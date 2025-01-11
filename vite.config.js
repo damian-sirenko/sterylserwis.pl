@@ -37,6 +37,10 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+    server: {
+      host: '127.0.0.1', // Це твій локальний хост
+      port: 5173, // Це стандартний порт Vite
+    },
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
