@@ -22,6 +22,7 @@
   margin-top: -20px;
   z-index: 3;
   flex-shrink: 0;
+  margin-bottom: env(safe-area-inset-bottom);
 }
 .hero-contact {
   display: flex;
@@ -40,16 +41,15 @@
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.03em;
 }
-.hero-contact:hover{
- background-color: #fff;
- color: #333;
-
+.hero-contact:hover {
+  background-color: #fff;
+  color: #333;
 }
-.hero-contact:hover .hero-tel{
- color: #333;
+.hero-contact:hover .hero-tel {
+  color: #333;
 }
-.hero-contact:hover .burger-menu{
- fill: #333;
+.hero-contact:hover .burger-menu {
+  fill: #333;
 }
 .burger-menu {
   margin-right: 8px;
