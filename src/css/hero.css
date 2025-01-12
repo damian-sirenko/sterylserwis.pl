@@ -22,7 +22,7 @@
   margin-top: -20px;
   z-index: 3;
   flex-shrink: 0;
-  margin-bottom: env(safe-area-inset-bottom, 20px);;
+  margin-bottom: env(safe-area-inset-bottom);;
 }
 .hero-contact {
   display: flex;
