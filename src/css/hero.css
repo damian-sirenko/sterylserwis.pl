@@ -23,7 +23,7 @@
   z-index: 3;
   flex-shrink: 0;
   height: 100px;
-  margin-bottom: env(safe-area-inset-bottom);;
+  /* margin-bottom: env(safe-area-inset-bottom); */
 }
 .hero-contact {
   display: flex;
