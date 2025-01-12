@@ -1,24 +1,24 @@
 .hero-section {
-  border-top: 3px solid #4d8680;
-  width: 100%;
-  height: 500px;
-  background-image: url('../img/hero/Hero_bg_mob_1x.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: 0.7;
 }
 .container {
 }
+.hero-img-wrap {
+  height: auto;
+  width: 100%;
+  border-top: 3px solid #4d8680;
+}
 .hero-bg {
-  height: 470px;
-  width: 100;
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .hero-contact-wrap {
   background-color: #4d8680;
-  /* height: 100px; */
   border-radius: 20px 20px 0 0;
   padding: 20px;
+  margin: -20px 0 0 0;
+  z-index: 3;
 }
 .hero-contact {
   display: flex;
