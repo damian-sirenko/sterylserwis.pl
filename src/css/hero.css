@@ -6,12 +6,14 @@
 }
 
 .hero-img-wrap {
+  position: relative;
   flex-grow: 1;
   /* height: auto; */
   width: 100%;
   border-top: 3px solid #4d8680;
 }
 .hero-bg {
+  display: block;
   z-index: 1;
   opacity: 0.7;
   width: 100%;
@@ -24,6 +26,7 @@
   padding: 20px;
   margin: -20px 0 0 0;
   z-index: 3;
+  flex-shrink: 0;
 }
 .hero-contact {
   display: flex;
