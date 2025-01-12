@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: flex-start;
   height: 100vh;
-  margin: 0; /* Забираємо всі зовнішні відступи */
-  padding: 0;
 }
 
 .header {
