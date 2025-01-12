@@ -1,8 +1,8 @@
 .hero-section {
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .hero-img-wrap {
@@ -14,7 +14,7 @@
 }
 .hero-bg {
   display: block;
-  z-index: 1;
+  /* z-index: 1; */
   opacity: 0.7;
   width: 100%;
   height: 100%;
@@ -24,8 +24,8 @@
   background-color: #4d8680;
   border-radius: 20px 20px 0 0;
   padding: 20px;
-  margin: -20px 0 0 0;
-  z-index: 3;
+  /* margin: -20px 0 0 0; */
+  /* z-index: 3; */
   flex-shrink: 0;
 }
 .hero-contact {
