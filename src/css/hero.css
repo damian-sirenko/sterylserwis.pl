@@ -23,7 +23,7 @@
   z-index: 3;
   flex-shrink: 0;
   height: 100px;
-  /* margin-bottom: env(safe-area-inset-bottom); */
+
 }
 .hero-contact {
   display: flex;
@@ -42,14 +42,21 @@
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.03em;
 }
-.hero-contact:hover {
+.hero-contact:hover,
+.hero-contact:focus {
   background-color: #fff;
   color: #333;
 }
 .hero-contact:hover .hero-tel {
   color: #333;
 }
+.hero-contact:focus .hero-tel {
+  color: #333;
+}
 .hero-contact:hover .burger-menu {
+  fill: #333;
+}
+.hero-contact:focus .burger-menu {
   fill: #333;
 }
 .burger-menu {
