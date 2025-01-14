@@ -33,9 +33,13 @@
   font-size: 18px;
   font-weight: 700;
   padding-bottom: 8px;
+  text-indent: 0;
 }
 .advantages-item-text {
   font-size: 16px;
+  text-indent: 0;
+  line-height: 24px;
+  text-align: left;
 }
 .advantages-bg-img {
   width: 70%;
@@ -45,7 +49,7 @@
 .advantages-item-btn {
   display: block;
   background-color: #31524e;
-    border: 2px solid #31524e;
+  border: 2px solid #31524e;
   padding: 16px 0;
   color: #fff;
   font-size: 16px;
