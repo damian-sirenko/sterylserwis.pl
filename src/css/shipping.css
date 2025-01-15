@@ -1,0 +1,20 @@
+.shipping-section {
+  padding-top: 80px;
+}
+.container {
+}
+
+.shipping-text {
+  text-indent: 30px;
+  text-align: justify;
+}
+.shipping-img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
