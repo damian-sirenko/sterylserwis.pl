@@ -1,7 +1,7 @@
 .offer-container {
   background-color: #31524e;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 .offer-title {
 	color: #fff;
@@ -9,6 +9,7 @@
 .offer-text {
   color: #fff;
   margin-bottom: 24px;
+  text-indent: 30px;
 }
 .offer-list {
   display: flex;
