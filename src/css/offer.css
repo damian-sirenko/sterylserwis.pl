@@ -3,7 +3,8 @@
   padding-top: 40px;
   padding-bottom: 60px;
 }
-.title {
+.offer-title {
+	color: #fff;
 }
 .offer-text {
   color: #fff;
@@ -21,14 +22,13 @@
   align-items: center;
   background-color: #dff6f4;
   width: 100%;
-  /* height: 240px; */
   padding: 16px 0;
   border-radius: 20px;
   border: 2px solid #4d8680;
 }
 .offer-item-title {
   font-family: Montserrat, sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 0.15em;
   color: #4d8680;
   text-decoration: underline;
@@ -42,7 +42,7 @@
   color: #fff;
   width: 100%;
   font-family: Montserrat, sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   background-color: #4d8680;
   text-align: center;
@@ -56,7 +56,7 @@
 .offer-item-btn {
   color: #fff;
   background-color: #4d8680;
-  padding: 8px 0;
+  
   width: 220px;
   text-align: center;
   border-radius: 10px;

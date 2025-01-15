@@ -47,22 +47,15 @@
   margin: 24px;
 }
 .advantages-item-btn {
-  display: block;
   background-color: #31524e;
   border: 2px solid #31524e;
-  padding: 8px 0;
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  max-width: 300px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0 auto;
   margin-top: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .advantages-item-btn:hover,
 .advantages-item-btn:focus {
   background-color: #dff6f4;
   color: #333;
-  border: 2px solid #31524e;
 }

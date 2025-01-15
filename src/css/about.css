@@ -5,19 +5,8 @@
 }
 .container {
 }
-.title {
-  font-family: Montserrat, sans-serif;
-  font-weight: 600;
-  text-align: center;
-  font-size: 28px;
-  letter-spacing: 0.03em;
-  line-height: 40px;
-  padding-bottom: 40px;
-  max-width: 90%;
-  margin: 0 auto;
+.about-title {
   color: #fff;
-  margin: 0 auto;
-  
 }
 .about-text {
   color: #fff;
@@ -28,6 +17,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 .about-img {
-	padding: 40px 0 40px 0;
-	margin: 0 auto;
+  padding: 40px 0 40px 0;
+  margin: 0 auto;
 }
