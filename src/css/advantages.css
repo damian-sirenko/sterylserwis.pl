@@ -50,13 +50,13 @@
   display: block;
   background-color: #31524e;
   border: 2px solid #31524e;
-  padding: 16px 0;
+  padding: 8px 0;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
   max-width: 300px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 0 auto;
   margin-top: 16px;
 }
