@@ -1,12 +1,11 @@
 .how-section {
-	padding-top: 80px;
-
+  padding-top: 80px;
 }
 .how-container {
+  padding-top: 40px;
   background-color: #31524e;
   border-radius: 20px 20px 0 0;
-  padding-bottom: 40px;
-  padding-top: 40px;
+  /* padding-bottom: 40px; */
 }
 .how-title {
   color: #fff;
