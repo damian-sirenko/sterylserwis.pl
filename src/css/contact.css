@@ -1,0 +1,80 @@
+.contact-section {
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  margin-top: -20px;
+}
+.contact-container {
+  padding-top: 40px;
+}
+.title {
+}
+.contact-title {
+}
+.contact-subtitle {
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.contact-adres {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.contact-text-fb {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.contact-fb-icon {
+  display: block;
+  margin: 0 auto;
+  fill: #4267b2;
+  margin-bottom: 40px;
+}
+.contact-text-pytanie {
+  margin-top: 40px;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 600;
+}
+.contact-form {
+  margin-top: 40px;
+}
+.contact-form-group {
+	display: flex;
+	flex-direction: column;
+}
+.contact-form-group-email {
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
+}
+.contact-form-group-msg {
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
+}
+.form-label {
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+.form-input {
+}
+.contact-label {
+}
+.form-textarea {
+}
+.checkbox-group {
+}
+.form-policy-checkbox {
+}
+.form-policy-text {
+}
+.g-recaptcha {
+}
+.form-btn {
+}
+.contact-google-map {
+}
