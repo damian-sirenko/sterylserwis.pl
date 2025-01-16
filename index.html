@@ -25,7 +25,7 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/sterylserwis.pl/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/index-Dd412OO9.css">
+    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/index-BMARajjy.css">
   </head>
   <body>
 	<div class="container-header-hero">
@@ -443,7 +443,74 @@
   </div>
 </section>
 
-			 
+			 <section class="contact-section">
+  <div class="container contact-container">
+    <h2 class="title contact-title">SKONTAKTUJ SIĘ Z NAMI</h2>
+    <h3 class="contact-subtitle">Punkt Sterylizacji Narzędzi STERYL SERWIS</h3>
+    <address class="contact-adres">
+      osiedle Dywizjonu 303 62F, <br />
+      31-875 Kraków <br />
+      <a href="tel:+48739015287">+48 739 015 287</a> <br />
+      <a href="mailto:sterylserwis@gmail.com">sterylserwis@gmail.com</a> <br />
+      pon - pt: 10:00 - 18:00
+    </address>
+    <p class="contact-text-fb">Obserwuj nas n a Facebooku!</p>
+    <svg width="32" height="32" class="contact-fb-icon">
+      <use href="/sterylserwis.pl/assets/icons-B2JoHb_w.svg#facebook_logo"></use>
+    </svg>
+    <p class="contact-text-pytanie">Masz pytanie? Napisz do nas!</p>
+    <form
+      action="mailto:sterylserwis@gmail.com"
+      method="post"
+      enctype="text/plain"
+      onsubmit="return validateForm()"
+      class="contact-form"
+    >
+      <div class="contact-form-group">
+        <label for="name" class="form-label">Imię</label>
+        <input type="text" id="name" name="name" class="form-input" required />
+      </div>
+      <div class="contact-form-group-email">
+        <label for="email" class="form-label">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-input"
+          required
+        />
+      </div>
+      <div class="contact-form-group-msg">
+        <label for="message" class="form-label">Wiadomość</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          class="form-textarea"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group checkbox-group">
+        <input
+          type="checkbox"
+          id="accept"
+          name="accept"
+          class="form-policy-checkbox"
+          required
+        />
+        <label for="accept" class="form-policy-text"
+          >Akceptuję politykę prywatności</label
+        >
+      </div>
+      <div class="g-recaptcha" aria-colcount="form-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+      <div class="form-group">
+        <button type="submit" class="form-btn">Wyślij</button>
+      </div>
+    </form>
+	 <div id="map" class="contact-google-map"></div>
+  </div>
+</section>
+
 	 </main>
 
     <footer class="footer">
