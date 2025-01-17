@@ -20,9 +20,9 @@
 .mob-menu-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   min-width: 80%;
-  height: 100%; 
+  height: 100%;
   padding: 16px;
   padding-left: 30px;
 }
@@ -44,10 +44,20 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-sizing: border-box; /* Включає рамку в розміри */
+  -webkit-appearance: none; /* Скидає стилі iOS */
+  -webkit-transform: translateZ(0); /* Виправляє проблеми з рендерингом */
+}
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  background-color: #fff;
 }
 
 .menu-close-icon {
   fill: #fff;
+  width: 12px; /* Ширина і висота іконки */
+  height: 12px;
+  display: block;
 }
 
 .menu-close-btn:hover .menu-close-icon,
@@ -56,9 +66,9 @@
 }
 
 .mob-menu {
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
-  justify-content: start; 
+  justify-content: start;
   margin-top: 80px;
 }
 
@@ -69,15 +79,15 @@
   text-transform: uppercase;
   color: #fff;
 }
-.line-decorator{
-	width: 40px;
-	border-bottom: 2px dashed #fff ;
-	margin-bottom: 16px;
+.line-decorator {
+  width: 40px;
+  border-bottom: 2px dashed #fff;
+  margin-bottom: 16px;
 }
 
 .mob-menu-contacts {
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   flex-shrink: 0;
 }
 
