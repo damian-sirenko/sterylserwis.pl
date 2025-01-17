@@ -45,19 +45,19 @@
 .hero-contact:hover,
 .hero-contact:focus {
   background-color: #fff;
-  color: #333;
+  color: #4d8680;
 }
 .hero-contact:hover .hero-tel {
-  color: #333;
+  color: #4d8680;
 }
 .hero-contact:focus .hero-tel {
-  color: #333;
+  color: #4d8680;
 }
 .hero-contact:hover .burger-menu {
-  fill: #333;
+  fill: #4d8680;
 }
 .hero-contact:focus .burger-menu {
-  fill: #333;
+  fill: #4d8680;
 }
 .burger-menu {
   margin-right: 8px;

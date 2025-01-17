@@ -13,6 +13,7 @@
   line-height: 36px;
   max-width: 430px;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 .calc-content {
@@ -42,7 +43,12 @@
   border: none;
   text-transform: uppercase;
   padding: 8px 16px;
-
+}
+.calc-button:hover,
+.calc-button:focus {
+  background-color: #fff;
+  color: #4d8680;
+  
 }
 
 .calc-result {

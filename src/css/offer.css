@@ -57,8 +57,13 @@
 .offer-item-btn {
   color: #fff;
   background-color: #4d8680;
-  
   width: 220px;
   text-align: center;
   border-radius: 10px;
+  border: 2px solid #4d8680;
+}
+.offer-item-btn:hover,
+.offer-item-btn:focus {
+  color: #4d8680;
+  background-color: #fff;
 }
