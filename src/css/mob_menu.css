@@ -35,6 +35,7 @@
 
 .menu-close-btn {
   position: relative;
+  padding: 0;
   height: 22px;
   width: 22px;
   border-radius: 50%;
