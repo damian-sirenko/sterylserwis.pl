@@ -1,0 +1,99 @@
+.backdrop {
+  width: 80%;
+  height: 100svh; /* Вся висота екрану */
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #4d8680;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mob-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-width: 80%;
+  height: 100%; 
+  padding: 16px;
+  padding-left: 30px;
+}
+
+.menu-header {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-close-btn {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-close-icon {
+  fill: #fff;
+}
+
+.menu-close-btn:hover .menu-close-icon,
+.menu-close-btn:focus .menu-close-icon {
+  fill: #4d8680;
+}
+
+.mob-menu {
+  flex-grow: 1; 
+  display: flex;
+  justify-content: start; 
+  margin-top: 80px;
+}
+
+.mob-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.line-decorator{
+	width: 40px;
+	border-bottom: 2px dashed #fff ;
+	margin-bottom: 16px;
+}
+
+.mob-menu-contacts {
+  color: #fff;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.menu-address-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.menu-address-icon {
+  fill: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+.menu-address {
+  margin: 0;
+}
