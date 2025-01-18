@@ -18,11 +18,11 @@
 .hero-contact-wrap {
   background-color: #4d8680;
   border-radius: 20px 20px 0 0;
-  padding: 20px;
+  padding-top: 20px;
   margin-top: -20px;
   z-index: 3;
   flex-shrink: 0;
-  height: 100px;
+
 
 }
 .hero-contact {
