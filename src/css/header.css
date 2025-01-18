@@ -35,7 +35,7 @@
   justify-content: center;
   background-color: transparent;
   margin-top: 6px;
-  padding: 2px;
+  padding: 4px;
   box-sizing: border-box;
 }
 .burger-menu-wrap:hover,
@@ -53,8 +53,8 @@
   cursor: pointer;
   fill: #ffffff;
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   align-self: center;
 }
 .burger-menu:hover,
