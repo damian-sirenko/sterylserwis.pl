@@ -19,11 +19,41 @@
       to pełną sterylność narzędzi i zgodność z najwyższymi standardami
       sanitarnymi.
     </p>
-    <img
-      src="./img/about/autoklaw_mob_1x.png"
-      alt="Autoklaw"
-      class="about-img"
-    />
+    <picture>
+      <source
+        srcset="
+          ./img/about/autoklaw_dt_1x.png 1x,
+          ./img/about/autoklaw_dt_2x.png 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ./img/about/autoklaw_dt_1x.png 1x,
+          ./img/about/autoklaw_dt_2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+		<source
+        srcset="
+          ./img/about/autoklaw_mob_1x.png 1x,
+          ./img/about/autoklaw_mob_2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+		<source
+        srcset="
+          ./img/about/autoklaw_mob_1x.png 1x,
+          ./img/about/autoklaw_mob_2x.png 2x
+        "
+        media="(min-width: 360px)"
+      />
+      <img
+        src="./img/about/autoklaw_mob_1x.png"
+        alt="Autoklaw"
+        class="about-img"
+      />
+    </picture>
     <p class="about-text">
       Steryzacja narzędzi jest kluczowym elementem zapewniającym bezpieczeństwo
       i higienę w każdym gabinecie, zarówno kosmetycznym, jak i medycznym.
