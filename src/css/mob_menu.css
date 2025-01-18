@@ -1,6 +1,6 @@
 .backdrop {
   width: 80%;
-  height: 100svh; /* Вся висота екрану */
+  height: 100svh;
   position: fixed;
   top: 0;
   right: 0;
@@ -9,12 +9,16 @@
   visibility: hidden;
   pointer-events: none;
   z-index: 5;
+  transform: translateX(100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transform: translateX(0);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
 }
 
 .mob-menu-container {
@@ -25,6 +29,7 @@
   height: 100%;
   padding: 16px;
   padding-left: 30px;
+  transition: transform 0.3s ease;
 }
 
 .menu-header {
@@ -82,7 +87,7 @@
 }
 .line-decorator {
   width: 40px;
-  border-bottom: 2px dashed #fff;
+  border-bottom: 2px dotted #fff;
   margin-bottom: 16px;
 }
 

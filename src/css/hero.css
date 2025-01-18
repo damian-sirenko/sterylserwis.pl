@@ -42,6 +42,9 @@
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.03em;
 }
+.hero-tel-icon{
+	fill: #fff;
+}
 .hero-contact:hover,
 .hero-contact:focus {
   background-color: #fff;
@@ -53,12 +56,13 @@
 .hero-contact:focus .hero-tel {
   color: #4d8680;
 }
-.hero-contact:hover .burger-menu {
+.hero-contact:hover .hero-tel-icon{
   fill: #4d8680;
 }
-.hero-contact:focus .burger-menu {
+.hero-contact:focus .hero-tel-icon {
   fill: #4d8680;
 }
-.burger-menu {
-  margin-right: 8px;
+.hero-tel-icon{
+margin-right: 8px;
 }
+

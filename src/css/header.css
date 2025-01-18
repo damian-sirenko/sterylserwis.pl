@@ -29,8 +29,37 @@
 .header-logo {
   max-width: 200px;
 }
+.burger-menu-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin-top: 6px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.burger-menu-wrap:hover,
+.burger-menu-wrap:focus {
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.burger-menu-wrap:hover .burger-menu,
+.burger-menu-wrap:focus .burger-menu {
+  fill: #4d8680;
+}
+
 .burger-menu {
+  cursor: pointer;
   fill: #ffffff;
+  display: block;
+  width: 22px;
+  height: 22px;
+  align-self: center;
+}
+.burger-menu:hover,
+.burger-menu:focus {
+  fill: #4d8680;
 }
 .header-bottom {
   padding-top: 24px;
