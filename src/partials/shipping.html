@@ -12,11 +12,41 @@
       narzędzia zostaną starannie zapakowane i odesłane do wskazanego przez
       Ciebie paczkomatu InPost, w pełni gotowe do bezpiecznego użytku.
     </p>
-    <img
-      src="./img/shipping/paczkomat_mob_1x.png"
-      alt="Paczkoamat InPost"
-      class="shipping-img"
-    />
+    <picture>
+      <source
+        srcset="
+          ./img/shipping/paczkomat_dt_1x.png 1x,
+          ./img/shipping/paczkomat_dt_2x.png 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ./img/shipping/paczkomat_dt_1x.png 1x,
+          ./img/shipping/paczkomat_dt_2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          ./img/shipping/paczkomat_mob_1x.png 1x,
+          ./img/shipping/paczkomat_mob_2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./img/shipping/paczkomat_mob_1x.png 1x,
+          ./img/shipping/paczkomat_mob_2x.png 2x
+        "
+        media="(min-width: 360px)"
+      />
+      <img
+        src="./img/shipping/paczkomat_mob_1x.png"
+        alt="Paczkoamat InPost"
+        class="shipping-img"
+      />
+    </picture>
     <p class="shipping-text">
       Przed wysyłką zadbamy o to, by narzędzia były starannie zabezpieczone, co
       gwarantuje ich nienaruszony stan podczas transportu. Współpracując z nami,

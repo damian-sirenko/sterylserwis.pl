@@ -15,6 +15,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero-img-wrap {
+    background-image: url("../img/hero/Hero_bg_mob_2x.jpg");
+  }
+}
 .hero-contact-wrap {
   background-color: #4d8680;
   border-radius: 20px 20px 0 0;
@@ -23,8 +30,6 @@
   margin-top: -20px;
   z-index: 3;
   flex-shrink: 0;
-
-
 }
 .hero-contact {
   display: flex;
@@ -43,8 +48,8 @@
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.03em;
 }
-.hero-tel-icon{
-	fill: #fff;
+.hero-tel-icon {
+  fill: #fff;
 }
 .hero-contact:hover,
 .hero-contact:focus {
@@ -57,13 +62,12 @@
 .hero-contact:focus .hero-tel {
   color: #4d8680;
 }
-.hero-contact:hover .hero-tel-icon{
+.hero-contact:hover .hero-tel-icon {
   fill: #4d8680;
 }
 .hero-contact:focus .hero-tel-icon {
   fill: #4d8680;
 }
-.hero-tel-icon{
-margin-right: 8px;
+.hero-tel-icon {
+  margin-right: 8px;
 }
-

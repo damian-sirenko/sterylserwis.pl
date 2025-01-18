@@ -3,24 +3,51 @@
     <div class="container header-container">
       <div class="header-top-content">
         <a href="index.html">
-          <img
-            class="header-logo"
-            src="./img/header/Logo_mob_1x.png"
-            alt="Logo"
-        /></a>
+          <picture>
+            <source
+              srcset="./img/header/Logo_1x.png 1x, ./img/header/Logo_2x.png 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="./img/header/Logo_1x.png 1x, ./img/header/Logo_2x.png 2x"
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                ./img/header/Logo_mob_1x.png 1x,
+                ./img/header/Logo_mob_2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./img/header/Logo_mob_1x.png 1x,
+                ./img/header/Logo_mob_2x.png 2x
+              "
+              media="(min-width: 360px)"
+            />
+            <img
+              class="header-logo"
+              src="./img/header/Logo_mob_1x.png"
+              alt="Logo"
+            />
+          </picture>
+        </a>
         <div class="burger-menu-wrap">
-        	<svg width="22" height="22" class="burger-menu">
-	          <use href="./img/icons.svg#menu-burger"></use>
-	        </svg>
+          <svg width="22" height="22" class="burger-menu">
+            <use href="./img/icons.svg#menu-burger"></use>
+          </svg>
         </div>
       </div>
     </div>
   </div>
   <div class="container header-bottom">
     <h1 class="title-main">
-      PUNKT STERYLIZACJI NARZĘDZI <br>
+      PUNKT STERYLIZACJI NARZĘDZI <br />
       <span class="green-text">STERYL SERWIS</span>
     </h1>
-    <h3 class="header-subtitle">Działaj bezpiecznie i skutecznie razem z nami!</h3>
+    <h3 class="header-subtitle">
+      Działaj bezpiecznie i skutecznie razem z nami!
+    </h3>
   </div>
 </header>
