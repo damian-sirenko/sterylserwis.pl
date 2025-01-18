@@ -1,5 +1,5 @@
 const menu = document.querySelector('.backdrop');
-const openMenuBtn = document.querySelector('.burger-menu');
+const openMenuBtn = document.querySelector('.burger-menu-wrap');
 const closeMenuBtn = document.querySelector('.menu-close-btn');
 
 const openMenu = () => {
