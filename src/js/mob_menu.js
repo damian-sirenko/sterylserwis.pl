@@ -2,6 +2,7 @@ const backdrop = document.querySelector('.backdrop');
 const openMenuBtn = document.querySelector('.burger-menu-wrap');
 const closeMenuBtn = document.querySelector('.menu-close-btn');
 const overlay = document.querySelector('.backdrop-overlay');
+const menuItems = document.querySelectorAll('.mob-menu-item a');
 
 const openMenu = () => {
   backdrop.classList.add('is-open');
@@ -23,7 +24,12 @@ const closeMenu = () => {
     overlay.style.visibility = 'hidden';
   }, 300); // Відповідає тривалості transition
 };
-
+menuItems.forEach(item => {
+  item.addEventListener('click', event => {
+    // Закриваємо меню
+    closeMenu();
+  });
+});
 // Додаємо обробники подій
 openMenuBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);

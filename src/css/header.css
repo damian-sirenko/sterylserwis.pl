@@ -18,6 +18,13 @@
   background-color: #4d8680;
   width: 100%;
   border-radius: 0 0 20px 20px;
+  position: fixed; /* Закріплює хедер на верхній частині */
+  top: 0; /* Приклеює до верхньої частини екрану */
+  left: 0;
+  z-index: 10; /* Вищий рівень, щоб хедер не перекривався іншими елементами */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Легка тінь для хедера */
+
+  
 }
 .header-top-content {
   display: flex;
@@ -64,6 +71,8 @@
 .header-bottom {
   padding-top: 24px;
   padding-bottom: 24px;
+  padding-top: 100px;
+
 }
 .title-main {
   font-family: Montserrat, sans-serif;
