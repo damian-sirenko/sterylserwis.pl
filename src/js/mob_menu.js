@@ -1,14 +1,29 @@
-const menu = document.querySelector('.backdrop');
+const backdrop = document.querySelector('.backdrop');
 const openMenuBtn = document.querySelector('.burger-menu-wrap');
 const closeMenuBtn = document.querySelector('.menu-close-btn');
+const overlay = document.querySelector('.backdrop-overlay');
 
 const openMenu = () => {
-  menu.classList.add('is-open');
+  backdrop.classList.add('is-open');
+  overlay.classList.add('is-open');
+
+  // Робимо елементи видимими
+  backdrop.style.visibility = 'visible';
+  overlay.style.visibility = 'visible';
 };
 
 const closeMenu = () => {
-  menu.classList.remove('is-open');
+  // Видаляємо класи для плавного закриття
+  backdrop.classList.remove('is-open');
+  overlay.classList.remove('is-open');
+
+  // Через 300 мс змінюємо visibility
+  setTimeout(() => {
+    backdrop.style.visibility = 'hidden';
+    overlay.style.visibility = 'hidden';
+  }, 300); // Відповідає тривалості transition
 };
 
+// Додаємо обробники подій
 openMenuBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
