@@ -25,13 +25,20 @@
   margin-bottom: 24px;
 }
 .footer-list-item {
+  color: #fff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer-list-item:hover,
+.footer-list-item:focus {
+  color: #c8fffa;
+}
+
 .footer-bottom {
-	padding: 8px 0;
-	background-color: #31524e;
+  padding: 8px 0;
+  background-color: #31524e;
 }
 .footer-copiring {
-	font-size: 14px;
+  font-size: 14px;
   color: #fff;
   text-align: center;
 }

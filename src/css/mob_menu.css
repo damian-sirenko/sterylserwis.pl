@@ -22,7 +22,7 @@
   pointer-events: none;
   z-index: 10;
   transform: translateX(100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
 }
 .backdrop.is-open {
@@ -42,7 +42,9 @@
   visibility: visible;
   pointer-events: auto;
   transform: translateX(0);
-  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mob-menu-container {
@@ -77,6 +79,7 @@
   box-sizing: border-box; /* Включає рамку в розміри */
   -webkit-appearance: none; /* Скидає стилі iOS */
   -webkit-transform: translateZ(0); /* Виправляє проблеми з рендерингом */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-close-btn:hover,
 .menu-close-btn:focus {
@@ -88,6 +91,7 @@
   width: 8px; /* Ширина і висота іконки */
   height: 8px;
   display: block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-close-btn:hover .menu-close-icon,
@@ -108,6 +112,13 @@
   gap: 12px;
   text-transform: uppercase;
   color: #fff;
+}
+.mob-menu-item {
+  color: #fff;
+}
+.mob-menu-item:hover,
+.mob-menu-item:focus {
+  color: #c8fffa;
 }
 .line-decorator {
   width: 40px;

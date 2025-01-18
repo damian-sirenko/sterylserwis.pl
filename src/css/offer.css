@@ -4,7 +4,7 @@
   padding-bottom: 100px;
 }
 .offer-title {
-	color: #fff;
+  color: #fff;
 }
 .offer-text {
   color: #fff;
@@ -61,6 +61,8 @@
   text-align: center;
   border-radius: 10px;
   border: 2px solid #4d8680;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .offer-item-btn:hover,
 .offer-item-btn:focus {

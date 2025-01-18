@@ -43,12 +43,13 @@
   border: none;
   text-transform: uppercase;
   padding: 8px 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .calc-button:hover,
 .calc-button:focus {
   background-color: #fff;
   color: #4d8680;
-  
 }
 
 .calc-result {
