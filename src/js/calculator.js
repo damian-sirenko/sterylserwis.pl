@@ -13,6 +13,7 @@ window.calculatePlan = function calculatePlan() {
   // Отримуємо значення кількості пакетів
   const packets = parseInt(document.querySelector('#packets').value);
   const resultDiv = document.querySelector('#result');
+  const calcButton = document.querySelector('.calc-button');
 
   // Валідація введених даних
   if (isNaN(packets) || packets <= 0) {
@@ -48,7 +49,7 @@ window.calculatePlan = function calculatePlan() {
   // Відображення результату
   if (bestPlan) {
     resultDiv.innerHTML = `
-      Przy ${packets} pakietach miesięcznie najlepszym wyborem dla Ciebie jest abinament
+      Przy ${packets} pakietach miesięcznie najlepszym wyborem dla Ciebie jest abonament
       <strong>${bestPlan.name}</strong>.<br>
       Koszt sterylizacji jednego pakietu w tym abonamencie wynosi <strong>${
         bestPlan.costPerPacket
@@ -72,4 +73,5 @@ window.calculatePlan = function calculatePlan() {
   } else {
     resultDiv.innerHTML = 'Nie znaleziono odpowiedniego abonamentu.';
   }
+  calcButton.blur();
 };
