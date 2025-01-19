@@ -12,6 +12,7 @@ window.calculatePlan = function calculatePlan() {
 
   // Отримуємо значення кількості пакетів
   const packets = parseInt(document.querySelector('#packets').value);
+  const packetsInput = document.querySelector('#packets');
   const resultDiv = document.querySelector('#result');
   const calcButton = document.querySelector('.calc-button');
 
@@ -74,4 +75,5 @@ window.calculatePlan = function calculatePlan() {
     resultDiv.innerHTML = 'Nie znaleziono odpowiedniego abonamentu.';
   }
   calcButton.blur();
+  packetsInput.value = '';
 };
