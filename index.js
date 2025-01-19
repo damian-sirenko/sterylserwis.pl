@@ -5,5 +5,5 @@
       ${t.extraPackets>0?`Miesięczny koszt tego abonamentu to <strong>${t.price.toFixed(2)} zł </strong>, <br>
 			   koszt sterylizacji ${t.extraPackets} pakietów poza abonamentem wynosi <strong>${t.extraPackets*t.costPerPacket} zł.</strong>`:"Brak dodatkowych kosztów. <br>"}
 					<br> Całkowity koszt sterylizacli ${s} pakietów miesiecznie z abonamentem <strong>${t.name}</strong> wynosi <strong>${t.totalCost.toFixed(2)} zł. </strong>
-					`:e.innerHTML="Nie znaleziono odpowiedniego abonamentu.",o.blur(),n.value=""};
+					`:e.innerHTML="Nie znaleziono odpowiedniego abonamentu.",n.value="",o.blur()};
 //# sourceMappingURL=index.js.map
