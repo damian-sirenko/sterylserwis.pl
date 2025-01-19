@@ -7,9 +7,17 @@
       <p class="calc-text">
         Podaj, ile pakietów planujesz sterylizować miesięcznie:
       </p>
-		<input type="number" class="calc-input">
-		<button class="calc-button button">Oblicz najlepszy abonament</button>
-		<div class="calc-result"></div>
+      <input
+        type="number"
+        id="packets"
+        class="calc-input"
+        placeholder="Podaj liczbę pakietow"
+        min="1"
+      />
+      <button class="calc-button button" onclick="calculatePlan()">
+        Oblicz najlepszy abonament
+      </button>
+      <div class="calc-result" id="result"></div>
     </div>
   </div>
 </section>
