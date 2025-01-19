@@ -74,6 +74,6 @@ window.calculatePlan = function calculatePlan() {
   } else {
     resultDiv.innerHTML = 'Nie znaleziono odpowiedniego abonamentu.';
   }
-  calcButton.blur();
   packetsInput.value = '';
+  calcButton.blur();
 };
