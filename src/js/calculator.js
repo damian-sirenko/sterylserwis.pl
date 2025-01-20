@@ -21,6 +21,15 @@ window.calculatePlan = function calculatePlan() {
     resultDiv.innerHTML = 'Proszę wpisać poprawną liczbę pakietów.';
     return;
   }
+  if (packets > 1000) {
+    resultDiv.innerHTML = `
+      Masz duży wolumen narzędzi do sterylizacji. <br>
+      Warto skontaktować się z nami, aby ustalić indywidualne warunki współpracy.
+    `;
+    packetsInput.value = ''; // Очищаємо поле вводу
+    calcButton.blur(); // Знімаємо фокус з кнопки
+    return;
+  }
 
   let bestPlan = null;
   let lowestTotalCost = Infinity;
@@ -62,9 +71,9 @@ window.calculatePlan = function calculatePlan() {
             )} zł </strong>, <br>
 			   koszt sterylizacji ${
            bestPlan.extraPackets
-         } pakietów poza abonamentem wynosi <strong>${
+         } pakietów poza abonamentem wynosi <strong>${(
               bestPlan.extraPackets * bestPlan.costPerPacket
-            } zł.</strong>`
+            ).toFixed(2)} zł.</strong>`
           : 'Brak dodatkowych kosztów. <br>'
       }
 					<br> Całkowity koszt sterylizacli ${packets} pakietów miesiecznie z abonamentem <strong>${
