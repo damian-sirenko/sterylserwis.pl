@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = el.querySelector('.faq-item-icon use');
         if (icon) {
           // Установка правильного атрибута для іконки
-          icon.setAttribute('href', '#icon-plus'); // Замінюємо "плюс"
+          icon.setAttribute('href', '#plus_faq'); // Замінюємо "плюс"
         }
         const answer = el.querySelector('.faq-item-answer');
         if (answer) {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = item.querySelector('.faq-item-icon use');
         if (icon) {
           // Замінюємо іконку на "мінус"
-          icon.setAttribute('href', '#icon-minus');
+          icon.setAttribute('href', '#minus_faq');
         }
         const answer = item.querySelector('.faq-item-answer');
         if (answer) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const svgElements = document.querySelectorAll('.faq-item-icon use');
   svgElements.forEach(svg => {
     if (!svg.getAttribute('href')) {
-      svg.setAttribute('href', '#icon-plus'); // Встановлюємо початкову іконку
+      svg.setAttribute('href', '#plus_faq'); // Встановлюємо початкову іконку
     }
   });
 });
