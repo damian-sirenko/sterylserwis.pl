@@ -48,7 +48,7 @@
   border-radius: 0 0 10px 10px;
   margin-left: 32px;
   max-height: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   font-style: italic;
   letter-spacing: 0.03em;
@@ -80,9 +80,7 @@
   background-color: #4d8680;
   color: #fff;
 }
-.faq-item.open .faq-item-icon {
-  fill: #c8fffa;
-}
+
 .faq-item.open .faq-item-text {
   border-radius: 10px 10px 0 0;
 }
