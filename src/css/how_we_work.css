@@ -28,7 +28,7 @@
   background-color: #4d8680;
   border-radius: 0 30px 30px 0;
   font-size: 16px;
-  overflow: hidden;
+  line-height: 1.2;  overflow: hidden;
 }
 /* step-header */
 .how-item-wrapper {
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 24px;
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   background-color: #d9d9d9;
