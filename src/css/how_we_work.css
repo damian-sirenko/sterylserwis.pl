@@ -52,6 +52,7 @@
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   background-color: #d9d9d9;
+  color: #31524e;
   padding: 8px;
   width: 56px;
   height: 56px;
@@ -93,9 +94,6 @@
   content: '\25BC'; /* Стрілка вниз */
   font-size: 26px;
   color: #31524e;
-}
-.how-list-item.open .how-item-number {
-  transform: rotate(180deg); /* Стрілка вниз */
 }
 .how-item-icon[data-number]::before {
   content: attr(data-number);
