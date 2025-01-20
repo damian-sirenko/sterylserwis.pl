@@ -32,6 +32,7 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
+  overflow: visible;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .faq-item-icon {
@@ -40,6 +41,9 @@
   fill: #c8fffa;
   flex-shrink: 0;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-item.open .faq-item-icon {
+  fill: #c8fffa; /* Колір для активного стану */
 }
 
 .faq-item-answer {
