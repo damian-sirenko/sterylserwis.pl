@@ -3,7 +3,7 @@
   border-radius: 20px 20px 0 0;
 }
 .contact-container {
-	padding-top: 100px;
+  padding-top: 100px;
   margin-top: -20px;
   padding-bottom: 80px;
 }
@@ -53,6 +53,10 @@
 }
 .contact-form {
   margin-top: 24px;
+  background-color: #31524e;
+  border-radius: 10px;
+  padding: 12px;
+  padding-bottom: 24px;
 }
 .contact-form-group {
   display: flex;
@@ -71,35 +75,34 @@
 .form-label {
   font-size: 14px;
   margin-bottom: 4px;
+  color: #fff;
 }
 .form-input {
   width: 100%;
   height: 36px;
-  border-radius: 8px;
-  border: 3px solid #b1b1b1;
+  border-radius: 10px;
+  border: none;
   box-shadow: #b1b1b1 1px 1px;
   padding-left: 8px;
-  background-color: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* background-color: transparent; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:hover,
 .form-input:focus {
-  border: 3px solid #4d8680;
   background-color: #c8fffa;
 }
 .contact-label {
 }
 .form-textarea {
-  border-radius: 8px;
-  border: 3px solid #b1b1b1;
+  border-radius: 10px;
+  border: none;
   box-shadow: #b1b1b1 1px 1px;
   height: 140px;
   padding-left: 8px;
   padding-top: 4px;
   padding-bottom: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  resize: both;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-textarea:hover,
 .form-textarea:focus {
@@ -114,27 +117,29 @@
 }
 .form-policy-text {
   margin-left: 4px;
+  color: #fff;
 }
 .link-policy {
-  color: #333;
+  color: #fff;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-policy:hover,
 .link-policy:focus {
-  color: #4267b2;
+  /* color: #4267b2; */
   text-decoration: underline;
 }
 .checkbox-group:hover .link-policy,
 .checkbox-group:focus .link-policy {
-  color: #4267b2;
+  /* color: #4267b2; */
   text-decoration: underline;
 }
 .g-recaptcha {
   margin-top: 16px;
+  width: 100%;
+  margin-bottom: 16px;
 }
 .form-btn {
-  margin-top: 16px;
   margin: 0;
   width: 120px;
   border: 2px solid #4d8680;
