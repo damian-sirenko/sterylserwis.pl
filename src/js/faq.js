@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.remove('open');
         const icon = el.querySelector('.faq-item-icon use');
         if (icon) {
-          // Установка правильного атрибута для іконки
-          icon.setAttribute('href', '#plus_faq'); // Замінюємо "плюс"
+          icon.setAttribute('href', '../img/icons.svg#plus_faq'); // Іконка плюса
         }
         const answer = el.querySelector('.faq-item-answer');
         if (answer) {
@@ -26,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('open');
         const icon = item.querySelector('.faq-item-icon use');
         if (icon) {
-          // Замінюємо іконку на "мінус"
-          icon.setAttribute('href', '#minus_faq');
+          icon.setAttribute('href', '../img/icons.svg#minus_faq'); // Іконка мінуса
         }
         const answer = item.querySelector('.faq-item-answer');
         if (answer) {
@@ -35,13 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-  });
-
-  // Додавання додаткового захисту для мобільних браузерів
-  const svgElements = document.querySelectorAll('.faq-item-icon use');
-  svgElements.forEach(svg => {
-    if (!svg.getAttribute('href')) {
-      svg.setAttribute('href', '#plus_faq'); // Встановлюємо початкову іконку
-    }
   });
 });
