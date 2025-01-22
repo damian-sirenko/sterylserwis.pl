@@ -1,0 +1,193 @@
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="close-btn" id="close-modal">&times;</button>
+    <h2 class="modal-title">Formularz zamówienia</h2>
+    <form id="order-form" class="modal-form">
+      <!-- Вибір типу особи -->
+      <p class="modal-radio-title">Proszę o przygotowanie umowy na:</p>
+      <div class="modal-radio-group">
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="contractType"
+            value="firma"
+            class="modal-radio"
+            checked
+          />
+          Firmę
+        </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="contractType"
+            value="osoba"
+            class="modal-radio"
+          />
+          Osobę prywatną
+        </label>
+      </div>
+
+      <!-- Поля форми -->
+      <div class="modal-form-group">
+        <label for="company-name" class="modal-input-lable">Nazwa firmy</label>
+        <input
+          type="text"
+          id="company-name"
+          name="companyName"
+          placeholder="Wprowadź nazwę firmy"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="full-name" class="modal-input-lable">Imię i nazwisko</label>
+        <input
+          type="text"
+          id="full-name"
+          name="fullName"
+          placeholder="Wprowadź imię i nazwisko"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="nip" class="modal-input-lable">NIP</label>
+        <input
+          type="number"
+          id="nip"
+          name="nip"
+          placeholder="Wprowadź NIP"
+          class="modal-input"
+          minlength="10"
+          maxlength="10"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="pesel" class="modal-input-lable">PESEL</label>
+        <input
+          type="number"
+          id="pesel"
+          name="pesel"
+          placeholder="Wprowadź PESEL"
+          class="modal-input"
+          minlength="11"
+          maxlength="11"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="address" class="modal-input-lable">Adres</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Wprowadź adres"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="phone" class="modal-input-lable">Telefon</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Wprowadź numer telefonu"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="email" class="modal-input-lable">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Wprowadź adres email"
+          class="modal-input"
+        />
+      </div>
+
+      <!-- Радіокнопки для інструментів -->
+      <p class="modal-radio-title">Potrzebuję sterylizować narzędzia:</p>
+      <div class="modal-radio-group">
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="toolsType"
+            value="kosmetyczne"
+            class="modal-radio"
+            checked
+          />
+          Kosmetyczne
+        </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="toolsType"
+            value="medyczne"
+            class="modal-radio"
+          />
+          Medyczne
+        </label>
+      </div>
+
+      <!-- Радіокнопки для доставки -->
+      <p class="modal-radio-title">Narzędzia będą dostarczane:</p>
+      <div class="modal-radio-group">
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="deliveryType"
+            value="osobiscie"
+            class="modal-radio"
+            checked
+          />
+          Osobiście
+        </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="deliveryType"
+            value="kurier"
+            class="modal-radio"
+          />
+          Przez firmę kurierską
+        </label>
+      </div>
+
+      <!-- Повідомлення -->
+      <div class="modal-form-group">
+        <label for="message" class="modal-input-lable">Wiadomość</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Twoja wiadomość"
+          class="modal-textarea"
+        ></textarea>
+      </div>
+      <div class=" checkbox-group">
+        <input
+          type="checkbox"
+          id="accept"
+          name="accept"
+          class="form-policy-checkbox"
+          required
+        />
+        <label for="accept" class="modal-policy-text"
+          >Akceptuję
+          <a class="" href="../private_policy.html"
+            ><span class="modal-policy-link">politykę prywatności</span> oraz
+            <a href="../regulamin.html"
+              ><span class="modal-policy-link">Regulamin</span></a
+            ></a
+          ></label
+        >
+      </div>
+      <div
+        class="g-recaptcha"
+        aria-colcount="form-recaptcha"
+        data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
+        data-action="LOGIN"
+      ></div>
+
+      <!-- Кнопка відправлення -->
+      <button type="submit" class="form-btn button">Wyślij</button>
+    </form>
+  </div>
+</div>
