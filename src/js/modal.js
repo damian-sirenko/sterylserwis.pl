@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nipField = document.getElementById('nip');
   const peselField = document.getElementById('pesel');
 
-  // Оновлення доступності полів форми залежно від вибору
+  // Функція оновлення доступності полів
   const updateFields = () => {
     const selectedValue = document.querySelector(
       '[name="contractType"]:checked'
@@ -25,20 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Ініціалізація стану полів
+  updateFields();
+
+  // Додати слухачів подій для перемикачів
   contractTypeInputs.forEach(input => {
     input.addEventListener('change', updateFields);
   });
 
-  // Відкриття модального вікна
-  setTimeout(() => {
-    modal.style.bottom = '0';
-  }, 300);
-
   // Закриття модального вікна
   closeModal.addEventListener('click', () => {
-    modal.style.bottom = '-100%';
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Відновити прокрутку сторінки
   });
 
-  // Ініціалізація форми
-  updateFields();
+  // Відкриття модального вікна
+  setTimeout(() => {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Заборонити прокрутку сторінки
+  }, 300);
 });
