@@ -25,9 +25,203 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/sterylserwis.pl/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/index-sVM2VdMC.css">
+    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/index-DIYAWnjE.css">
   </head>
   <body>
+	  <div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="close-btn" id="close-modal">&times;</button>
+    <h2 class="modal-title">Formularz zamówienia</h2>
+    <form id="order-form" class="modal-form">
+      <!-- Вибір типу особи -->
+      <p class="modal-radio-title">Proszę o przygotowanie umowy na:</p>
+      <div class="modal-radio-group">
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="contractType"
+            value="firma"
+            class="modal-radio"
+            checked
+          />
+          Firmę
+        </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="contractType"
+            value="osoba"
+            class="modal-radio"
+          />
+          Osobę prywatną
+        </label>
+      </div>
+
+      <!-- Поля форми -->
+      <div class="modal-form-group">
+        <label for="company-name" class="modal-input-lable">Nazwa firmy</label>
+        <input
+          type="text"
+          id="company-name"
+          name="companyName"
+          placeholder="Wprowadź nazwę firmy"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="full-name" class="modal-input-lable">Imię i nazwisko</label>
+        <input
+          type="text"
+          id="full-name"
+          name="fullName"
+          placeholder="Wprowadź imię i nazwisko"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="nip" class="modal-input-lable">NIP</label>
+        <input
+          type="number"
+          id="nip"
+          name="nip"
+          placeholder="Wprowadź NIP"
+          class="modal-input"
+          minlength="10"
+          maxlength="10"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="pesel" class="modal-input-lable">PESEL</label>
+        <input
+          type="number"
+          id="pesel"
+          name="pesel"
+          placeholder="Wprowadź PESEL"
+          class="modal-input"
+          minlength="11"
+          maxlength="11"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="address" class="modal-input-lable">Adres</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Wprowadź adres"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="phone" class="modal-input-lable">Telefon</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Wprowadź numer telefonu"
+          class="modal-input"
+        />
+      </div>
+      <div class="modal-form-group">
+        <label for="email" class="modal-input-lable">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Wprowadź adres email"
+          class="modal-input"
+        />
+      </div>
+
+      <!-- Радіокнопки для інструментів -->
+      <p class="modal-radio-title">Potrzebuję sterylizować narzędzia:</p>
+      <div class="modal-radio-group">
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="toolsType"
+            value="kosmetyczne"
+            class="modal-radio"
+            checked
+          />
+          Kosmetyczne
+        </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="toolsType"
+            value="medyczne"
+            class="modal-radio"
+          />
+          Medyczne
+        </label>
+      </div>
+
+      <!-- Радіокнопки для доставки -->
+      <p class="modal-radio-title">Narzędzia będą dostarczane:</p>
+      <div class="modal-radio-group">
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="deliveryType"
+            value="osobiscie"
+            class="modal-radio"
+            checked
+          />
+          Osobiście
+        </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="deliveryType"
+            value="kurier"
+            class="modal-radio"
+          />
+          Przez firmę kurierską
+        </label>
+      </div>
+
+      <!-- Повідомлення -->
+      <div class="modal-form-group">
+        <label for="message" class="modal-input-lable">Wiadomość</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Twoja wiadomość"
+          class="modal-textarea"
+        ></textarea>
+      </div>
+      <div class=" checkbox-group">
+        <input
+          type="checkbox"
+          id="accept"
+          name="accept"
+          class="form-policy-checkbox"
+          required
+        />
+        <label for="accept" class="modal-policy-text"
+          >Akceptuję
+          <a class="" href="../private_policy.html"
+            ><span class="modal-policy-link">politykę prywatności</span> oraz
+            <a href="../regulamin.html"
+              ><span class="modal-policy-link">Regulamin</span></a
+            ></a
+          ></label
+        >
+      </div>
+      <div
+        class="g-recaptcha"
+        aria-colcount="form-recaptcha"
+        data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
+        data-action="LOGIN"
+      ></div>
+
+      <!-- Кнопка відправлення -->
+      <button type="submit" class="form-btn button">Wyślij</button>
+    </form>
+  </div>
+</div>
+
     <div class="container-header-hero">
       <header class="header">
   <div class="header-top">
@@ -143,7 +337,7 @@
     </div>
 
     <main>
-      <section class="about-section" id="about">
+		 <section class="about-section" id="about">
   <div class="container">
     <h2 class="title about-title">O NAS</h2>
     <p class="about-text">
@@ -198,7 +392,7 @@
   </div>
 </section>
 
-      <section class="advantages-section">
+		 <section class="advantages-section">
   <div class="container">
     <div class="advantages-content">
       <h2 class="title-adv">
@@ -261,7 +455,7 @@
   </div>
 </section>
 
-      <section class="tools-section" id="what">
+		 <section class="tools-section" id="what">
   <div class="container">
     <h2 class="title tools-title">CO STERYLIZUJEMY</h2>
     <p class="tools-text">
@@ -308,7 +502,7 @@
   </div>
 </section>
 
-      <section class="how-section">
+		 <section class="how-section">
   <div class="container how-container">
     <h2 class="title how-title">JAK DZIAŁAMY</h2>
     <ul class="how-list">
@@ -391,7 +585,7 @@
   </div>
 </section>
 
-      <section section-offer id="offer">
+		 <section section-offer id="offer">
   <div class="container offer-container">
     <h2 class="title offer-title">OFEROWANE ABONAMENTY</h2>
     <p class="offer-text">Podane niżej ceny są cenami brutto.</p>
@@ -402,7 +596,7 @@
         <p class="offer-item-text">
           do 20 pakietów na miesiąc </br> koszt 1 pakietu 5,50 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 20">ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 30</h3>
@@ -410,7 +604,7 @@
         <p class="offer-item-text">
           do 30 pakietów na miesiąc </br> koszt 1 pakietu 4,67 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 30" >ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 50</h3>
@@ -418,7 +612,7 @@
         <p class="offer-item-text">
           do 50 pakietów na miesiąc </br> koszt 1 pakietu 4,20 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 50" >ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 100</h3>
@@ -426,7 +620,7 @@
         <p class="offer-item-text">
           do 100 pakietów na miesiąc </br> koszt 1 pakietu 3,00 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 100" >ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 150</h3>
@@ -434,7 +628,7 @@
         <p class="offer-item-text">
           do 150 pakietów na miesiąc </br> koszt 1 pakietu 2,40 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 150">ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 200</h3>
@@ -442,7 +636,7 @@
         <p class="offer-item-text">
           do 200 pakietów na miesiąc </br> koszt 1 pakietu 2,15 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 200">ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 300</h3>
@@ -450,7 +644,7 @@
         <p class="offer-item-text">
           do 30 pakietów na miesiąc </br> koszt 1 pakietu 1,83 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 300">ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 500</h3>
@@ -458,13 +652,13 @@
         <p class="offer-item-text">
           do 500 pakietów na miesiąc </br> koszt 1 pakietu 1,56 zł
         </p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 500">ZAMAWIAM</a>
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">NA SZTUKI</h3>
         <p class="offer-item-price">6,00 zł/pakiet</p>
         <p class="offer-item-text">bez podpisania umowy</p>
-        <a href="" class="offer-item-btn button" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="NA SZTUKI">ZAMAWIAM</a>
       </li>
     </ul>
   </div>
