@@ -25,10 +25,10 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/sterylserwis.pl/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/index-Dghn68Qt.css">
+    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/index-CQ-rb7Jv.css">
   </head>
   <body>
-	  <div class="modal" id="modal">
+    <div class="modal" id="modal">
   <div class="modal-content">
     <button class="close-modal-btn" id="close-modal">&times;</button>
     <h2 class="modal-title">Formularz zamówienia</h2>
@@ -66,6 +66,7 @@
           name="companyName"
           placeholder="Wprowadź nazwę firmy"
           class="modal-input"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -76,6 +77,7 @@
           name="fullName"
           placeholder="Wprowadź imię i nazwisko"
           class="modal-input"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -86,8 +88,7 @@
           name="nip"
           placeholder="Wprowadź NIP"
           class="modal-input"
-          minlength="10"
-          maxlength="10"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -98,8 +99,7 @@
           name="pesel"
           placeholder="Wprowadź PESEL"
           class="modal-input"
-          minlength="11"
-          maxlength="11"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -191,7 +191,7 @@
           class="modal-textarea"
         ></textarea>
       </div>
-      <div class=" checkbox-group">
+      <div class="checkbox-group">
         <input
           type="checkbox"
           id="accept"
@@ -199,15 +199,16 @@
           class="form-policy-checkbox"
           required
         />
-        <label for="accept" class="modal-policy-text"
-          >Akceptuję
-          <a class="" href="../private_policy.html"
-            ><span class="modal-policy-link">politykę prywatności</span> oraz
-            <a href="../regulamin.html"
-              ><span class="modal-policy-link">Regulamin</span></a
-            ></a
-          ></label
-        >
+        <label for="accept" class="modal-policy-text">
+          Akceptuję
+          <a href="../private_policy.html"
+            ><span class="modal-policy-link">politykę prywatności</span></a
+          >
+          oraz
+          <a href="../regulamin.html"
+            ><span class="modal-policy-link">Regulamin</span></a
+          >
+        </label>
       </div>
       <div
         class="g-recaptcha"
@@ -337,7 +338,7 @@
     </div>
 
     <main>
-		 <section class="about-section" id="about">
+      <section class="about-section" id="about">
   <div class="container">
     <h2 class="title about-title">O NAS</h2>
     <p class="about-text">
@@ -392,7 +393,7 @@
   </div>
 </section>
 
-		 <section class="advantages-section">
+      <section class="advantages-section">
   <div class="container">
     <div class="advantages-content">
       <h2 class="title-adv">
@@ -455,7 +456,7 @@
   </div>
 </section>
 
-		 <section class="tools-section" id="what">
+      <section class="tools-section" id="what">
   <div class="container">
     <h2 class="title tools-title">CO STERYLIZUJEMY</h2>
     <p class="tools-text">
@@ -502,7 +503,7 @@
   </div>
 </section>
 
-		 <section class="how-section">
+      <section class="how-section">
   <div class="container how-container">
     <h2 class="title how-title">JAK DZIAŁAMY</h2>
     <ul class="how-list">
@@ -585,7 +586,7 @@
   </div>
 </section>
 
-		 <section section-offer id="offer">
+      <section section-offer id="offer">
   <div class="container offer-container">
     <h2 class="title offer-title">OFEROWANE ABONAMENTY</h2>
     <p class="offer-text">Podane niżej ceny są cenami brutto.</p>
@@ -1051,7 +1052,7 @@
     <div id="map" class="contact-google-map"></div>
   </div>
 </section>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
     </main>
 
@@ -1081,5 +1082,6 @@
 </footer>
 
 
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </body>
 </html>
