@@ -75,8 +75,8 @@
   padding: 16px;
   padding-bottom: 40px;
   padding-top: 40px;
-  max-width: 95%;
-  max-height: 95vh;
+  max-width: 100%;
+  max-height: 100%;
   margin-top: 3vh;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
