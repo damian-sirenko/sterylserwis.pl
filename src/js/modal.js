@@ -1,47 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('modal');
-  const closeModal = document.getElementById('close-modal');
-  const contractTypeInputs = document.querySelectorAll('[name="contractType"]');
-  const companyNameField = document.getElementById('company-name');
-  const fullNameField = document.getElementById('full-name');
-  const nipField = document.getElementById('nip');
-  const peselField = document.getElementById('pesel');
+  const modal = document.getElementById('modal'); // Модальне вікно
+  const modalTitle = document.querySelector('.modal-title'); // Заголовок модального вікна
+  const openModalButtons = document.querySelectorAll('.offer-item-btn'); // Кнопки "ZAMAWIAM"
+  const closeModal = document.getElementById('close-modal'); // Кнопка закриття
 
-  // Функція оновлення доступності полів
-  const updateFields = () => {
-    const selectedValue = document.querySelector(
-      '[name="contractType"]:checked'
-    ).value;
-    if (selectedValue === 'firma') {
-      companyNameField.disabled = false;
-      nipField.disabled = false;
-      fullNameField.disabled = true;
-      peselField.disabled = true;
-    } else {
-      companyNameField.disabled = true;
-      nipField.disabled = true;
-      fullNameField.disabled = false;
-      peselField.disabled = false;
-    }
-  };
-
-  // Ініціалізація стану полів
-  updateFields();
-
-  // Додати слухачів подій для перемикачів
-  contractTypeInputs.forEach(input => {
-    input.addEventListener('change', updateFields);
+  // Відкрити модальне вікно
+  openModalButtons.forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault(); // Забороняємо стандартну поведінку <a>
+      const abonament = button.dataset.abonament; // Отримуємо тип абонемента
+      if (modal && modalTitle) {
+        modalTitle.textContent = `Zamówienie: ${abonament}`; // Встановлюємо назву у модальному вікні
+        modal.classList.add('active'); // Додаємо клас для відображення модального вікна
+        document.body.style.overflow = 'hidden'; // Забороняємо прокрутку сторінки
+      }
+    });
   });
 
-  // Закриття модального вікна
-  closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Відновити прокрутку сторінки
-  });
-
-  // Відкриття модального вікна
-  setTimeout(() => {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Заборонити прокрутку сторінки
-  }, 300);
+  // Закрити модальне вікно
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('active'); // Видаляємо клас
+      setTimeout(() => {
+        modal.style.display = 'none'; // Приховуємо вікно після анімації
+        document.body.style.overflow = 'auto'; // Відновлюємо прокрутку сторінки
+      }, 500); // Час, який відповідає transition в CSS
+    });
+  }
 });
