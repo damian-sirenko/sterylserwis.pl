@@ -3,19 +3,18 @@
   position: fixed;
   bottom: -100%;
   left: 0;
-
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   justify-content: center;
   align-items: flex-end;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal.active {
   display: flex;
-  bottom: 0;
+  /* bottom: 0; */
 }
 .close-modal-btn {
   position: absolute;
@@ -38,6 +37,7 @@
   max-width: 95%;
   overflow-y: auto;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+  animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -117,4 +117,14 @@
   background-color: #fff;
   color: #4d8680;
   text-transform: uppercase;
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(100%); /* Початкове положення */
+    opacity: 0; /* Початкова прозорість */
+  }
+  to {
+    transform: translateY(0); /* Кінцеве положення */
+    opacity: 1; /* Кінцева прозорість */
+  }
 }

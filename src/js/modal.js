@@ -1,30 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal'); // Модальне вікно
-  const modalTitle = document.querySelector('.modal-title'); // Заголовок модального вікна
-  const openModalButtons = document.querySelectorAll('.offer-item-btn'); // Кнопки "ZAMAWIAM"
-  const closeModal = document.getElementById('close-modal'); // Кнопка закриття
+  const modalContent = document.querySelector('.modal-content'); // Вміст модального вікна
+  const modalTitle = document.querySelector('.modal-title'); // Заголовок
+  const openModalButtons = document.querySelectorAll('.offer-item-btn'); // Кнопки відкриття
+  const closeModalButton = document.getElementById('close-modal'); // Кнопка закриття
 
   // Відкрити модальне вікно
   openModalButtons.forEach(button => {
     button.addEventListener('click', event => {
-      event.preventDefault(); // Забороняємо стандартну поведінку <a>
-      const abonament = button.dataset.abonament; // Отримуємо тип абонемента
+      event.preventDefault(); // Заборонити стандартну поведінку посилання
+      const abonament = button.dataset.abonament; // Отримати тип абонемента
       if (modal && modalTitle) {
-        modalTitle.textContent = `Zamówienie: ${abonament}`; // Встановлюємо назву у модальному вікні
-        modal.classList.add('active'); // Додаємо клас для відображення модального вікна
-        document.body.style.overflow = 'hidden'; // Забороняємо прокрутку сторінки
+        modalTitle.textContent = `Zamówienie: ${abonament}`; // Оновити заголовок
+        modal.classList.add('active'); // Додати клас active
+        document.body.style.overflow = 'hidden'; // Заборонити прокрутку сторінки
       }
     });
   });
 
-  // Закрити модальне вікно
-  if (closeModal) {
-    closeModal.addEventListener('click', () => {
-      modal.classList.remove('active'); // Видаляємо клас
-      setTimeout(() => {
-        modal.style.display = 'none'; // Приховуємо вікно після анімації
-        document.body.style.overflow = 'auto'; // Відновлюємо прокрутку сторінки
-      }, 500); // Час, який відповідає transition в CSS
-    });
+  // Закрити модальне вікно при натисканні кнопки
+  closeModalButton.addEventListener('click', () => {
+    closeModal();
+  });
+
+  // Закрити модальне вікно при натисканні поза межами вмісту
+  modal.addEventListener('click', event => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Функція закриття модального вікна
+  function closeModal() {
+    modal.classList.remove('active'); // Видалити клас active
+    document.body.style.overflow = 'auto'; // Відновити прокрутку сторінки
   }
 });
