@@ -19,30 +19,66 @@
   bottom: 0;
   animation: fade-in 0.3s ease-in-out;
 }
-.close-modal-btn {
+/* .close-modal-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
   z-index: 21;
+  } */
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  border: 2px solid #4d8680;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box; /* Включає рамку в розміри */
+  -webkit-appearance: none; /* Скидає стилі iOS */
+  -webkit-transform: translateZ(0); /* Виправляє проблеми з рендерингом */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #4d8680;
+}
+
+.modal-close-icon {
+  fill: #4d8680;
+  width: 8px; /* Ширина і висота іконки */
+  height: 8px;
+  display: block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #fff;
 }
 
 .modal-content {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   background-color: #fff;
   border: 3px solid #4d8680;
   border-radius: 20px;
   padding: 16px;
-  max-width: 95%;
-  max-height: 100vh;
+  padding-bottom: 40px;
+  max-width: 90%;
+  max-height: 90vh;
+  margin-top: 5vh;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
-  /* transform: translateY(-20px); */
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -76,11 +112,12 @@
   gap: 8px;
 }
 .modal-radio {
+  fill: #333;
+  color: #333;
 }
 .modal-form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
 }
 .modal-input-lable {
 }
@@ -88,23 +125,48 @@
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:hover,
+.modal-input:focus {
+  background-color: #c8fffa;
 }
 .radio-group {
 }
 .modal-textarea {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   resize: vertical;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   min-height: 100px;
   width: 100%;
+  padding: 8px;
+  border-radius: 10px;
 }
+.modal-textarea:hover,
+.modal-textarea:focus {
+  background-color: #c8fffa;
+}
+.checkbox-modal {
+  margin: 0 8px;
+}
+
 .modal-policy-text {
   color: #333;
 }
 .modal-policy-link {
   color: #5680d3;
   cursor: pointer;
+  /* text-decoration: underline; */
+}
+.modal-policy-link:hover,
+.modal-policy-link:focus {
+  color: #4267b2;
+  text-decoration: underline;
+}
+.checkbox-modal:hover .modal-policy-link,
+.checkbox-modal:focus .modal-policy-link {
+  color: #4267b2;
   text-decoration: underline;
 }
 .form-btn {
@@ -126,13 +188,19 @@
   text-transform: uppercase;
 }
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slide-up {
   from {
-    transform: translateY(20px); /* Початкове положення модального вікна, щоб уникнути того, щоб воно перелітало верх */
+    transform: translateY(
+      20px
+    ); /* Початкове положення модального вікна, щоб уникнути того, щоб воно перелітало верх */
   }
   to {
     transform: translateY(0);

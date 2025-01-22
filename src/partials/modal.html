@@ -1,10 +1,14 @@
 <div class="modal" id="modal">
   <div class="modal-content">
-    <button class="close-modal-btn" id="close-modal">&times;</button>
+    <button class="modal-close-btn" type="button" id="close-modal">
+      <svg width="8" height="8" class="modal-close-icon">
+        <use href="./img/icons.svg#close_icon"></use>
+      </svg>
+    </button>
+    <!-- <button class="close-modal-btn" id="close-modal">&times;</button> -->
     <h2 class="modal-title">Formularz zamówienia</h2>
     <form id="order-form" class="modal-form">
       <!-- Вибір типу особи -->
-      <p class="modal-radio-title">Proszę o przygotowanie umowy na:</p>
       <div class="modal-radio-group">
         <label class="modal-radio-lable">
           <input
@@ -14,7 +18,7 @@
             class="modal-radio"
             checked
           />
-          Firmę
+          Firma
         </label>
         <label class="modal-radio-lable">
           <input
@@ -23,7 +27,7 @@
             value="osoba"
             class="modal-radio"
           />
-          Osobę prywatną
+          Osoba prywatna
         </label>
       </div>
 
@@ -36,6 +40,7 @@
           name="companyName"
           placeholder="Wprowadź nazwę firmy"
           class="modal-input"
+          required
           disabled
         />
       </div>
@@ -47,6 +52,7 @@
           name="fullName"
           placeholder="Wprowadź imię i nazwisko"
           class="modal-input"
+          required
           disabled
         />
       </div>
@@ -58,6 +64,7 @@
           name="nip"
           placeholder="Wprowadź NIP"
           class="modal-input"
+          required
           disabled
         />
       </div>
@@ -69,6 +76,7 @@
           name="pesel"
           placeholder="Wprowadź PESEL"
           class="modal-input"
+          required
           disabled
         />
       </div>
@@ -80,6 +88,7 @@
           name="address"
           placeholder="Wprowadź adres"
           class="modal-input"
+          required
         />
       </div>
       <div class="modal-form-group">
@@ -90,6 +99,7 @@
           name="phone"
           placeholder="Wprowadź numer telefonu"
           class="modal-input"
+          required
         />
       </div>
       <div class="modal-form-group">
@@ -100,6 +110,7 @@
           name="email"
           placeholder="Wprowadź adres email"
           class="modal-input"
+          required
         />
       </div>
 
@@ -161,7 +172,7 @@
           class="modal-textarea"
         ></textarea>
       </div>
-      <div class="checkbox-group">
+      <div class="checkbox-modal">
         <input
           type="checkbox"
           id="accept"
@@ -173,10 +184,6 @@
           Akceptuję
           <a href="../private_policy.html"
             ><span class="modal-policy-link">politykę prywatności</span></a
-          >
-          oraz
-          <a href="../regulamin.html"
-            ><span class="modal-policy-link">Regulamin</span></a
           >
         </label>
       </div>

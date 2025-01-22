@@ -106,7 +106,6 @@
 }
 .form-textarea:hover,
 .form-textarea:focus {
-  border: 3px solid #4d8680;
   background-color: #c8fffa;
 }
 .checkbox-group {

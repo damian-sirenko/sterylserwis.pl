@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const abonament = button.dataset.abonament; // Отримуємо абонемент
       if (modal && modalTitle) {
         modalTitle.textContent = `Zamówienie: ${abonament}`;
+        modalTitle.style.FontFamily = 'Montserrat, sans-serif';
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Забороняємо прокручування сторінки
         modalContent.style.overflow = 'auto';
