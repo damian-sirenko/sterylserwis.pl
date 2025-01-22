@@ -10,7 +10,7 @@
   z-index: 20;
   justify-content: center;
   align-items: flex-start;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   overflow-x: hidden;
 }
 
@@ -74,9 +74,10 @@
   border-radius: 20px;
   padding: 16px;
   padding-bottom: 40px;
-  max-width: 90%;
-  max-height: 90vh;
-  margin-top: 5vh;
+  padding-top: 40px;
+  max-width: 95%;
+  max-height: 95vh;
+  margin-top: 3vh;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
@@ -101,19 +102,19 @@
 .modal-radio-group {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: baseline;
   gap: 16px;
   flex-direction: row;
   margin-bottom: 16px;
 }
 .modal-radio-lable {
+  align-self: center;
   display: flex;
   flex-direction: row;
   gap: 8px;
 }
 .modal-radio {
-  fill: #333;
-  color: #333;
+  align-self: center;
 }
 .modal-form-group {
   display: flex;
