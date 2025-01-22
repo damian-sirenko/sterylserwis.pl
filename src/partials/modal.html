@@ -36,6 +36,7 @@
           name="companyName"
           placeholder="Wprowadź nazwę firmy"
           class="modal-input"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -46,6 +47,7 @@
           name="fullName"
           placeholder="Wprowadź imię i nazwisko"
           class="modal-input"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -56,8 +58,7 @@
           name="nip"
           placeholder="Wprowadź NIP"
           class="modal-input"
-          minlength="10"
-          maxlength="10"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -68,8 +69,7 @@
           name="pesel"
           placeholder="Wprowadź PESEL"
           class="modal-input"
-          minlength="11"
-          maxlength="11"
+          disabled
         />
       </div>
       <div class="modal-form-group">
@@ -161,7 +161,7 @@
           class="modal-textarea"
         ></textarea>
       </div>
-      <div class=" checkbox-group">
+      <div class="checkbox-group">
         <input
           type="checkbox"
           id="accept"
@@ -169,15 +169,16 @@
           class="form-policy-checkbox"
           required
         />
-        <label for="accept" class="modal-policy-text"
-          >Akceptuję
-          <a class="" href="../private_policy.html"
-            ><span class="modal-policy-link">politykę prywatności</span> oraz
-            <a href="../regulamin.html"
-              ><span class="modal-policy-link">Regulamin</span></a
-            ></a
-          ></label
-        >
+        <label for="accept" class="modal-policy-text">
+          Akceptuję
+          <a href="../private_policy.html"
+            ><span class="modal-policy-link">politykę prywatności</span></a
+          >
+          oraz
+          <a href="../regulamin.html"
+            ><span class="modal-policy-link">Regulamin</span></a
+          >
+        </label>
       </div>
       <div
         class="g-recaptcha"

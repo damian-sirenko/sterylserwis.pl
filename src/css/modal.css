@@ -6,15 +6,18 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 20;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal.active {
   display: flex;
-  /* bottom: 0; */
+  bottom: 0;
+  animation: fade-in 0.3s ease-in-out;
 }
 .close-modal-btn {
   position: absolute;
@@ -24,20 +27,24 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
+  z-index: 21;
 }
 
 .modal-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
   background-color: #fff;
   border: 3px solid #4d8680;
   border-radius: 20px;
   padding: 16px;
   max-width: 95%;
-  overflow-y: auto;
+  max-height: 100vh;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
+  /* transform: translateY(-20px); */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-title {
@@ -118,13 +125,16 @@
   color: #4d8680;
   text-transform: uppercase;
 }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes slide-up {
   from {
-    transform: translateY(100%); /* Початкове положення */
-    opacity: 0; /* Початкова прозорість */
+    transform: translateY(20px); /* Початкове положення модального вікна, щоб уникнути того, щоб воно перелітало верх */
   }
   to {
-    transform: translateY(0); /* Кінцеве положення */
-    opacity: 1; /* Кінцева прозорість */
+    transform: translateY(0);
   }
 }
