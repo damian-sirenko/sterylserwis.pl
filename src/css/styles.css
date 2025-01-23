@@ -35,8 +35,13 @@
   font-size: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  background-color: #4d8680;
+  -webkit-mask: url('./img/icons.svg#backtotop') no-repeat center;
+  mask: url('./img/icons.svg#backtotop') no-repeat center;
+  -webkit-mask-size: 60%;
+  mask-size: 60%;
 }
-.go-to-top-icon {
+.go-to-top svg {
   fill: #fff;
   width: 60%;
   height: 60%;
