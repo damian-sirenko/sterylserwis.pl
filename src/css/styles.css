@@ -38,8 +38,8 @@
 }
 .go-to-top-icon {
   fill: #fff;
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
 }
 
 .go-to-top:hover {
@@ -50,4 +50,8 @@
 .go-to-top:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(77, 134, 128, 0.5);
+}
+.go-to-top:hover .go-to-top-icon {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
