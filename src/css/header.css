@@ -66,6 +66,9 @@
 .burger-menu:focus {
   fill: #4d8680;
 }
+.menu{
+	display: none;
+}
 .header-bottom {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -104,4 +107,15 @@
 .burger-menu-wrap {
 	display: none;
 }
+.menu{
+	display: block;
+}
+.header-menu{
+	display: flex;
+
+}
+.header-menu-item{
+
+}
+
 }
