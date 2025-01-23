@@ -1,22 +1,5 @@
 @import url('./reset.css');
 @import url('./base.css');
-
-/* Sections style */
-@import url('./header.css');
-@import url('./mob_menu.css');
-@import url('./hero.css');
-@import url('./about.css');
-@import url('./advantages.css');
-@import url('./tools_to_steryl.css');
-@import url('./how_we_work.css');
-@import url('./offer.css');
-@import url('./modal.css');
-@import url('./calculator.css');
-@import url('./shipping.css');
-@import url('./faq.css');
-@import url('./contact.css');
-@import url('./footer.css');
-
 .go-to-top {
   position: fixed;
   bottom: 16px;
@@ -55,3 +38,20 @@
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+/* Sections style */
+@import url('./header.css');
+@import url('./mob_menu.css');
+@import url('./hero.css');
+@import url('./about.css');
+@import url('./advantages.css');
+@import url('./tools_to_steryl.css');
+@import url('./how_we_work.css');
+@import url('./offer.css');
+@import url('./modal.css');
+@import url('./calculator.css');
+@import url('./shipping.css');
+@import url('./faq.css');
+@import url('./contact.css');
+@import url('./footer.css');
+

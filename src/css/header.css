@@ -98,4 +98,10 @@
   .header-top-content {
     height: 160px;
   }
+  .header-logo {
+  max-width: 120px;
+}
+.burger-menu-wrap {
+	display: none;
+}
 }
