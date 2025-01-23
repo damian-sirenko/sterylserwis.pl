@@ -36,8 +36,10 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.go-to-top-icon{
-	fill: #fff;
+.go-to-top-icon {
+  fill: #fff;
+  width: 26px;
+  height: 26px;
 }
 
 .go-to-top:hover {
