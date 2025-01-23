@@ -75,9 +75,10 @@
   padding: 16px;
   padding-bottom: 40px;
   padding-top: 40px;
-  max-width: 100%;
-  max-height: 100%;
-  margin-top: 3vh;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  margin-top: 5vh;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
@@ -87,25 +88,32 @@
 .modal-title {
   font-family: Montserrat, sans-serif;
   font-size: 20px;
+  max-width: 350px;
   color: #4d8680;
   text-align: center;
-  margin-bottom: 24px;
+  margin: 0 auto;
+
 }
 
 .modal-form {
+	margin-top: 24px;
 }
 .modal-radio-title {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 8px;
+  margin-top: 24px;
+  font-weight: 600;
 }
 .modal-radio-group {
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: center;
   gap: 16px;
   flex-direction: row;
   margin-bottom: 16px;
+    /* margin: 0 auto; */
+	 text-align: center;
 }
 .modal-radio-lable {
   align-self: center;
@@ -182,7 +190,7 @@
 .form-btn:hover,
 .form-btn:focus {
   margin-top: 16px;
-  margin: 0;
+  /* margin: 0; */
   width: 120px;
   background-color: #fff;
   color: #4d8680;
@@ -200,7 +208,7 @@
 @keyframes slide-up {
   from {
     transform: translateY(
-      20px
+      80vh
     ); /* Початкове положення модального вікна, щоб уникнути того, щоб воно перелітало верх */
   }
   to {
