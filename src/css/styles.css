@@ -1,5 +1,21 @@
 @import url('./reset.css');
 @import url('./base.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./mob_menu.css');
+@import url('./hero.css');
+@import url('./about.css');
+@import url('./advantages.css');
+@import url('./tools_to_steryl.css');
+@import url('./how_we_work.css');
+@import url('./offer.css');
+@import url('./modal.css');
+@import url('./calculator.css');
+@import url('./shipping.css');
+@import url('./faq.css');
+@import url('./contact.css');
+@import url('./footer.css');
 .go-to-top {
   position: fixed;
   bottom: 16px;
@@ -7,7 +23,7 @@
   width: 50px;
   height: 50px;
   background-color: #4d8680;
-  color: white;
+  /* color: white;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -16,9 +32,9 @@
   align-items: center;
   font-size: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease; */
 }
-.go-to-top svg {
+.go-to-top-icon {
   all: unset;
   fill: #fff;
   width: 60%;
@@ -38,20 +54,4 @@
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
-
-/* Sections style */
-@import url('./header.css');
-@import url('./mob_menu.css');
-@import url('./hero.css');
-@import url('./about.css');
-@import url('./advantages.css');
-@import url('./tools_to_steryl.css');
-@import url('./how_we_work.css');
-@import url('./offer.css');
-@import url('./modal.css');
-@import url('./calculator.css');
-@import url('./shipping.css');
-@import url('./faq.css');
-@import url('./contact.css');
-@import url('./footer.css');
 
