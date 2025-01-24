@@ -171,10 +171,13 @@
     background-color: red;
     /* margin-top: 180px; */
   }
+  .title-wrap{
+	  position: absolute;
+	  top: 35%;
+
+  }
   .title-main {
     display: block;
-    position: absolute;
-    top: 370px;
     max-width: 550px;
     font-size: 32px;
     line-height: 46px;
@@ -182,16 +185,12 @@
     font-weight: 600;
     text-align: left;
   }
-  .header-subtitle {
-    position: absolute;
-    top: 530px;
-    font-weight: 600;
-    font-family: Montserrat, sans-serif;
-    font-size: 18px;
+  .header-subtitle { 
     max-width: 320px;
 	 font-size: 18px;
 	 letter-spacing: 0.03em;
     text-align: left;
 	 max-width: 250px;
+	 margin: 0;
   }
 }
