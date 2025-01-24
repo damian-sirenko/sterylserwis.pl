@@ -12,6 +12,9 @@
 }
 .header-content {
 }
+.header-address-line {
+  display: none;
+}
 .header-top {
   background-color: #4d8680;
   width: 100%;
@@ -66,8 +69,8 @@
 .burger-menu:focus {
   fill: #4d8680;
 }
-.menu{
-	display: none;
+.menu {
+  display: none;
 }
 .header-bottom {
   padding-top: 24px;
@@ -98,24 +101,97 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .header-address-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px 0 32px;
+    background-color: #31524e;
+    height: 30px;
+    color: #fff;
+    font-size: 14px;
+  }
+  .header-adress {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-header-icon {
+    fill: #fff;
+    flex: 1;
+    width: 100%;
+  }
+  .header-address-text {
+  }
+  .header-shedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .header-shedule-text {
+  }
+  .header-top {
+    border-radius: 0 0 30px 30px;
+  }
   .header-top-content {
-    height: 160px;
+    height: 130px;
   }
   .header-logo {
-  max-width: 120px;
-}
-.burger-menu-wrap {
-	display: none;
-}
-.menu{
-	display: block;
-}
-.header-menu{
-	display: flex;
-
-}
-.header-menu-item{
-
-}
-
+    max-width: 120px;
+  }
+  .burger-menu-wrap {
+    display: none;
+  }
+  .menu {
+    display: block;
+    flex: 1;
+  }
+  .header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #fff;
+  }
+  .header-menu-item {
+  }
+  .co-item {
+    display: none;
+  }
+  .header-bottom {
+    /* display: none; */
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: red;
+    /* margin-top: 180px; */
+  }
+  .title-main {
+    display: block;
+    position: absolute;
+    top: 370px;
+    max-width: 550px;
+    font-size: 32px;
+    line-height: 46px;
+    /* padding-top: 150px; */
+    font-weight: 600;
+    text-align: left;
+  }
+  .header-subtitle {
+    position: absolute;
+    top: 530px;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    max-width: 320px;
+	 font-size: 18px;
+	 letter-spacing: 0.03em;
+    text-align: left;
+	 max-width: 250px;
+  }
 }
