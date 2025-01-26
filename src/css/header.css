@@ -137,10 +137,13 @@
     border-radius: 0 0 30px 30px;
   }
   .header-top-content {
-    height: 130px;
+    height: auto;
+	 padding: 24px 0;
   }
   .header-logo {
     max-width: 120px;
+	
+
   }
   .burger-menu-wrap {
     display: none;
@@ -152,17 +155,17 @@
   .header-menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 24px;
     font-size: 16px;
     letter-spacing: 0.1em;
     color: #fff;
+	 margin-left: 24px;
   }
   .header-menu-item {
-  }
-  .co-item {
-    display: none;
+	text-transform: uppercase;
+	text-align: center;
   }
   .header-bottom {
     /* display: none; */
@@ -171,10 +174,9 @@
     background-color: red;
     /* margin-top: 180px; */
   }
-  .title-wrap{
-	  position: absolute;
-	  top: 35%;
-
+  .title-wrap {
+    position: absolute;
+    top: 35%;
   }
   .title-main {
     display: block;
@@ -185,12 +187,12 @@
     font-weight: 600;
     text-align: left;
   }
-  .header-subtitle { 
+  .header-subtitle {
     max-width: 320px;
-	 font-size: 18px;
-	 letter-spacing: 0.03em;
+    font-size: 18px;
+    letter-spacing: 0.03em;
     text-align: left;
-	 max-width: 250px;
-	 margin: 0;
+    max-width: 250px;
+    margin: 0;
   }
 }
