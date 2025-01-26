@@ -3,8 +3,6 @@
   padding-top: 100px;
   padding-bottom: 160px;
 }
-.container {
-}
 .about-title {
   color: #fff;
 }
@@ -20,3 +18,24 @@
   padding: 40px 0 40px 0;
   margin: 0 auto;
 }
+
+@media only screen and (min-width: 768px) {
+  .about-section {
+    background-color: #4d8680;
+    padding-bottom: 160px;
+    padding-top: 180px;
+	 margin-top: -80px;
+  }
+  .about-section {
+    padding-bottom: 180px;
+  }
+  .about-text {
+    line-height: 36px;
+  }
+  .about-img {
+    padding: 50px 0 50px 0;
+    margin: 0 auto;
+    width: 330px;
+  }
+}
+ 

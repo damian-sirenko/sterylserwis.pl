@@ -138,12 +138,10 @@
   }
   .header-top-content {
     height: auto;
-	 padding: 24px 0;
+    padding: 24px 0;
   }
   .header-logo {
     max-width: 120px;
-	
-
   }
   .burger-menu-wrap {
     display: none;
@@ -161,11 +159,14 @@
     font-size: 16px;
     letter-spacing: 0.1em;
     color: #fff;
-	 margin-left: 24px;
+    margin-left: 24px;
   }
   .header-menu-item {
-	text-transform: uppercase;
-	text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .co-item {
+    display: none;
   }
   .header-bottom {
     /* display: none; */
@@ -194,5 +195,10 @@
     text-align: left;
     max-width: 250px;
     margin: 0;
+  }
+}
+@media only screen and (min-width: 840px) {
+  .co-item {
+    display: block;
   }
 }
