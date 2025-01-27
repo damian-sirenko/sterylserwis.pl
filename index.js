@@ -2,7 +2,7 @@
       Masz duży wolumen narzędzi do sterylizacji. <br>
       Warto skontaktować się z nami, aby ustalić indywidualne warunki współpracy.
     `,i.value="",n.blur();return}let c=null,d=1/0;s.forEach(a=>{const u=a.price/a.packets;let l=a.price;if(o>a.packets){const p=o-a.packets;l+=p*u}l<d&&(d=l,c={...a,totalCost:l,extraPackets:o>a.packets?o-a.packets:0,costPerPacket:u.toFixed(2)})}),c?t.innerHTML=`
-      Przy ${o} pakietach miesięcznie najlepszym wyborem dla Ciebie jest abonament
+      Przy ${o} pakietach miesięcznie najlepszym wyborem dla Ciebie jest abonament 
       <strong>${c.name}</strong>.<br>
       Koszt sterylizacji jednego pakietu w tym abonamencie wynosi <strong>${c.costPerPacket} zł</strong>.<br>
       ${c.extraPackets>0?`Miesięczny koszt tego abonamentu to <strong>${c.price.toFixed(2)} zł </strong>, <br>
