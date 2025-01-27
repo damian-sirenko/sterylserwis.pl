@@ -49,6 +49,9 @@
   line-height: 24px;
   text-align: left;
 }
+  .advantages-cert-img {
+   display: none;
+  }
 .advantages-bg-img {
   width: 70%;
   max-width: 300px;
