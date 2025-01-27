@@ -28,7 +28,8 @@
   background-color: #4d8680;
   border-radius: 0 30px 30px 0;
   font-size: 16px;
-  line-height: 1.2;  overflow: hidden;
+  line-height: 1.2;
+  overflow: hidden;
 }
 /* step-header */
 .how-item-wrapper {
@@ -69,15 +70,14 @@
   font-size: 14px;
   background-color: #4d8680;
   max-height: 0;
-  border-top: 1px dotted #fff  ;
+  border-top: 1px dotted #fff;
   overflow: hidden;
   transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .how-list-item.open .item-description {
   display: block;
   animation: expand 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 500px; 
+  max-height: 500px;
 }
 @keyframes expand {
   from {
@@ -99,12 +99,18 @@
   content: attr(data-number);
 }
 
-
 @media only screen and (min-width: 768px) {
   .how-section {
-
- 
     padding-top: 180px;
-	 margin-top: -80px;
+    margin-top: -80px;
+  }
+  .how-container {
+    padding-top: 50px;
+    border-radius: 30px 30px 0 0;
+  }
+  .how-list {
+    max-width: 800px;
+	 margin: 0 auto;
+   
   }
 }

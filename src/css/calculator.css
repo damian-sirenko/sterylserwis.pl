@@ -22,6 +22,8 @@
   flex-direction: column;
   background-color: #31524e;
   padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
   border-radius: 20px;
 }
 .calc-text {
@@ -73,4 +75,22 @@
   color: #333;
   font-size: 16px;
   line-height: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .calc-section {
+    border-radius: 30px;
+    margin-top: -30px;
+  }
+  .calc-container {
+    padding-top: 60px;
+  }
+  .calc-title {
+    font-size: 28px;
+    max-width: 650px;
+    margin-bottom: 50px;
+  }
+  .calc-content {
+    border-radius: 20px;
+  }
 }

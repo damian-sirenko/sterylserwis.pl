@@ -59,7 +59,7 @@ window.calculatePlan = function calculatePlan() {
   // Відображення результату
   if (bestPlan) {
     resultDiv.innerHTML = `
-      Przy ${packets} pakietach miesięcznie najlepszym wyborem dla Ciebie jest abonament
+      Przy ${packets} pakietach miesięcznie najlepszym wyborem dla Ciebie jest abonament 
       <strong>${bestPlan.name}</strong>.<br>
       Koszt sterylizacji jednego pakietu w tym abonamencie wynosi <strong>${
         bestPlan.costPerPacket

@@ -72,6 +72,9 @@
 
 @media only screen and (min-width: 768px) {
   .offer-container {
+    padding-bottom: 130px;
+  }
+  .offer-container {
     padding-top: 180px;
     margin-top: -80px;
   }
@@ -83,8 +86,7 @@
     flex: 1 1 calc(50% - 12px); /* 2 елементи в ряд */
     max-width: calc(50% - 12px);
   }
-  .offer-item-title {
-    /* font-size: 24; */
+  .na-sztuki-item {
+    margin: 0 auto;
   }
-  
 }
