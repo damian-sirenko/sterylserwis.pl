@@ -69,6 +69,7 @@
   padding: 8px 0;
   background-color: #31524e;
 }
+
 .footer-copiring {
   font-size: 14px;
   color: #fff;
@@ -106,6 +107,12 @@
   }
   .footer-bottom {
   }
+  .footer-copiring-wrap{
+	display: flex;flex-direction: row;
+	justify-content: center;
+	gap: 4px;
+	align-items: center;;
+}
   .footer-copiring {
   }
 }

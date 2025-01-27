@@ -1,5 +1,8 @@
-.offer-container {
+.section-offer {
   background-color: #31524e;
+}
+
+.offer-container {
   padding-top: 100px;
   padding-bottom: 100px;
 }
