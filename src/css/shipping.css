@@ -1,5 +1,6 @@
 .shipping-section {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .shipping-text {
@@ -16,19 +17,18 @@
   margin-bottom: 40px;
 }
 
-
 @media only screen and (min-width: 768px) {
   .shipping-section {
     padding-top: 180px;
-	 margin-top: -80px;
+    margin-top: -80px;
   }
   .shipping-img {
-  display: block;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  height: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }

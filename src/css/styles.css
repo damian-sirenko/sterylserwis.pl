@@ -37,8 +37,8 @@
 .go-to-top-icon {
   all: unset;
   fill: #fff;
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 50%;
 }
 
 .go-to-top:hover {
