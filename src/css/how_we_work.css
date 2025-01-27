@@ -98,3 +98,13 @@
 .how-item-icon[data-number]::before {
   content: attr(data-number);
 }
+
+
+@media only screen and (min-width: 768px) {
+  .how-section {
+
+ 
+    padding-top: 180px;
+	 margin-top: -80px;
+  }
+}

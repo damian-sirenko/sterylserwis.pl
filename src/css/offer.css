@@ -69,3 +69,22 @@
   color: #4d8680;
   background-color: #fff;
 }
+
+@media only screen and (min-width: 768px) {
+  .offer-container {
+    padding-top: 180px;
+    margin-top: -80px;
+  }
+  .offer-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .offer-list-item {
+    flex: 1 1 calc(50% - 12px); /* 2 елементи в ряд */
+    max-width: calc(50% - 12px);
+  }
+  .offer-item-title {
+    /* font-size: 24; */
+  }
+  
+}
