@@ -1,0 +1,51 @@
+.reg-section {
+}
+.container-reg {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.title {
+}
+.title-reg {
+  font-size: 22px;
+  line-height: 32px;
+}
+.paragraph-title-reg {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+.paragraph-list {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 30px;
+}
+.paragraph-item {
+  text-indent: 30px;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+.paragraph-inner-list {
+  text-indent: 0;
+  list-style-type: lower-latin;
+  list-style-position: inside;
+  margin-left: 30px;
+}
+.paragraph-inner-item {
+}
+.paragraph-inner-item-dott {
+}
+.paragraph-inner-list-dott {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 30px;
+  text-indent: 0;
+}
+.paragraph-list-num {
+  margin-left: 30px;
+  text-align: justify;
+}
+.par-3-text {
+  font-weight: 600;
+  text-indent: 30px;
+}

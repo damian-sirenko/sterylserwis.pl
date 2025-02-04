@@ -16,6 +16,7 @@
 @import url('./faq.css');
 @import url('./contact.css');
 @import url('./footer.css');
+@import url('./regulamin.css');
 .go-to-top {
   position: fixed;
   bottom: 16px;
