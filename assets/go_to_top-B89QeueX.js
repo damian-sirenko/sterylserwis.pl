@@ -9,4 +9,4 @@
 			   koszt sterylizacji ${c.extraPackets} pakietów poza abonamentem wynosi <strong>${(c.extraPackets*c.costPerPacket).toFixed(2)} zł.</strong>`:"Brak dodatkowych kosztów. <br>"}
 					<br> Całkowity koszt sterylizacli ${o} pakietów miesiecznie z abonamentem <strong>${c.name}</strong> wynosi <strong>${c.totalCost.toFixed(2)} zł. </strong>
 					`:t.innerHTML="Nie znaleziono odpowiedniego abonamentu.",i.value="",n.blur()};document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".faq-item");e.forEach(s=>{s.addEventListener("click",()=>{const o=s.classList.contains("open");e.forEach(i=>i.classList.remove("open")),o||s.classList.add("open")})})});document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("goToTop");window.addEventListener("scroll",()=>{window.scrollY>300?e.style.display="flex":e.style.display="none"}),e.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"})})});
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=go_to_top-B89QeueX.js.map

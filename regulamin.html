@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon_1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regułamin | STERYL SERWIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="/sterylserwis.pl/assets/go_to_top-B89QeueX.js"></script>
+    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/go_to_top-CcwLDlnb.css">
+  </head>
+  <body>
+    <header>
+      <header class="header">
+        <div class="header-top">
+          <div class="header-address-line">
+            <div class="header-adress">
+              <svg width="16" height="16" class="top-header-icon">
+                <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#location_contacts"></use>
+              </svg>
+              <p class="header-address-text">
+                os. Dywizjonu 303 62F/LU2, Kraków
+              </p>
+            </div>
+            <div class="header-shedule">
+              <svg width="16" height="16" class="top-header-icon">
+                <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#clock"></use>
+              </svg>
+              <p class="header-shedule-text">pn.-pt. 10:00 - 18:00</p>
+            </div>
+          </div>
+          <div class="container header-container">
+            <div class="header-top-content">
+              <a href="index.html">
+                <picture>
+                  <source
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABMCAMAAACRUYNbAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAL3UExURUdwTNTU1P///4CAgP////z8/P///////////////////////////////4iIiP///////////////+3t7f////7+/vX19f///////4CAgP////////T09P////////z8/Ovr69jY2Pv7+/f39////9nZ2f////39/f////7+/v////////////7+/v39/f7+/vv7+/////////39/f///////+7u7v////b29v7+/v////Dw8Pn5+f7+/v////////////z8/N7e3v////////////z8/OXl5f////v7+/7+/v7+/vj4+PHx8evr6/7+/v////////v7++Hh4fr6+v////////////////////7+/vb29v////v7+/n5+f///8/Pz/X19fb29uvr6/39/f7+/v////////z8/P///9XV1f39/f////n5+f////39/f///////////////////////8rKyvz8/P////Ly8v39/f7+/pSUlPX19f////Dw8Pj4+P////39/fX19ff39/v7+/z8/Pn5+fT09P////////////j4+Onp6fv7+/////b29v39/f////////r6+vHx8f9dSf////7+/uvr6+3t7f39/f7+/v39/ff39/Pz8/b29v////j4+Pn5+f39/f39/fj4+P///+3t7f39/fj4+Pz8/PDw8Pz8/Pn5+fz8/Pv7+/f39/z8/P39/fn5+fj4+PLy8vn5+e3t7fX19f////T09O/v7/z8/P////r6+vz8/PHx8f////39/eDg4Ozs7O7u7pSUlP////T09P////v7+/////v7+/r6+vLy8vj4+O7u7vT09Pb29uXl5fj4+O3t7fj4+P///+7u7vX19ejo6Pv7++np6eTk5P////Ly8u/v797e3u7u7uDg4Pb29vr6+vLy8r+/v/Hx8fDw8PLy8vf39/Dw8Li4uNHR0fLy8vv7+9LS0vf39/////j4+LKysuLi4uTk5N/f3/Ly8gA1Av///3bKQsIAAAD7dFJOUwAwARBA9/448CBgl+D9As/8+Aff6PrPA5AIGAIKD81UlwcSEVgJ9MC18vrkBv0U7OjtiDOA7rfbRCHJMA6WsS/xFQ+N9t0cFa4qW1cyJRzlwda6GgvhBNiEPEZv1DeTjw1Qpjz4QirO4RgYOVC2cemffEO8eKMGe6882iwNebgiRibXQT6PnJpeZ+ylvh6mku/lSkjXj6urrTgpUGqfgt4abItgZoexNF3JbLZOlfOMqkygxc9dLKkY44d7H6zQdIJ2mqIkSqYJGX6n2E1knHPTu6TLJ7Nij3RmZk7xLWjmv29Wr5Tb7dgghIWeh2gkQrL2cZ/i8Chyg4DDQvJr1AAAB/hJREFUaN6tmndYFEcUwMcD1j25Bt4pynkXOITj8AQFo0hAkQNRQBGUoiCiaPhigEQkiiYBE0skliDmsyX2hg2TWBNN77333ntCevK9P7Izs9ydt3t6y+77A4Zpv52ZN++9mQEhEcm0QKBiWGpGyslzIEF+Uo5bOQqW9A1Q3oERaqW4uqWwrCTQyhONkF6iEHiHg7kv8NqPgWGhMtzpFdAYFXj1c7UQp1IE/B24kqXUX2SAPCW4uxPhZWkjyIDNUQqAj4PxOmkt0hKZJfK5+SzMktpmL7Stl8sdGgedkudtQjssHSgTfBpqWqW32gmGVnncqCTIjZTezPYwHJVnsr+HkJW9aTffCdVyuJNYyPK3lcJtnAzzUxh5EW6LlmGk74XaiWIFJeWLt1qyNZrRllu7Fola5icbmKzeg28Pg/dEsgenaLzd4PiIZJWYfoUV9JY7pwgsNwmneH+Crwd2jbxGUO3CVHiot+C3wVUuyBy+lBFx/hVCa27d8mYvubYPYYtgDm120aiDYVcixeRxCMkXZKb7C3g0w5XijmPhbsGAmx09QxxfWpiR0TiNdZNXKRXvzIXsYt/Mm9bx2MbJqWQXRaZaM3gwu00Z8O018JLQ4RkoN8Vr706v58n3KsIdegoahbkPUcTFSw3WKifJjR+qBPgIxIqEbE8QgqnSZ79vpt/TTLZ5ViiVmQgVV9Hk+1x+8WycSl+LDen+UBI87s56lDMTKenefaWOgPtFPqeOAL662Sf7Fgr+DKeDzrOsCViWfRehPt0mFstchNMuo9HoggwzDltnrMcG2XCEK9DApUOL3y4CjiOAb3zB26lN+RKnVWq1+umap9RqM4b9p8YynIA/5ZzKgk6G2/C6DbC6BLUycQN9wevDQDRqeosAalp8g/gTJP/pnr+v6u5Dfvfpvtpdh0//Bh9zP9XtzpVDbgtbjnzA3FYaLWoPVtM5ne2riRdzQ8v25OULwZ8OxjKUpF8LDzfnFBp+IfaUsR/gd743uNrkvF5U5Wb1OIXBl9VMD9hB1vgwSSfq9dNY7Z0kGIvcajBZzL5gWwUcFHf/LSZ+zyaEHlIFAk66Acs2ko7XZ2uhircAU6bGzkO+4HqGSRPvseR5j3HOrupQq64E9lnjewzGZ/m/ByQF+YJz2uCkv+EUjPd2DCM6H5yfKQVckgsH/IM3QEOL31m0xvp4pQT7jQuG+QW/Qc7My90f0dIQ2yoA4yqcYhY44N3LKM7kMIFHdIy1RvoB0wq7gtyjn+XkgxovMJa7sHXST7/sYbBUxBs/XO6NPnaA+jVbVwSRWwZxe73rDqIlZV2ppOyRJYNo5cWkyqMIxcL+y5vx4WUJQrLjRtln4geg6EqHpZy1jW3Kk+cDc/rKtQbveNxn3I4UuUMuglJbQBVXrM3whptopKnboCdSxK3hM7/ilKXpEI4s9Pi4+47+be7n6/pnENqkfxHXHxLxB7Q9jxU/zQRVgX5k9Mwqj64d1OGsQQOcRiynOB8W1L9bo9G0MUau3zPadTqka4A6hK5rqOXWpR/046qbcyFx7AzQYIVeA+y5wCco2notH2lTbzNowJ9v4mMV7imof39u02SmY7cyYVnDRJQGJm4bNTM/oB7wIafFhqJXAdZ5W7ZoFEDPEepKQYRTspiGYvAKBd/lvrqgYE5tzpLxnEH/Qp3pAy5w+MANDoaT3M+/CrG3RDEMzBOBzmssHQEQIrTjqjsp+AsKPnFfMCctBHz+I7V6nJ180mmwquLaq01d6OCJn93g6KlwbX1f3nKYLVAYLqbvRD4XliRrSckbFEyrXUXAOAiK1RZiN7qe+edcw1tz2k/pXu3UucFo0zQtGDT19OqiGZyThd1vo07xbpFLj130NEHB3ekjOZlJwB/a7Z/ArdTzvrDuGPyN6kzz4vciDxgN6djY6WB43lwwCt3Ot1+T7jeLBMOvkpJlomuc+knNJnpxlXQWCrj49XVo9YDfu59T5Mi+NedpizOxcFx4uFhGJ/EpQUnxKFLwmrhy5bmoYchjQmq5rp0hSRM94NUMDn515+P5Jhuh/YKg/zUU3Ck4Dd8DnkXgpnrf9Zy8aHZr9VYapV2Ih98RunkXrNN5wGMMbfUrKo/Dxp47+Qo4KzC+Y3hL0eRDzqGuzVntrVzYNfLgNNY1CQ+rAqzYacJzyAMeGOHiKmstQ3o628doBVdV5rE8eezyS86V/MPBC0SHdGNiiFgncLu+4xj5+o6YJ/GvmVZ8jpgUQ83TihgSBqkm7Rk5Ms8TS0TViUzpvh7rqG1axBdGJof2HF0fU+a4WA6wRzDkBzyPHgn2rJSUB7dUuGOh0XOUAZs3QPsUwWnd6PcNZFQrUkgKwmCNIHOhP7IjDykmZUyi8OQ2brQoN7afclwUXQpFwngmp0kYZ4KlHCkph0EbLHJPGZxruBQ7Y/90RbkofC5UiEZBmR1ljfxiG+1LxonUGLZC1uNTchj86LcwEp9Aw/2+DjwiB6xqgobU3jT8qIZ5Sd6WcsHq3qyRHSpkPqouZthK6a0mO0nwJutRYjPYJT9KhCdAkexLr2pgJNvCWVDTLP+K76Tk14XdtfCyAps53wA7pbWYDVMzlbjGjYDEM5KuX7WyNYu/bTOCXcraxCnzmIqvKhl2gYStxMBhhUx2VBzEBVz5GiMc1SnlLJpdsFYdoKSAI1UpLjbZBjZAMUCXgv4x3xH4/59opijpmYuDA5WFvY0J/gcK8Rx8vsB01wAAAABJRU5ErkJggg== 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACXCAMAAAAceiZCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABLUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////9JyxnAAAAAYdFJOUwAQ789AYJ/fgCC/MK9QcJCPoB9/b7BfwHzaBXkAAAnmSURBVHja3V3bopsqEA13EFDTpD37/7/0RE0UEMxggtLy0iZxK8sZ1lzFywU8/oifAkPcL5UO9VNo2EoBi1KARZ142U+xIWvEi0YBc/nl0Q1nxahCwLdCyncdzmsqZSysCpwYD2fW1QHmw7R+lzhzO5y5qQ0vLSXgBzmQGk3TyFiszLlthabpXnJOk4j7qhirpIAvF12daeoLmw45mviKBDxaDlX6ArQawGaYTlfyCm1VvDUuMVF2iVVlmsbJtAdEJqIO3rodom6mGtOEjvF1p+wCqkXAv8tfR1biUk93Xh2lSeebJnJYRmLkLXK2Utvj2HMS8cnZnmkS7JiL1eBSj4xFDvXoThXxFCUdln6ZCPLMbI85OIqRhypU4o5jdeAVT07oHb+mznWp2xOuTs7kLbEnZFPsxk0zDc4ZzVwQZ5qme7Zzq9sGr+pGuGc5oJvTXGqdaSPULV1dJHcw5vMKEXl5HcrfFAg5FPJZUdOU1wHOUjWAmigQMhLniFhkCPiGQVVgDCNAdkp6K8MgogZc+OYIuJgON8UIbpJQTicEgag16lp1CmOBmEORvHYOdalxwEsNKLfThVSJGB4l8ewGlqbCfg4GVj72b7TsgIujalfrlq5TwOAMUGhthZEtG4aUTfSGNFUy1j4B446iIJ6IsPifugBzMGPJEC5DIL+TVIVXw6vfgYCTSfQ2dD1pdYwFcqIt2MIGR1bVeJdRauh9H2rrb2ig+7+qwYsy+nVIhrEJljurBrDMiJJwhpb6B3uciFQw4t+j2PHBaeIf/R/2OtGvHBCUh2SSp1ckzmIKtFhvjyoJc/Wt9alo+qi2vDueQSn+unx7uC9i9B6wgAD++bm9TIGX7uwX32kLsM2pfrceDcECktiKN4lHIICAZz4gzkHKKZlsAW5y+nVk3mMLNsVa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 2x"
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABMCAMAAACRUYNbAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAL3UExURUdwTNTU1P///4CAgP////z8/P///////////////////////////////4iIiP///////////////+3t7f////7+/vX19f///////4CAgP////////T09P////////z8/Ovr69jY2Pv7+/f39////9nZ2f////39/f////7+/v////////////7+/v39/f7+/vv7+/////////39/f///////+7u7v////b29v7+/v////Dw8Pn5+f7+/v////////////z8/N7e3v////////////z8/OXl5f////v7+/7+/v7+/vj4+PHx8evr6/7+/v////////v7++Hh4fr6+v////////////////////7+/vb29v////v7+/n5+f///8/Pz/X19fb29uvr6/39/f7+/v////////z8/P///9XV1f39/f////n5+f////39/f///////////////////////8rKyvz8/P////Ly8v39/f7+/pSUlPX19f////Dw8Pj4+P////39/fX19ff39/v7+/z8/Pn5+fT09P////////////j4+Onp6fv7+/////b29v39/f////////r6+vHx8f9dSf////7+/uvr6+3t7f39/f7+/v39/ff39/Pz8/b29v////j4+Pn5+f39/f39/fj4+P///+3t7f39/fj4+Pz8/PDw8Pz8/Pn5+fz8/Pv7+/f39/z8/P39/fn5+fj4+PLy8vn5+e3t7fX19f////T09O/v7/z8/P////r6+vz8/PHx8f////39/eDg4Ozs7O7u7pSUlP////T09P////v7+/////v7+/r6+vLy8vj4+O7u7vT09Pb29uXl5fj4+O3t7fj4+P///+7u7vX19ejo6Pv7++np6eTk5P////Ly8u/v797e3u7u7uDg4Pb29vr6+vLy8r+/v/Hx8fDw8PLy8vf39/Dw8Li4uNHR0fLy8vv7+9LS0vf39/////j4+LKysuLi4uTk5N/f3/Ly8gA1Av///3bKQsIAAAD7dFJOUwAwARBA9/448CBgl+D9As/8+Aff6PrPA5AIGAIKD81UlwcSEVgJ9MC18vrkBv0U7OjtiDOA7rfbRCHJMA6WsS/xFQ+N9t0cFa4qW1cyJRzlwda6GgvhBNiEPEZv1DeTjw1Qpjz4QirO4RgYOVC2cemffEO8eKMGe6882iwNebgiRibXQT6PnJpeZ+ylvh6mku/lSkjXj6urrTgpUGqfgt4abItgZoexNF3JbLZOlfOMqkygxc9dLKkY44d7H6zQdIJ2mqIkSqYJGX6n2E1knHPTu6TLJ7Nij3RmZk7xLWjmv29Wr5Tb7dgghIWeh2gkQrL2cZ/i8Chyg4DDQvJr1AAAB/hJREFUaN6tmndYFEcUwMcD1j25Bt4pynkXOITj8AQFo0hAkQNRQBGUoiCiaPhigEQkiiYBE0skliDmsyX2hg2TWBNN77333ntCevK9P7Izs9ydt3t6y+77A4Zpv52ZN++9mQEhEcm0QKBiWGpGyslzIEF+Uo5bOQqW9A1Q3oERaqW4uqWwrCTQyhONkF6iEHiHg7kv8NqPgWGhMtzpFdAYFXj1c7UQp1IE/B24kqXUX2SAPCW4uxPhZWkjyIDNUQqAj4PxOmkt0hKZJfK5+SzMktpmL7Stl8sdGgedkudtQjssHSgTfBpqWqW32gmGVnncqCTIjZTezPYwHJVnsr+HkJW9aTffCdVyuJNYyPK3lcJtnAzzUxh5EW6LlmGk74XaiWIFJeWLt1qyNZrRllu7Fola5icbmKzeg28Pg/dEsgenaLzd4PiIZJWYfoUV9JY7pwgsNwmneH+Crwd2jbxGUO3CVHiot+C3wVUuyBy+lBFx/hVCa27d8mYvubYPYYtgDm120aiDYVcixeRxCMkXZKb7C3g0w5XijmPhbsGAmx09QxxfWpiR0TiNdZNXKRXvzIXsYt/Mm9bx2MbJqWQXRaZaM3gwu00Z8O018JLQ4RkoN8Vr706v58n3KsIdegoahbkPUcTFSw3WKifJjR+qBPgIxIqEbE8QgqnSZ79vpt/TTLZ5ViiVmQgVV9Hk+1x+8WycSl+LDen+UBI87s56lDMTKenefaWOgPtFPqeOAL662Sf7Fgr+DKeDzrOsCViWfRehPt0mFstchNMuo9HoggwzDltnrMcG2XCEK9DApUOL3y4CjiOAb3zB26lN+RKnVWq1+umap9RqM4b9p8YynIA/5ZzKgk6G2/C6DbC6BLUycQN9wevDQDRqeosAalp8g/gTJP/pnr+v6u5Dfvfpvtpdh0//Bh9zP9XtzpVDbgtbjnzA3FYaLWoPVtM5ne2riRdzQ8v25OULwZ8OxjKUpF8LDzfnFBp+IfaUsR/gd743uNrkvF5U5Wb1OIXBl9VMD9hB1vgwSSfq9dNY7Z0kGIvcajBZzL5gWwUcFHf/LSZ+zyaEHlIFAk66Acs2ko7XZ2uhircAU6bGzkO+4HqGSRPvseR5j3HOrupQq64E9lnjewzGZ/m/ByQF+YJz2uCkv+EUjPd2DCM6H5yfKQVckgsH/IM3QEOL31m0xvp4pQT7jQuG+QW/Qc7My90f0dIQ2yoA4yqcYhY44N3LKM7kMIFHdIy1RvoB0wq7gtyjn+XkgxovMJa7sHXST7/sYbBUxBs/XO6NPnaA+jVbVwSRWwZxe73rDqIlZV2ppOyRJYNo5cWkyqMIxcL+y5vx4WUJQrLjRtln4geg6EqHpZy1jW3Kk+cDc/rKtQbveNxn3I4UuUMuglJbQBVXrM3whptopKnboCdSxK3hM7/ilKXpEI4s9Pi4+47+be7n6/pnENqkfxHXHxLxB7Q9jxU/zQRVgX5k9Mwqj64d1OGsQQOcRiynOB8W1L9bo9G0MUau3zPadTqka4A6hK5rqOXWpR/046qbcyFx7AzQYIVeA+y5wCco2notH2lTbzNowJ9v4mMV7imof39u02SmY7cyYVnDRJQGJm4bNTM/oB7wIafFhqJXAdZ5W7ZoFEDPEepKQYRTspiGYvAKBd/lvrqgYE5tzpLxnEH/Qp3pAy5w+MANDoaT3M+/CrG3RDEMzBOBzmssHQEQIrTjqjsp+AsKPnFfMCctBHz+I7V6nJ180mmwquLaq01d6OCJn93g6KlwbX1f3nKYLVAYLqbvRD4XliRrSckbFEyrXUXAOAiK1RZiN7qe+edcw1tz2k/pXu3UucFo0zQtGDT19OqiGZyThd1vo07xbpFLj130NEHB3ekjOZlJwB/a7Z/ArdTzvrDuGPyN6kzz4vciDxgN6djY6WB43lwwCt3Ot1+T7jeLBMOvkpJlomuc+knNJnpxlXQWCrj49XVo9YDfu59T5Mi+NedpizOxcFx4uFhGJ/EpQUnxKFLwmrhy5bmoYchjQmq5rp0hSRM94NUMDn515+P5Jhuh/YKg/zUU3Ck4Dd8DnkXgpnrf9Zy8aHZr9VYapV2Ih98RunkXrNN5wGMMbfUrKo/Dxp47+Qo4KzC+Y3hL0eRDzqGuzVntrVzYNfLgNNY1CQ+rAqzYacJzyAMeGOHiKmstQ3o628doBVdV5rE8eezyS86V/MPBC0SHdGNiiFgncLu+4xj5+o6YJ/GvmVZ8jpgUQ83TihgSBqkm7Rk5Ms8TS0TViUzpvh7rqG1axBdGJof2HF0fU+a4WA6wRzDkBzyPHgn2rJSUB7dUuGOh0XOUAZs3QPsUwWnd6PcNZFQrUkgKwmCNIHOhP7IjDykmZUyi8OQ2brQoN7afclwUXQpFwngmp0kYZ4KlHCkph0EbLHJPGZxruBQ7Y/90RbkofC5UiEZBmR1ljfxiG+1LxonUGLZC1uNTchj86LcwEp9Aw/2+DjwiB6xqgobU3jT8qIZ5Sd6WcsHq3qyRHSpkPqouZthK6a0mO0nwJutRYjPYJT9KhCdAkexLr2pgJNvCWVDTLP+K76Tk14XdtfCyAps53wA7pbWYDVMzlbjGjYDEM5KuX7WyNYu/bTOCXcraxCnzmIqvKhl2gYStxMBhhUx2VBzEBVz5GiMc1SnlLJpdsFYdoKSAI1UpLjbZBjZAMUCXgv4x3xH4/59opijpmYuDA5WFvY0J/gcK8Rx8vsB01wAAAABJRU5ErkJggg== 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACXCAMAAAAceiZCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABLUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////9JyxnAAAAAYdFJOUwAQ789AYJ/fgCC/MK9QcJCPoB9/b7BfwHzaBXkAAAnmSURBVHja3V3bopsqEA13EFDTpD37/7/0RE0UEMxggtLy0iZxK8sZ1lzFywU8/oifAkPcL5UO9VNo2EoBi1KARZ142U+xIWvEi0YBc/nl0Q1nxahCwLdCyncdzmsqZSysCpwYD2fW1QHmw7R+lzhzO5y5qQ0vLSXgBzmQGk3TyFiszLlthabpXnJOk4j7qhirpIAvF12daeoLmw45mviKBDxaDlX6ArQawGaYTlfyCm1VvDUuMVF2iVVlmsbJtAdEJqIO3rodom6mGtOEjvF1p+wCqkXAv8tfR1biUk93Xh2lSeebJnJYRmLkLXK2Utvj2HMS8cnZnmkS7JiL1eBSj4xFDvXoThXxFCUdln6ZCPLMbI85OIqRhypU4o5jdeAVT07oHb+mznWp2xOuTs7kLbEnZFPsxk0zDc4ZzVwQZ5qme7Zzq9sGr+pGuGc5oJvTXGqdaSPULV1dJHcw5vMKEXl5HcrfFAg5FPJZUdOU1wHOUjWAmigQMhLniFhkCPiGQVVgDCNAdkp6K8MgogZc+OYIuJgON8UIbpJQTicEgag16lp1CmOBmEORvHYOdalxwEsNKLfThVSJGB4l8ewGlqbCfg4GVj72b7TsgIujalfrlq5TwOAMUGhthZEtG4aUTfSGNFUy1j4B446iIJ6IsPifugBzMGPJEC5DIL+TVIVXw6vfgYCTSfQ2dD1pdYwFcqIt2MIGR1bVeJdRauh9H2rrb2ig+7+qwYsy+nVIhrEJljurBrDMiJJwhpb6B3uciFQw4t+j2PHBaeIf/R/2OtGvHBCUh2SSp1ckzmIKtFhvjyoJc/Wt9alo+qi2vDueQSn+unx7uC9i9B6wgAD++bm9TIGX7uwX32kLsM2pfrceDcECktiKN4lHIICAZz4gzkHKKZlsAW5y+nVk3mMLNsVa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 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABMCAMAAACRUYNbAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAL3UExURUdwTNTU1P///4CAgP////z8/P///////////////////////////////4iIiP///////////////+3t7f////7+/vX19f///////4CAgP////////T09P////////z8/Ovr69jY2Pv7+/f39////9nZ2f////39/f////7+/v////////////7+/v39/f7+/vv7+/////////39/f///////+7u7v////b29v7+/v////Dw8Pn5+f7+/v////////////z8/N7e3v////////////z8/OXl5f////v7+/7+/v7+/vj4+PHx8evr6/7+/v////////v7++Hh4fr6+v////////////////////7+/vb29v////v7+/n5+f///8/Pz/X19fb29uvr6/39/f7+/v////////z8/P///9XV1f39/f////n5+f////39/f///////////////////////8rKyvz8/P////Ly8v39/f7+/pSUlPX19f////Dw8Pj4+P////39/fX19ff39/v7+/z8/Pn5+fT09P////////////j4+Onp6fv7+/////b29v39/f////////r6+vHx8f9dSf////7+/uvr6+3t7f39/f7+/v39/ff39/Pz8/b29v////j4+Pn5+f39/f39/fj4+P///+3t7f39/fj4+Pz8/PDw8Pz8/Pn5+fz8/Pv7+/f39/z8/P39/fn5+fj4+PLy8vn5+e3t7fX19f////T09O/v7/z8/P////r6+vz8/PHx8f////39/eDg4Ozs7O7u7pSUlP////T09P////v7+/////v7+/r6+vLy8vj4+O7u7vT09Pb29uXl5fj4+O3t7fj4+P///+7u7vX19ejo6Pv7++np6eTk5P////Ly8u/v797e3u7u7uDg4Pb29vr6+vLy8r+/v/Hx8fDw8PLy8vf39/Dw8Li4uNHR0fLy8vv7+9LS0vf39/////j4+LKysuLi4uTk5N/f3/Ly8gA1Av///3bKQsIAAAD7dFJOUwAwARBA9/448CBgl+D9As/8+Aff6PrPA5AIGAIKD81UlwcSEVgJ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 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAACXCAMAAAAceiZCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABLUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////9JyxnAAAAAYdFJOUwAQ789AYJ/fgCC/MK9QcJCPoB9/b7BfwHzaBXkAAAnmSURBVHja3V3bopsqEA13EFDTpD37/7/0RE0UEMxggtLy0iZxK8sZ1lzFywU8/oifAkPcL5UO9VNo2EoBi1KARZ142U+xIWvEi0YBc/nl0Q1nxahCwLdCyncdzmsqZSysCpwYD2fW1QHmw7R+lzhzO5y5qQ0vLSXgBzmQGk3TyFiszLlthabpXnJOk4j7qhirpIAvF12daeoLmw45mviKBDxaDlX6ArQawGaYTlfyCm1VvDUuMVF2iVVlmsbJtAdEJqIO3rodom6mGtOEjvF1p+wCqkXAv8tfR1biUk93Xh2lSeebJnJYRmLkLXK2Utvj2HMS8cnZnmkS7JiL1eBSj4xFDvXoThXxFCUdln6ZCPLMbI85OIqRhypU4o5jdeAVT07oHb+mznWp2xOuTs7kLbEnZFPsxk0zDc4ZzVwQZ5qme7Zzq9sGr+pGuGc5oJvTXGqdaSPULV1dJHcw5vMKEXl5HcrfFAg5FPJZUdOU1wHOUjWAmigQMhLniFhkCPiGQVVgDCNAdkp6K8MgogZc+OYIuJgON8UIbpJQTicEgag16lp1CmOBmEORvHYOdalxwEsNKLfThVSJGB4l8ewGlqbCfg4GVj72b7TsgIujalfrlq5TwOAMUGhthZEtG4aUTfSGNFUy1j4B446iIJ6IsPifugBzMGPJEC5DIL+TVIVXw6vfgYCTSfQ2dD1pdYwFcqIt2MIGR1bVeJdRauh9H2rrb2ig+7+qwYsy+nVIhrEJljurBrDMiJJwhpb6B3uciFQw4t+j2PHBaeIf/R/2OtGvHBCUh2SSp1ckzmIKtFhvjyoJc/Wt9alo+qi2vDueQSn+unx7uC9i9B6wgAD++bm9TIGX7uwX32kLsM2pfrceDcECktiKN4lHIICAZz4gzkHKKZlsAW5y+nVk3mMLNsVa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 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="/sterylserwis.pl/assets/Logo_mob_1x-q_UpQ7jr.png 1x, /sterylserwis.pl/assets/Logo_mob_1x-q_UpQ7jr.png 2x"
+                    media="(min-width: 360px)"
+                  />
+                  <img
+                    class="header-logo"
+                    src="/sterylserwis.pl/assets/Logo_mob_1x-q_UpQ7jr.png"
+                    alt="Logo"
+                  />
+                </picture>
+              </a>
+              <nav class="menu">
+                <ul class="header-menu">
+                  <li class="header-menu-item"><a href="#about">O nas</a></li>
+                  <li class="header-menu-item co-item">
+                    <a href="#what">Co sterylizujemy</a>
+                  </li>
+                  <li class="header-menu-item"><a href="#offer">Oferta</a></li>
+                  <li class="header-menu-item">
+                    <a href="#shipping">Wysyłka</a>
+                  </li>
+                  <li class="header-menu-item"><a href="#faq">FAQ</a></li>
+                  <li class="header-menu-item">
+                    <a href="#contact">Kontakt</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="burger-menu-wrap">
+                <svg width="22" height="22" class="burger-menu">
+                  <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#menu-burger"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="container header-bottom">
+          <div class="title-wrap">
+          </div>
+        </div> -->
+      </header>
+    </header>
+    <!-- <div class="container-header-hero"> -->
+    <!-- <header class="header">
+  <div class="header-top">
+    <div class="header-address-line">
+      <div class="header-adress">
+        <svg width="16" height="16" class="top-header-icon">
+          <use href="./img/icons.svg#location_contacts"></use>
+        </svg>
+        <p class="header-address-text">os. Dywizjonu 303 62F/LU2, Kraków</p>
+      </div>
+      <div class="header-shedule">
+        <svg width="16" height="16" class="top-header-icon">
+          <use href="./img/icons.svg#clock"></use>
+        </svg>
+        <p class="header-shedule-text">pn.-pt. 10:00 - 18:00</p>
+      </div>
+    </div>
+    <div class="container header-container">
+      <div class="header-top-content">
+        <a href="index.html">
+          <picture>
+            <source
+              srcset="./img/header/Logo_1x.png 1x, ./img/header/Logo_2x.png 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="./img/header/Logo_1x.png 1x, ./img/header/Logo_2x.png 2x"
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="./img/header/Logo_1x.png 1x, ./img/header/Logo_2x.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./img/header/Logo_mob_1x.png 1x,
+                ./img/header/Logo_mob_1x.png 2x
+              "
+              media="(min-width: 360px)"
+            />
+            <img
+              class="header-logo"
+              src="./img/header/Logo_mob_1x.png"
+              alt="Logo"
+            />
+          </picture>
+        </a>
+        <nav class="menu">
+          <ul class="header-menu">
+            <li class="header-menu-item"><a href="#about">O nas</a></li>
+            <li class="header-menu-item co-item">
+              <a href="#what">Co sterylizujemy</a>
+            </li>
+            <li class="header-menu-item"><a href="#offer">Oferta</a></li>
+            <li class="header-menu-item"><a href="#shipping">Wysyłka</a></li>
+            <li class="header-menu-item"><a href="#faq">FAQ</a></li>
+            <li class="header-menu-item"><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="burger-menu-wrap">
+          <svg width="22" height="22" class="burger-menu">
+            <use href="./img/icons.svg#menu-burger"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container header-bottom">
+    <div class="title-wrap">
+      <h1 class="title-main">
+        PUNKT STERYLIZACJI NARZĘDZI <br />
+        <span class="green-text">STERYL SERWIS</span>
+      </h1>
+      <h3 class="header-subtitle">
+        Działaj bezpiecznie i skutecznie razem z nami!
+      </h3>
+    </div>
+  </div>
+</header>
+ -->
+    <div class="backdrop">
+  <div class="container mob-menu-container">
+    <div class="menu-header">
+      <button class="menu-close-btn" type="button">
+        <svg width="8" height="8" class="menu-close-icon">
+          <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#close_icon"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="mob-menu">
+      <ul class="mob-menu-list">
+        <li class="mob-menu-item"><a href="#about">O nas</a></li>
+        <li class="mob-menu-item"><a href="#what">Co sterylizujemy</a></li>
+        <li class="mob-menu-item"><a href="#offer">Oferta</a></li>
+        <li class="mob-menu-item"><a href="#shipping">Wysyłka</a></li>
+        <li class="mob-menu-item"><a href="#faq">FAQ</a></li>
+        <li class="mob-menu-item"><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="line-decorator"></div>
+    <div class="mob-menu-contacts">
+      <div class="menu-address-wrap">
+        <svg width="12" height="12" class="menu-address-icon">
+          <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#house_contacts"></use>
+        </svg>
+        <p class="menu-address">os. Dywizjonu 303 62F, Kraków</p>
+      </div>
+      <div class="menu-address-wrap">
+        <svg width="12" height="12" class="menu-address-icon">
+          <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#icon-email"></use>
+        </svg>
+        <a href="mailto:sterylserwis@gmail.com">sterylserwis@gmail.com</a>
+      </div>
+      <div class="menu-address-wrap">
+        <svg width="12" height="12" class="menu-address-icon">
+          <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#phone-call"></use>
+        </svg>
+        <a href="tel:+48739015287">+48 739 015 287</a>
+      </div>
+      <div class="menu-address-wrap">
+        <svg width="12" height="12" class="menu-address-icon">
+          <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#clock"></use>
+        </svg>
+        <p class="menu-address">pon-pt: 10:00 - 18:00</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="backdrop-overlay"></div>
+
+    <!-- <section class="hero-section">
+  <div class="hero-img-wrap">
+  </div>
+  <div class="hero-contact-wrap">
+    <div class="hero-contact">
+      <svg width="22" height="22" class="hero-tel-icon">
+        <use href="./img/icons.svg#phone-call"></use>
+      </svg>
+      <a href="tel:+48739015287" class="hero-tel">739 015 287</a>
+    </div>
+  </div>
+</section>
+ -->
+    <!-- </div> -->
+
+    <main>
+      <section class="reg-section">
+        <div class="container container-reg">
+          <h2 class="title title-reg">
+            REGULAMIN PUNKTU STERYLIZACJI NARZĘDZI STERYL SERWIS
+          </h2>
+          <h3 class="paragraph-title-reg">§ 1. Postanowienia ogólne</h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Niniejszy regulamin, zwany dalej "Regulaminem", określa zasady
+              świadczenia usług sterylizacji narzędzi medycznych i kosmetycznych
+              przez Punkt Sterylizacji Narzędzi Steryl Serwis, zwany dalej
+              "Punkt Sterylizacji Narzędzi" prowadzony przez Correct Solution
+              Sp. z o.o. znajdującego się w Krakowie, os. Dywizjonu 303 62F.
+            </li>
+            <li class="paragraph-item">
+              Punkt Sterylizacji Narzędzi świadczy usługi zarówno dla firm, jak
+              i klientów indywidualnych.
+            </li>
+            <li class="paragraph-item">
+              Każdy klient korzystający z usług Punktu Sterylizacji Narzędzi ma
+              obowiązek zapoznania oraz przestrzegania niniejszego regulaminu.
+            </li>
+            <li class="paragraph-item">
+              Zamówienie usługi w Punkcie Sterylizacji Narzędzi jest
+              równoznaczne z zaakceptowaniem postanowień niniejszego Regulaminu.
+            </li>
+            <li class="paragraph-item">
+              Zamówienie usługi w Punkcie Sterylizacji Narzędzi jest
+              równoznaczne z zaakceptowaniem postanowień niniejszego Regulaminu.
+            </li>
+            <li class="paragraph-item">
+              Godziny pracy: od poniedziałku do piątku do godz. 10.00 do godz.
+              18.00. Godziny otwarcia mogą ulec zmianie. Punkt Sterylizacji
+              Narzędzi jest zamknięty w dni świąteczne oraz ustawowo wolne od
+              pracy. Punkt Sterylizacji Narzędzi zastrzega sobie prawo do
+              wydłużenia lub skrócenia czasu otwarcia.
+            </li>
+          </ol>
+          <h3 class="paragraph-title-reg">§ 2. Zakres świadczonych usług</h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Punkt Sterylizacji Narzędzi oferuje kompleksowe usługi obejmujące:
+
+              <ol class="paragraph-inner-list">
+                <li class="paragraph-inner-item">
+                  dezynfekcję właściwą w myjce ultradźwiękowej lub metodą
+                  zanurzeniową,
+                </li>
+                <li class="paragraph-inner-item">
+                  konserwację narzędzi odpowiednimi środkami (w przypadku
+                  narzędzi przegubowych),
+                </li>
+                <li class="paragraph-inner-item">
+                  pakowanie narzędzi do rękawów papierowo-foliowych,
+                </li>
+                <li class="paragraph-inner-item">
+                  sterylizację w sterylizatorze metodą ciśnieniowo-parową,
+                </li>
+                <li class="paragraph-inner-item">
+                  przechowywanie wysterylizowanych narzędzi zgodnie z normami
+                  sanitarnymi.
+                </li>
+              </ol>
+            </li>
+            <li class="paragraph-item">
+              Usługi mogą być realizowane na zasadzie:
+              <ol class="paragraph-inner-list-dott">
+                <li class="paragraph-inner-item-dott">
+                  jednorazowej sterylizacji "na sztuki" (bez podpisania umowy),
+                </li>
+                <li class="paragraph-inner-item-dott">
+                  współpracy abonamentowej. Usługi mogą być realizowane na
+                  zasadzie:
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <h3 class="paragraph-title-reg">
+            § 3. Warunki dezynfekcji i sterylizacji
+          </h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Steryl Serwis przyjmuje wyłącznie czyste oraz wstępnie
+              zdezynfekowane narzędzia.
+            </li>
+            <li class="paragraph-item">
+              Przy przekazaniu narzędzi do Steryl Serwis Klient zobowiązany jest
+              do uzupełnienia i podpisania Protokołu Przekazania Narzędzi,
+              zawierającego dane Klienta, wykaz narzędzi, ich ilość oraz
+              instrukcję do pakowania. Steryl Serwis przed przyjęciem narzędzi
+              dokonuje weryfikacji ich zgodności ilościowej oraz jakościowej. W
+              przypadku braku Protokołu Przekazania Narzędzi lub jego
+              dostarczenia w formie nieczytelnej bądź nieprawidłowo wypełnionej,
+              Steryl Serwis zastrzega sobie prawo do samodzielnego spakowania
+              narzędzi zgodnie z własnymi standardami i procedurami, zapewniając
+              ich odpowiednią ochronę, a jednocześnie nie ponosi
+              odpowiedzialności za ewentualne niezgodności ilościowe
+              przekazanych narzędzi.
+            </li>
+            <li class="paragraph-item">
+              <strong>Proces przygotowania i sterylizacji narzędzi:</strong>
+
+              <ol class="paragraph-list-num">
+                <li>
+                  3.1 Po przyjęciu narzędzi od Klienta są one poddawane
+                  właściwej dezynfekcji w specjalistycznym roztworze roboczym z
+                  zastosowaniem certyfikowanych środków dezynfekcyjnych.
+                  Dezynfekcja odbywa się metodą ultradźwiękową w myjce lub
+                  metodą zanurzeniową w dedykowanej wanience, co gwarantuje
+                  skuteczne usunięcie zanieczyszczeń organicznych i
+                  drobnoustrojów.
+                </li>
+                <li>
+                  3.2 Po zakończeniu dezynfekcji narzędzia są pozostawiane do
+                  całkowitego wyschnięcia przy użyciu wentylacji mechanicznej,
+                  zapewniającej równomierny przepływ powietrza i eliminację
+                  wilgoci.
+                </li>
+                <li>
+                  3.3 Po całkowitym wyschnięciu narzędzia przegubowe są
+                  konserwowane specjalistycznym olejkiem do konserwacji
+                  narzędzi, co zapewnia ich prawidłowe funkcjonowanie oraz
+                  ochronę przed korozją.
+                </li>
+                <li>
+                  3.4 Kolejnym krokiem jest pakowanie narzędzi po ich
+                  dezynfekcji i wysuszeniu. Proces ten odbywa się zgodnie z
+                  ustalonymi normami higienicznymi, aby zapewnić pełną
+                  skuteczność sterylizacji. Narzędzia są pakowane w rękawy
+                  papierowo-foliowe, które umożliwiają właściwe zabezpieczenie
+                  ich sterylności. Do każdego pakietu dodawany jest wskaźnik
+                  chemiczny klasy 4, potwierdzający skuteczność procesu
+                  sterylizacji. Do jednego pakietu można zapakować maksymalnie:
+                  <ol class="paragraph-inner-list-dott">
+                    zapakować maksymalnie:
+                    <li class="paragraph-inner-item-dott">
+                      zapakować maksymalnie: 4 sztuki narzędzi kosmetycznych (w
+                      tym tylko jedno narzędzie z kategorii: cążki, cęgi,
+                      nożyczki, obcinacz),
+                    </li>
+                    <li class="paragraph-inner-item-dott">
+                      2 sztuki narzędzi medycznych.
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  3.5 Zapakowane narzędzia są poddawane procesowi sterylizacji
+                  ciśnieniowo-parowej w autoklawie klasy B. Parametry
+                  sterylizacji są dostosowywane do rodzaju oraz materiału, z
+                  którego wykonane są narzędzia, zgodnie z obowiązującymi
+                  standardami. Sterylizacja odbywa się w temperaturze 121°C lub
+                  134°C, zapewniając eliminację wszelkich drobnoustrojów i pełną
+                  skuteczność procesu.
+                </li>
+                <li>
+                  3.6 Ostatnim krokiem jest przechowywanie wysterylizowanych
+                  narzędzi w specjalnej szafie przeznaczonej do przechowywania
+                  narzędzi sterylnych, aż do momentu ich odbioru przez klienta.
+                </li>
+              </ol>
+            </li>
+
+            <li class="paragraph-item">
+              Steryl Serwis nie przyjmuje do sterylizacji narzedzi:
+              <ol class="paragraph-inner-list">
+                Steryl Serwis nie przyjmuje do sterylizacji narzedzi:
+                <li class="paragraph-inner-item">
+                  jednorazowego użytku, Steryl Serwis nie przyjmuje do
+                  sterylizacji narzedzi:
+                </li>
+                <li class="paragraph-inner-item">
+                  które nie spełniają standardów higienicznych,
+                </li>
+                <li class="paragraph-inner-item">
+                  nieodpowiednio przygotowanych,
+                </li>
+                <li class="paragraph-inner-item">
+                  wykonanych z materiałów nieodpowiednich do sterylizacji
+                  paroweje,
+                </li>
+                <li class="paragraph-inner-item">
+                  posiadających śladów korozji,
+                </li>
+                <li class="paragraph-inner-item">
+                  posiadających uszkodzenia mechaniczne.
+                </li>
+              </ol>
+            </li>
+            <li class="paragraph-item">
+              W przypadku narzędzi wykonanych z materiałów innych niż stal
+              nierdzewna, Klient zobowiązany jest dostarczyć wraz z nimi
+              instrukcję użytkowania, zawierającą zalecenia producenta dotyczące
+              odpowiednich parametrów dezynfekcji oraz sterylizacji.
+            </li>
+            <li class="paragraph-item">
+              Sterylizacja jest realizowana w terminie do 24 godzin od momentu
+              dostarczenia narzędzi do Steryl Serwis.
+            </li>
+            <li class="paragraph-item">
+              Steryl Serwis ponosi odpowiedzialność za zawinioną utratę lub
+              uszkodzenie przekazanych do sterylizacji narzędzi od chwili
+              podpisania protokołu ich przyjęcia do momentu zwrotu ich
+              Klientowi.
+            </li>
+            <li class="paragraph-item">
+              Steryl Serwis gwarantuje 3-miesięczny okres sterylności narzędzi,
+              pod warunkiem stosowania zasad przechowywania (m.in. w
+              pomieszczeniach suchych, w zamkniętym pojemniku, z dala od
+              promieni słonecznych, w temperaturze 18-22°C i wilgotności
+              40-55%).
+            </li>
+            <li class="paragraph-item">
+              Steryl Serwis nie ponosi odpowiedzialności za uszkodzenie narzędzi
+              w trakcie procesu dezynfekcji oraz sterylizacji, jeśli do
+              narzędzia nie została dołączona instrukcja użytkowania, w której
+              są wyraźnie określone warunki dezynfekcji oraz sterylizacji. W
+              przypadku dotrzymania odpowiednich parametrów sterylizacji oraz
+              raportu z autoklawu, wskazującego na zakończenie procesu
+              sterylizacji sukcesem, wszelkie ewentualne uszkodzenia narzędzi
+              wynikające z ich specyfiki, niewłaściwego przygotowania do procesu
+              sterylizacji lub naturalnego zużycia pozostają poza
+              odpowiedzialnością Steryl Serwis.
+            </li>
+          </ol>
+          <h3 class="paragraph-title-reg">
+            § 4. Zasady dostarczania i odbioru narzędzi
+          </h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Narzędzia mogą być dostarczane:
+              <ol class="paragraph-inner-list-dott">
+                <li class="paragraph-inner-item-dott">osobiście do punktu</li>
+                sterylizacji,
+                <li class="paragraph-inner-item">
+                  poprzez wysyłkę do Paczkomatu InPost.
+                </li>
+              </ol>
+            </li>
+            <li class="paragraph-item">
+              Dane do nadania przesyłek do Paczkomatu: Paczkomat InPost KRA16M,
+              e-mail: sterylserwis@gmail.com, tel.: +48 739 015 287.
+            </li>
+            <li class="paragraph-item">
+              Czyste i wstępnie zdezynfekowane narzędzia powinny być dostarczone
+              w zamykanym plastikowym pudełku oznaczonym jako "Narzędzia
+              niesterylne". W przypadku wysyłki paczkomatowej do pudełka należy
+              dołączyć uzupełniony Protokół Przekazania Narzędzi. Dodatkowo
+              należy dostarczyć drugi pojemnik oznaczony jako "Narzędzia
+              sterylne", dostosowany do rodzaju i ilości narzędzi już
+              zapakowanych w rękawy papierowo-foliowe. Pojemnik ten powinien
+              zapewniać odpowiednią ochronę narzędzi oraz minimalizować ryzyko
+              ich uszkodzenia podczas transportu.
+            </li>
+            <li class="paragraph-item">
+              Klienci z Krakowa odbierają wysterylizowane narzędzia osobiście w
+              punkcie. Klienci spoza Krakowa otrzymują narzędzia przesyłką
+              zwrotną do wskazanego paczkomatu InPost organizowaną przez Steryl
+              Serwis.
+            </li>
+            <li class="paragraph-item">
+              Maksymalna częstotliwość dostarczania narzędzi w ramach abonamentu
+              wynosi dwa razy w tygodniu.
+            </li>
+            <li class="paragraph-item">
+              W przypadku dostarczenia do sterylizacji narzędzi już
+              zapakowanych, Steryl Serwis nie ponosi odpowiedzialności za
+              dezynfekcję, konserwację i pakowanie przeprowadzone samodzielnie
+              przez Klienta.
+            </li>
+            <li class="paragraph-item">
+              Steryl Serwis nie odpowiada za ewentualne opóźnienia wynikające z
+              problemów logistycznych firm kurierskich.
+            </li>
+          </ol>
+          <h3 class="paragraph-title-reg">§ 6. Ceny i płatności</h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Cena za jeden pakiet sterylizacji jest dostępna na stronie
+              internetowej www.sterylserwis.pl w aktualnym cenniku.
+            </li>
+            <li class="paragraph-item">
+              Steryl Serwis jest płatnikiem VAT i wystawia faktury VAT za
+              świadczone usługi.
+            </li>
+            <li class="paragraph-item">
+              W przypadku sterylizacji na sztuki, płatność za wykonaną usługę
+              następuje przy odbiorze narzędzi.
+            </li>
+            <li class="paragraph-item">
+              Współpraca na zasadzie abonamentu odbywa się na podstawie faktury
+              VAT, która jest wysyłana na adres e-mail klienta.
+            </li>
+            <li class="paragraph-item">
+              Przy odbiorze narzędzi bezpośrednio w punkcie Steryl Serwis
+              możliwa jest płatność gotówką, kartą płatniczą lub przelewem
+              bankowym. W przypadku przelewu bankowego obowiązuje zasada
+              przedpłaty.
+            </li>
+          </ol>
+          <h3 class="paragraph-title-reg">§ 7. Reklamacje</h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Przy odbiorze narzędzi Klient zobowiązany jest do sprawdzenia ich
+              pod kątem ilościowym oraz jakościowym.
+            </li>
+            <li class="paragraph-item">
+              Wszelkie uszkodzenia narzędzi, uszkodzenia opakowania,
+              nieprawidłowe oznaczenie daty sterylizacji lub inne niezgodności
+              powinny zostać zgłoszone natychmiast przy odbiorze.
+            </li>
+            <li class="paragraph-item">
+              Po odbiorze narzędzi Steryl Serwis nie przyjmuje reklamacji
+              dotyczących ilości, jakości narzędzi ani ewentualnych uszkodzeń
+              opakowania.
+            </li>
+            <li class="paragraph-item">
+              W przypadku stwierdzenia niezgodności przed odbiorem, Klient
+              powinien niezwłocznie poinformować obsługę Steryl Serwis w celu
+              wyjaśnienia sprawy.
+            </li>
+          </ol>
+          <h3 class="paragraph-title-reg">§ 8. Postanowienia końcowe</h3>
+          <ol class="paragraph-list">
+            <li class="paragraph-item">
+              Steryl Serwis zastrzega sobie prawo do zmiany regulaminu. Zmiany
+              wchodzą w życie w terminie 14 dni od ich opublikowania.
+            </li>
+            <li class="paragraph-item">
+              W sprawach nieuregulowanych niniejszym regulaminem obowiązują
+              przepisy Kodeksu Cywilnego.
+            </li>
+            <li class="paragraph-item">
+              Spory wynikające z realizacji usług będą rozstrzygane przez sąd
+              właściwy dla siedziby Steryl Serwis.
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-top-wrap">
+      <h3 class="footer-title">
+        Punkt sterylizacji narzędzi <br />
+        STERYL SERWIS
+      </h3>
+      <ul class="footer-menu">
+        <li class="footer-menu-item"><a href="#about">O nas</a></li>
+        <li class="fooer-menu-item"><a href="#what">Co sterylizujemy</a></li>
+        <li class="footer-menu-item"><a href="#offer">Oferta</a></li>
+        <li class="footer-menu-item"><a href="#shipping">Wysyłka</a></li>
+        <li class="footer-menu-item"><a href="#faq">FAQ</a></li>
+        <li class="footer-menu-item"><a href="#contact">Kontakt</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li class="footer-list-item">
+          <a href="../regulamin.html">Regulamin</a>
+        </li>
+        <li class="footer-list-item">
+          <a href="../private_policy.html">Polityka prywatności</a>
+        </li>
+        <li class="footer-list-item">
+          <a
+            class="footer-fb-link"
+            href="https://www.facebook.com/sterylserwis"
+          >
+            <svg width="30" height="30" class="footer-fb-icon">
+              <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#facebook_logo"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer-address">
+        osiedle Dywizjonu 303 62F,<br />
+        31-875 Kraków <br />
+        +48 739 015 287 <br />
+        sterylserwis@gmail.com
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copiring-wrap">
+      <p class="footer-copiring">© 2024 Steryl Serwis. </p>
+
+      <p class="footer-copiring">Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <div id="goToTop" class="go-to-top" title="Wróć do góry">
+      <svg width="20" height="20" class="go-to-top-icon">
+        <use href="/sterylserwis.pl/assets/icons-BiIoHcp3.svg#backtotop"></use>
+      </svg>
+    </div>
+  </body>
+</html>
