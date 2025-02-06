@@ -4,13 +4,8 @@
   justify-content: flex-start;
   min-height: auto;
 }
-
 .header {
   flex-shrink: 0;
-}
-.header-container {
-}
-.header-content {
 }
 .header-address-line {
   display: none;
@@ -278,6 +273,19 @@
   }
   .header-tel-icon {
     margin-right: 8px;
+  }
+    .title-main {
+   
+    max-width: 600px;
+    font-size: 42px;
+    line-height: 54px;
+  }
+  .header-subtitle {
+    max-width: 400px;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin: 0;
   }
 }
 
