@@ -26,7 +26,7 @@
     padding-bottom: 160px;
     padding-top: 180px;
     margin-top: -40px;
-	 border-radius:50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
   }
   .about-section {
     padding-bottom: 180px;
@@ -44,5 +44,25 @@
 @media only screen and (min-width: 1200px) {
   .about-section {
     padding-top: 140px;
+  }
+  .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 40px;
+    width: 100%;
+  }
+  .about-text-wrapper {
+    flex: 1;
+  }
+  .about-text {
+    line-height: 36px;
+  }
+  .about-img {
+    padding: 50px 0 50px 0;
+    margin: 0 auto;
+   
+    flex: 0 0 350px;
   }
 }
