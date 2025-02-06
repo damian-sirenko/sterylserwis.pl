@@ -2,6 +2,7 @@
   background-color: #4d8680;
   padding-top: 100px;
   padding-bottom: 160px;
+  z-index: 60;
 }
 .about-title {
   color: #fff;
@@ -37,5 +38,12 @@
     margin: 0 auto;
     width: 330px;
   }
+}
+
+@media only screen and (min-width: 1200px) {
+.about-section {
+
+
+}
 }
  

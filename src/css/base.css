@@ -78,6 +78,11 @@ html {
     padding: 0 32px 0 32px;
     margin: 0 auto;
   }
+  .title {
+    font-size: 42px;
+    padding-bottom: 80px;
+	 line-height: 64px;
+  } 
 }
 
 @media only screen and (min-width: 1440px) {
