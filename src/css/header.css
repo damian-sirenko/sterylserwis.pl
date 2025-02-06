@@ -219,6 +219,9 @@
     max-width: 100px;
     flex: 0 0 auto;
   }
+  .header-top {
+    border-radius: 0 0 40px 40px;
+  }
   .header-top-content {
     display: flex;
     align-items: center;
@@ -261,16 +264,16 @@
     background-color: #fff;
     color: #4d8680;
   }
-  .header-contact:hover .hero-tel {
+  .header-contact:hover .header-tel {
     color: #4d8680;
   }
-  .header-contact:focus .hero-tel {
+  .header-contact:focus .header-tel {
     color: #4d8680;
   }
-  .header-contact:hover .hero-tel-icon {
+  .header-contact:hover .header-tel-icon {
     fill: #4d8680;
   }
-  .header-contact:focus .hero-tel-icon {
+  .header-contact:focus .header-tel-icon {
     fill: #4d8680;
   }
   .header-tel-icon {
