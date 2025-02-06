@@ -102,15 +102,19 @@
 
 @media only screen and (min-width: 768px) {
   .header-address-line {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 32px 0 32px;
     background-color: #31524e;
     height: 30px;
     color: #fff;
     font-size: 14px;
-    max-width: 1200px;
+    max-width: 100%;
+    display: block;
+  }
+  .address-line-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	 max-width: 1200px;
   }
   .header-adress {
     display: flex;
