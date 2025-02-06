@@ -98,10 +98,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .hero-section {
+    height: 100vh;
+  }
   .hero-img-wrap {
     flex-grow: 1;
-	 height: 100vh;
-	 width: auto;
+    height: 100vh;
+    width: auto;
     background-image: url('../img/hero/Hero_bg_dt_1x.jpg');
     background-position: calc(100% + 400px) 100px;
     background-repeat: no-repeat;
