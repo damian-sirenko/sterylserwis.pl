@@ -35,6 +35,9 @@
 .header-logo {
   max-width: 200px;
 }
+.header-contact {
+  display: none;
+}
 .burger-menu-wrap {
   display: flex;
   align-items: center;
@@ -102,9 +105,9 @@
 
 @media only screen and (min-width: 768px) {
   .header-address-line {
-    padding: 0 32px 0 32px;
+    padding: 4px 32px 4px 32px;
     background-color: #31524e;
-    height: 30px;
+    height: auto;
     color: #fff;
     font-size: 14px;
     max-width: 100%;
@@ -114,8 +117,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-	 max-width: 1200px;
-	 margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .header-adress {
     display: flex;
@@ -129,15 +132,11 @@
     flex: 1;
     width: 100%;
   }
-  .header-address-text {
-  }
   .header-shedule {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-  }
-  .header-shedule-text {
   }
   .header-top {
     border-radius: 0 0 30px 30px;
@@ -207,4 +206,79 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .header-container {
+    margin: 0 auto;
+  }
+  .address-line-content {
+    font-size: 16px;
+    padding: 0 32px 0 32px;
+    max-width: 1200px;
+  }
+  .header-logo {
+    max-width: 120px;
+    flex: 0 0 auto;
+  }
+  .header-top-content {
+    display: flex;
+    align-items: center;
+  }
+  .menu {
+    display: block;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .header-menu {
+    gap: 20px;
+    display: inline-flex;
+  }
+  .header-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	 flex: 0 0 auto;
+    width: 200px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-tel {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.03em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-tel-icon {
+    fill: #fff;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-contact:hover,
+  .header-contact:focus {
+    background-color: #fff;
+    color: #4d8680;
+  }
+  .header-contact:hover .hero-tel {
+    color: #4d8680;
+  }
+  .header-contact:focus .hero-tel {
+    color: #4d8680;
+  }
+  .header-contact:hover .hero-tel-icon {
+    fill: #4d8680;
+  }
+  .header-contact:focus .hero-tel-icon {
+    fill: #4d8680;
+  }
+  .header-tel-icon {
+    margin-right: 8px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+.address-line-content {
+    max-width: 1440px;
+  }
 }
