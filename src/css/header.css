@@ -202,7 +202,12 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .header-container {
+  .container-header-hero {
+
+  justify-content: flex-start;
+  height: 105vh;
+}
+	.header-container {
     margin: 0 auto;
   }
   .address-line-content {
