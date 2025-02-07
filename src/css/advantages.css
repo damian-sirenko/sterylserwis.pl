@@ -7,6 +7,9 @@
   padding: 24px 16px;
   border-radius: 20px;
 }
+.advantages-content-dt {
+	display: none;
+}
 .advantages-items-wrap {
   display: flex;
   flex-direction: column;
@@ -136,6 +139,7 @@
     display: none;
   }
   .advantages-content-dt {
+    display: block;
     position: relative;
     max-width: 100%;
     background-color: #31524e;

@@ -45,12 +45,15 @@
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.header-icon{
+	fill: #fff;
+}
 .burger-menu-wrap:hover,
 .burger-menu-wrap:focus {
   background-color: #fff;
 }
-.burger-menu-wrap:hover .burger-menu,
-.burger-menu-wrap:focus .burger-menu {
+.burger-menu-wrap:hover .header-icon,
+.burger-menu-wrap:focus .header-icon {
   fill: #4d8680;
 }
 

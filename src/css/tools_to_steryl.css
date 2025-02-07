@@ -1,8 +1,7 @@
 .tools-section {
   padding-top: 100px;
 }
-.container {
-}
+
 .tools-title {
   color: #333;
 }
@@ -10,7 +9,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  perspective: 1000px; /* Для 3D-ефекту */
+  perspective: 1000px;
 }
 
 .tools-text {
@@ -37,7 +36,7 @@
   background-color: #4d8680;
   color: #fff;
   height: 320px;
-width: 100%;
+  width: 100%;
   border-radius: 20px;
   font-size: 22px;
   line-height: 36px;
@@ -109,21 +108,61 @@ width: 100%;
     margin-top: -80px;
   }
   .tools-list-item {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
- 
-  max-width: 800px;
-}
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+
+    max-width: 800px;
+  }
   .tools-text {
     font-size: 16px;
     text-indent: 30px;
     text-align: justify;
   }
-  
+
   .card-front {
     font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-tools {
+    max-width: 100%;
+  }
+  .tools-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .tools-list-item {
+    color: #fff;
+    height: 350px;
+    width: 400px;
+  }
+  .card-front,
+  .card-back {
+    border-radius: 30px;
+  }
+  .card-front {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .card-back {
+    font-size: 18px;
+    border-radius: 30px;
+  }
+  .card-back-list {
+    gap: 22px;
+  }
+}
+
+@media only screen and (min-width: 1440px){
+ .container-tools {
+    max-width: 1440px;
   }
 }
