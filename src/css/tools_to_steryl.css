@@ -137,7 +137,9 @@
     justify-content: space-between;
     gap: 0;
     max-width: 80%;
+	 padding-top: 80px;
     margin: 0 auto;
+	 min-height: 350px;
   }
   .tools-list-item {
     color: #fff;
