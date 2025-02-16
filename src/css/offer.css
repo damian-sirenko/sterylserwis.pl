@@ -93,3 +93,13 @@
     margin: 0 auto;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+	.offer-list-item {
+    flex: 1 1 calc(25% - 18px); /* 2 елементи в ряд */
+    max-width: calc(25% - 18px);
+  }
+  .na-sztuki-item{
+	max-width: 500px;
+  }
+}
