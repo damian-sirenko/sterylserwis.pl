@@ -17,7 +17,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
 }
-/* step */
 .how-list-item {
   display: flex;
   flex-direction: row;
@@ -32,20 +31,23 @@
   font-size: 16px;
   line-height: 1.2;
   overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  transition: width 600ms ease-in-out;
 }
-/* step-header */
 .how-item-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 .how-item-title {
   color: #fff;
   max-width: 70%;
   font-weight: 500;
+  flex-shrink: 0;
 }
 .how-item-icon {
   display: flex;
@@ -56,10 +58,15 @@
   font-weight: 600;
   background-color: #d9d9d9;
   color: #31524e;
+  margin-top: 2px;
+  margin-bottom: 2px;
   padding: 8px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  flex-shrink: 0;
+  transition: none;
+  margin-left: 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-description {
@@ -76,10 +83,25 @@
   overflow: hidden;
   transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.item-description-dt {
+  display: none;
+}
 .how-list-item.open .item-description {
   display: block;
   animation: expand 250ms cubic-bezier(0.4, 0, 0.2, 1);
   max-height: 500px;
+}
+.how-list-item::after {
+  content: attr(data-desc);
+  display: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+  margin-top: 12px;
+}
+.how-list-item.open::after {
+  display: block;
 }
 @keyframes expand {
   from {
@@ -93,7 +115,7 @@
 }
 
 .how-list-item.open .how-item-icon::before {
-  content: '\25BC'; /* Стрілка вниз */
+  content: '\25BC';
   font-size: 26px;
   color: #31524e;
 }
@@ -116,5 +138,128 @@
   .how-list {
     max-width: 800px;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .how-section {
+    padding-top: 180px;
+  }
+
+  .how-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .how-list-item {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    transition: width 600ms ease-in-out;
+  }
+  .how-item-title {
+    color: #fff;
+    max-width: 325px;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  /* При наведенні пункт розширюється вліво */
+  .how-list-item:hover {
+    width: 100%;
+    transition: width 600ms ease-in-out;
+  }
+  .how-list-item:not(:hover) .item-description-dt {
+    transition: opacity 0ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .how-list-item:not(:hover) {
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Додаємо контейнер для опису всередині кожного пункту */
+  .how-list-item::after {
+    content: attr(data-desc);
+    display: none;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0%;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+  }
+
+  .how-item-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item-description {
+    display: none;
+  }
+  .item-description-dt {
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    flex-grow: 1;
+    overflow: hidden;
+    max-width: 60%;
+    flex-grow: 1;
+    white-space: normal;
+    line-height: 24px;
+    transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(10px);
+  }
+  .how-item-icon {
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    background-color: #d9d9d9;
+    color: #31524e;
+    padding: 8px;
+    width: 56px;
+    flex-shrink: 0;
+    height: 56px;
+    border-radius: 50%;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .how-list-item.open .how-item-icon::before {
+    content: '\25BA';
+  }
+  .how-list-item:hover .item-description-dt {
+    visibility: visible;
+    opacity: 1;
+    left: 30%;
+    /* transform: translateY(0); */
+    transition-delay: 300ms;
+  }
+  .how-list-item.open .how-item-wrapper {
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .how-list-item.open .item-description-dt {
+    opacity: 1;
+    margin-left: 30px;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  .how-list-item.open .item-description {
+    display: none;
+  }
+  .how-list-item.open .how-item-title {
+    flex-shrink: 0;
+    width: 325px;
+	
   }
 }
