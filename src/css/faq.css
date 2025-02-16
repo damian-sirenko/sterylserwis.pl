@@ -1,10 +1,9 @@
 .faq-section {
   padding-top: 60px;
 }
-.faq-section-wrapper{
-	background-color: #31524e;
-	border-radius: 20px 20px 0 0;
-
+.faq-section-wrapper {
+  background-color: #31524e;
+  border-radius: 20px 20px 0 0;
 }
 .faq-container {
   padding-top: 40px;
@@ -63,7 +62,6 @@
   color: #c8fffa;
 }
 .faq-item.open .faq-item-icon::before {
- 
 }
 
 .faq-item-answer {
@@ -85,7 +83,7 @@
 .faq-item.open .faq-item-answer {
   display: block;
   animation: expand 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 500px;
+  max-height: 1200px;
 }
 @keyframes expand {
   from {
@@ -125,22 +123,64 @@
   border-bottom: 2px dotted #fff;
   margin-bottom: 16px;
 }
-
+.faq-insrtuction-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+.faq-instruction {
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+.faq-instruction-title {
+  font-weight: 600;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+}
 
 @media only screen and (min-width: 768px) {
   .faq-section {
     padding-top: 120px;
-	 margin-top: -80px;
+    margin-top: -80px;
   }
-  .faq-section-wrapper{
-	background-color: #31524e;
-	border-radius: 30px 30px 0 0;
-
+  .faq-section-wrapper {
+    background-color: #31524e;
+    border-radius: 30px 30px 0 0;
+  }
+  .faq-container {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border-radius: 30px 30px 0 0;
+  }
 }
-.faq-container {
-  padding-top: 50px;
-  padding-bottom: 100px;
-  border-radius: 30px 30px 0 0;
-}
 
+@media only screen and (min-width: 1200px) {
+  .faq-section-wrapper {
+    border-radius: 50px 50px 0 0;
+  }
+  .faq-container {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    border-radius: 30px 30px 0 0;
+  }
+  .faq-list {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .faq-insrtuction-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+   
+}
+  .faq-instruction {
+    flex: 1 1 calc(50% - 12px); /* 2 елементи в ряд */
+    max-width: calc(50% - 12px);
+  }
 }
