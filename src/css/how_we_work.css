@@ -8,9 +8,8 @@
 .how-container {
   padding-top: 40px;
 }
-.how-item-title-wrap{
-	max-width: 70%;
-
+.how-item-title-wrap {
+  max-width: 70%;
 }
 .how-title {
   color: #fff;
@@ -126,6 +125,9 @@
 .how-item-icon[data-number]::before {
   content: attr(data-number);
 }
+.how-image-container {
+  display: none;
+}
 
 @media only screen and (min-width: 768px) {
   .how-section {
@@ -147,15 +149,20 @@
 
 @media only screen and (min-width: 1200px) {
   .how-section {
-    padding-top: 180px;
+    padding-top: 240px;
   }
   .how-section-wrapper {
-  background-color: #31524e;
-  border-radius: 50px 50px 0 0;
-}
+    background-color: #31524e;
+    border-radius: 50px 50px 0 0;
+  }
+  .how-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   .how-list {
     display: flex;
+    position: relative;
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
@@ -172,8 +179,8 @@
     color: #fff;
     font-weight: 500;
     flex-shrink: 0;
-	 flex-grow: 0;
-	 max-width: 270px;
+    flex-grow: 0;
+    max-width: 270px;
   }
   .how-list-item:hover {
     width: 100%;
@@ -206,6 +213,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
   }
   .item-description {
     display: none;
@@ -266,14 +274,26 @@
   .how-list-item.open .how-item-title-wrap {
     position: relative;
     flex-shrink: 0;
-	 flex-grow: 0;
+    flex-grow: 0;
     width: 295px;
   }
   .how-list-item:hover .how-item-title {
     max-width: 270px;
   }
+  .how-content {
+    position: relative;
+  }
+  .how-image-container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20%;
+  }
+  .how-img {
+	width: 400px;
+  }
 }
-
 
 @media only screen and (min-width: 1440px) {
   .how-list-item {
