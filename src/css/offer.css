@@ -95,6 +95,9 @@
 }
 
 @media only screen and (min-width: 1200px) {
+	.offer-container {
+    padding-bottom: 180px;
+  }
 	.offer-list-item {
     flex: 1 1 calc(25% - 18px); /* 2 елементи в ряд */
     max-width: calc(25% - 18px);

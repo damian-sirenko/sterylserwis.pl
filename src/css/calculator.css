@@ -94,3 +94,22 @@
     border-radius: 20px;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .calc-section {
+    border-radius: 50px;
+    margin-top: -50px;
+  }
+  .calc-container {
+    padding-top: 100px;
+  }
+  .calc-title {
+    font-size: 36px;line-height: 48px;
+    max-width: 650px;
+    margin-bottom: 100px;
+  }
+  .calc-content {
+	/* font-size: 16px; */
+    border-radius: 20px;
+  }
+}
