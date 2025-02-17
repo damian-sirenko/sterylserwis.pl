@@ -9,6 +9,9 @@
   text-indent: 30px;
   text-align: justify;
 }
+.shipping-text-two-dt{
+	display: none;
+}
 .shipping-img {
   display: block;
   width: 100%;
