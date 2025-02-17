@@ -38,7 +38,7 @@
   display: block;
   margin: 0 auto;
   fill: #4267b2;
-  margin-bottom: 0;
+  margin-bottom: 50px;
   border: 2px solid #4267b2;
   padding: 8px;
   border-radius: 50%;
@@ -49,6 +49,9 @@
 .contact-fb-icon:focus {
   border: 2px solid #5680d3;
   fill: #5680d3;
+}
+.contact-form-wrap {
+  max-width: 100%;
 }
 .contact-text-pytanie {
   text-align: center;
@@ -162,12 +165,20 @@
   text-transform: uppercase;
 }
 .contact-google-map {
+  margin-top: 40px;
+  height: 300px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
 }
 
 @media only screen and (min-width: 768px) {
   .contact-section {
     margin-top: -100px;
     padding-top: 100px;
+    padding-bottom: 100px;
   }
   .contact-section-wrapper {
     margin-top: -30px;
@@ -176,19 +187,28 @@
   .contact-container {
     padding-top: 80px;
   }
+  .contact-form-wrap {
+    max-width: 600px;
+  }
   .contact-text-pytanie {
     margin: 50px auto;
   }
-   .contact-form-wrap {
-		max-width: 600px;
-		margin: 0 auto;
+  .contact-form-wrap {
+    margin: 0 auto;
   }
   .contact-form {
     border-radius: 30px;
   }
+  .contact-google-map {
+  margin-top: 80px;
+  height: 400px;
+}
 }
 
 @media only screen and (min-width: 1200px) {
+  .contact-section {
+    padding-bottom: 150px;
+  }
   .contact-section-wrapper {
     margin-top: -50px;
     border-radius: 50px 50px 0 0;
@@ -207,13 +227,13 @@
     line-height: 36px;
   }
   .contact-content {
-	position: relative;
+    position: relative;
     display: flex;
     justify-content: space-around;
-	 align-items: stretch;
+    align-items: stretch;
   }
   .contact-content::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%; /* umieszcza linię na środku kontenera */
     top: 0;
@@ -222,29 +242,33 @@
     background: #7a7a7a;
   }
 
-.contact-address {
+  .contact-address {
     font-size: 20px;
     line-height: 44px;
-	}
-	.contact-text-fb {
+  }
+  .contact-text-fb {
     font-size: 20px;
     margin-bottom: 24px;
     margin-top: 60px;
-	}
-	.contact-info-wrap {
-		margin: 0 auto;
-		max-width: 40%;
-		padding: 0 24px;
-	}
-	.contact-form-wrap {
-		max-width: 60%;
-
   }
+  .contact-info-wrap {
+    margin: 0 auto;
+    width: 50%;
+    padding: 0 24px;
+  }
+  .contact-form-wrap {
+    width: 50%;
+    padding: 0 80px;
+  }
+
   .contact-text-pytanie {
     display: none;
   }
   .contact-form {
-  margin-top: 0;
- 
+    margin-top: 0;
+  }
+  .contact-google-map {
+  margin-top: 100px;
+  height: 500px;
 }
 }

@@ -3,92 +3,137 @@
     <div class="container contact-container">
       <h2 class="title contact-title">SKONTAKTUJ SIĘ Z NAMI</h2>
       <div class="contact-content">
-      	<div class="contact-info-wrap">
-	      	<h3 class="contact-subtitle">
-		        Punkt Sterylizacji Narzędzi STERYL SERWIS
-		      </h3>
-		      <address class="contact-address">
-		        osiedle Dywizjonu 303 62F, <br />
-		        31-875 Kraków <br />
-		        <a href="tel:+48739015287">+48 739 015 287</a> <br />
-		        <a href="mailto:sterylserwis@gmail.com">sterylserwis@gmail.com</a>
-		        <br />
-		        pon - pt: 10:00 - 18:00
-		      </address>
-		      <p class="contact-text-fb">Obserwuj nas n a Facebooku!</p>
-		      <a href="https://www.facebook.com/sterylserwis">
-		        <svg width="50" height="50" class="contact-fb-icon">
-		          <use href="./img/icons.svg#facebook_logo"></use>
-		        </svg>
-		      </a>
-	      </div>
-	      <div class="contact-form-wrap">
-	      	<p class="contact-text-pytanie">Masz pytanie? Napisz do nas!</p>
-		      <form
-		        action="mailto:sterylserwis@gmail.com"
-		        method="post"
-		        enctype="text/plain"
-		        onsubmit="return validateForm()"
-		        class="contact-form"
-		      >
-		        <div class="contact-form-group">
-		          <label for="name" class="form-label">Imię</label>
-		          <input
-		            type="text"
-		            id="name"
-		            name="name"
-		            class="form-input"
-		            required
-		          />
-		        </div>
-		        <div class="contact-form-group-email">
-		          <label for="email" class="form-label">E-mail</label>
-		          <input
-		            type="email"
-		            id="email"
-		            name="email"
-		            class="form-input"
-		            required
-		          />
-		        </div>
-		        <div class="contact-form-group-msg">
-		          <label for="message" class="form-label">Wiadomość</label>
-		          <textarea
-		            id="message"
-		            name="message"
-		            rows="5"
-		            class="form-textarea"
-		            required
-		          ></textarea>
-		        </div>
-		        <div class="form-group checkbox-group">
-		          <input
-		            type="checkbox"
-		            id="accept"
-		            name="accept"
-		            class="form-policy-checkbox"
-		            required
-		          />
-		          <label for="accept" class="form-policy-text"
-		            >Akceptuję
-		            <a class="link-policy" href="../private_policy.html"
-		              >politykę prywatności</a
-		            ></label
-		          >
-		        </div>
-		        <div
-		          class="g-recaptcha"
-		          aria-colcount="form-recaptcha"
-		          data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
-		          data-action="LOGIN"
-		        ></div>
-		        <div class="form-group">
-		          <button type="submit" class="form-btn button">Wyślij</button>
-		        </div>
-		      </form>
-		      <div id="map" class="contact-google-map"></div>
-	      </div>
+        <div class="contact-info-wrap">
+          <h3 class="contact-subtitle">
+            Punkt Sterylizacji Narzędzi STERYL SERWIS
+          </h3>
+          <address class="contact-address">
+            osiedle Dywizjonu 303 62F, <br />
+            31-875 Kraków <br />
+            <a href="tel:+48739015287">+48 739 015 287</a> <br />
+            <a href="mailto:sterylserwis@gmail.com">sterylserwis@gmail.com</a>
+            <br />
+            pon - pt: 10:00 - 18:00
+          </address>
+          <p class="contact-text-fb">Obserwuj nas n a Facebooku!</p>
+          <a href="https://www.facebook.com/sterylserwis">
+            <svg width="50" height="50" class="contact-fb-icon">
+              <use href="./img/icons.svg#facebook_logo"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="contact-form-wrap">
+          <p class="contact-text-pytanie">Masz pytanie? Napisz do nas!</p>
+          <form
+            action="mailto:sterylserwis@gmail.com"
+            method="post"
+            enctype="text/plain"
+            onsubmit="return validateForm()"
+            class="contact-form"
+          >
+            <div class="contact-form-group">
+              <label for="name" class="form-label">Imię</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="contact-form-group-email">
+              <label for="email" class="form-label">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="contact-form-group-msg">
+              <label for="message" class="form-label">Wiadomość</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="form-textarea"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+              <input
+                type="checkbox"
+                id="accept"
+                name="accept"
+                class="form-policy-checkbox"
+                required
+              />
+              <label for="accept" class="form-policy-text"
+                >Akceptuję
+                <a class="link-policy" href="../private_policy.html"
+                  >politykę prywatności</a
+                ></label
+              >
+            </div>
+            <div
+              class="g-recaptcha"
+              aria-colcount="form-recaptcha"
+              data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
+              data-action="LOGIN"
+            ></div>
+            <div class="form-group">
+              <button type="submit" class="form-btn button">Wyślij</button>
+            </div>
+          </form>
+        </div>
       </div>
+      <div
+        id="map"
+        class="contact-google-map"
+        center="40.12150192260742,-100.45039367675781"
+        zoom="4"
+      ></div>
     </div>
   </div>
 </section>
+<script>
+  (g => {
+    var h,
+      a,
+      k,
+      p = 'The Google Maps JavaScript API',
+      c = 'google',
+      l = 'importLibrary',
+      q = '__ib__',
+      m = document,
+      b = window;
+    b = b[c] || (b[c] = {});
+    var d = b.maps || (b.maps = {}),
+      r = new Set(),
+      e = new URLSearchParams(),
+      u = () =>
+        h ||
+        (h = new Promise(async (f, n) => {
+          await (a = m.createElement('script'));
+          e.set('libraries', [...r] + '');
+          for (k in g)
+            e.set(
+              k.replace(/[A-Z]/g, t => '_' + t[0].toLowerCase()),
+              g[k]
+            );
+          e.set('callback', c + '.maps.' + q);
+          a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+          d[q] = f;
+          a.onerror = () => (h = n(Error(p + ' could not load.')));
+          a.nonce = m.querySelector('script[nonce]')?.nonce || '';
+          m.head.append(a);
+        }));
+    d[l]
+      ? console.warn(p + ' only loads once. Ignoring:', g)
+      : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+  })({
+    key: 'AIzaSyAj1Qy-fnSDz-mJjTbTTYesRz-gyKtpOPg',
+    v: 'weekly',
+  });
+</script>
