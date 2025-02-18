@@ -137,4 +137,8 @@
   .footer-menu {
     display: block;
   }
+  /* .footer-menu-item:focus {
+    color: #c8fffa;
+    text-decoration: underline;
+  } */
 }

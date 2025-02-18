@@ -1,33 +1,26 @@
-h1,
-h2,
-h3 {
-  color: #31524e;
-}
 .policy-container {
   padding-top: 40px;
 }
-h2 {
+.policy-subtitle {
   margin-top: 30px;
   margin-bottom: 10px;
+  color: #333;
 }
-p {
+.policy-text {
   margin-bottom: 15px;
   text-align: justify;
 }
-ul {
-  margin-left: 20px;
-  margin-bottom: 15px;
+.policy-list {
+  margin-left: 40px;
+  margin-bottom: 12px;
+  list-style-type: disc;
+  font-size: 16px;
 }
-a {
-  color: #31524e;
+.policy-link {
+  color: #556edc;
   text-decoration: none;
 }
-a:hover {
+.policy-link:hover {
   text-decoration: underline;
 }
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #777;
-}
+
