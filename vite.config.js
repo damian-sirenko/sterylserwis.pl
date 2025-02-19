@@ -5,10 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => ({
-  base: './',
-  define: {
-    [command === 'serve' ? 'global' : '_global']: {},
-  },
+  base: '/sterylserwis.pl/', // ВАЖЛИВО! Використовуємо відносні шляхи, щоб уникнути проблем
   root: 'src',
   build: {
     sourcemap: true,
@@ -21,12 +18,7 @@ export default defineConfig(({ command }) => ({
           }
         },
         entryFileNames: '[name].js',
-        assetFileNames: assetInfo => {
-          if (assetInfo.name && assetInfo.name.endsWith('.html')) {
-            return '[name].[ext]';
-          }
-          return 'assets/[name]-[hash][extname]';
-        },
+        assetFileNames: 'assets/[name]-[hash][extname]', // Виправляємо шлях до ресурсів
       },
     },
     outDir: '../dist',
