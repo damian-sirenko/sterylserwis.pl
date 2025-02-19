@@ -6,6 +6,8 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
+    // Додаємо базовий шлях, щоб всі шляхи до ресурсів були відносними
+    base: '/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -21,11 +23,14 @@ export default defineConfig(({ command }) => {
             }
           },
           entryFileNames: chunkInfo => {
-            if (chunkInfo.name === 'commonHelpers') {
-              return 'commonHelpers.js';
-            }
             return '[name].js';
           },
+          //  entryFileNames: chunkInfo => {
+          //    if (chunkInfo.name === 'commonHelpers') {
+          //      return 'commonHelpers.js';
+          //    }
+          //    return '[name].js';
+          //  },
           assetFileNames: assetInfo => {
             if (assetInfo.name && assetInfo.name.endsWith('.html')) {
               return '[name].[ext]';
@@ -38,12 +43,12 @@ export default defineConfig(({ command }) => {
       emptyOutDir: true,
     },
     server: {
-      host: '127.0.0.1', // Це твій локальний хост
-      port: 5173, // Це стандартний порт Vite
+      host: '127.0.0.1', // Локальний хост
+      port: 5173, // Стандартний порт Vite
     },
     plugins: [
       injectHTML(),
-      FullReload(['./src/**/**.html']),
+      FullReload(['./src/**/*.html']),
       SortCss({
         sort: 'mobile-first',
       }),
