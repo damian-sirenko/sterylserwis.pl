@@ -25,9 +25,10 @@
       referrerpolicy="no-referrer"
     />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="module" crossorigin src="/sterylserwis.pl/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/sterylserwis.pl/assets/go_to_top-DKJjBay5.js">
-    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/styles-CqDdad7R.css">
+    <link rel="modulepreload" crossorigin href="/sterylserwis.pl/assets/go_to_top-Cq5DELgf.js">
+    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/styles-CF7vp0hZ.css">
   </head>
   <body>
     <div class="modal" id="modal">
@@ -39,14 +40,24 @@
     </button>
     <!-- <button class="close-modal-btn" id="close-modal">&times;</button> -->
     <h2 class="modal-title">Formularz zamówienia</h2>
-    <form id="order-form" class="modal-form">
-      <!-- Вибір типу особи -->
+
+    <form id="modal-form" class="modal-form" method="POST">
+      <input
+        type="hidden"
+        name="access_key"
+        value="674a91e4-cb0e-4621-a6fe-33522af79ee4"
+      />
+      <input
+        type="hidden"
+        name="Nazwa_formularzu"
+        value="Formularz zamówienia abonamentu"
+      />
       <div class="modal-radio-group">
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="contractType"
-            value="firma"
+            name="Typ_klienta"
+            value="Firma"
             class="modal-radio"
             checked
           />
@@ -55,8 +66,8 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="contractType"
-            value="osoba"
+            name="Typ_klienta"
+            value="Osoba prywatna"
             class="modal-radio"
           />
           Osoba prywatna
@@ -69,8 +80,7 @@
         <input
           type="text"
           id="company-name"
-          name="companyName"
-          placeholder="Wprowadź nazwę firmy"
+          name="Nazwa_firmy"
           class="modal-input"
           required
           disabled
@@ -81,8 +91,7 @@
         <input
           type="text"
           id="full-name"
-          name="fullName"
-          placeholder="Wprowadź imię i nazwisko"
+          name="Imie_i_nazwisko"
           class="modal-input"
           required
           disabled
@@ -93,8 +102,7 @@
         <input
           type="number"
           id="nip"
-          name="nip"
-          placeholder="Wprowadź NIP"
+          name="Nip"
           class="modal-input"
           required
           disabled
@@ -105,8 +113,7 @@
         <input
           type="number"
           id="pesel"
-          name="pesel"
-          placeholder="Wprowadź PESEL"
+          name="Pesel"
           class="modal-input"
           required
           disabled
@@ -117,8 +124,7 @@
         <input
           type="text"
           id="address"
-          name="address"
-          placeholder="Wprowadź adres"
+          name="Adres"
           class="modal-input"
           required
         />
@@ -128,8 +134,7 @@
         <input
           type="tel"
           id="phone"
-          name="phone"
-          placeholder="Wprowadź numer telefonu"
+          name="Telefon"
           class="modal-input"
           required
         />
@@ -139,8 +144,7 @@
         <input
           type="email"
           id="email"
-          name="email"
-          placeholder="Wprowadź adres email"
+          name="Email"
           class="modal-input"
           required
         />
@@ -152,7 +156,7 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="toolsType"
+            name="Rodzaj_narzędzi"
             value="kosmetyczne"
             class="modal-radio"
             checked
@@ -162,7 +166,7 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="toolsType"
+            name="Rodzaj_narzędzi"
             value="medyczne"
             class="modal-radio"
           />
@@ -171,12 +175,12 @@
       </div>
 
       <!-- Радіокнопки для доставки -->
-      <p class="modal-radio-title">Narzędzia będą dostarczane:</p>
+      <p class="modal-radio-title">Sposób dostawy narzedzi:</p>
       <div class="modal-radio-group">
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="deliveryType"
+            name="Dostarczenie"
             value="osobiscie"
             class="modal-radio"
             checked
@@ -186,12 +190,34 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="deliveryType"
+            name="Dostarczenie"
             value="kurier"
             class="modal-radio"
           />
-          Przez firmę kurierską
+          Nasz kurier w Krakowie
         </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="Dostarczenie"
+            value="paczkomat"
+            class="modal-radio"
+          />
+          Paczkomat InPost
+        </label>
+      </div>
+
+      <div class="modal-form-group">
+        <label for="start-date" class="modal-input-lable"
+          >Data rozpoczęcia współpracy</label
+        >
+        <input
+          type="date"
+          id="start-date"
+          name="Data_rozpoczecia"
+          class="modal-input"
+          required
+        />
       </div>
 
       <!-- Повідомлення -->
@@ -199,8 +225,7 @@
         <label for="message" class="modal-input-lable">Wiadomość</label>
         <textarea
           id="message"
-          name="message"
-          placeholder="Twoja wiadomość"
+          name="Wiadomosc"
           class="modal-textarea"
         ></textarea>
       </div>
@@ -208,7 +233,7 @@
         <input
           type="checkbox"
           id="accept"
-          name="accept"
+          name="Private-policy"
           class="form-policy-checkbox"
           required
         />
@@ -219,12 +244,17 @@
           >
         </label>
       </div>
-      <div
+
+      <!-- <div
         class="g-recaptcha"
         aria-colcount="form-recaptcha"
         data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
         data-action="LOGIN"
-      ></div>
+      ></div> -->
+
+      <div id="modal-status" class="modal-status hidden">
+        <p id="modal-status-message"></p>
+      </div>
 
       <!-- Кнопка відправлення -->
       <button type="submit" class="form-btn button">Wyślij</button>
@@ -919,65 +949,89 @@
         <h3 class="offer-item-title">STERYL 20</h3>
         <p class="offer-item-price">110,00 zł/mies</p>
         <p class="offer-item-text">
-          do 20 pakietów na miesiąc </br> koszt 1 pakietu 5,50 zł
+          do 20 pakietów na miesiąc <br />
+          koszt 1 pakietu 5,50 zł
         </p>
-        <a href="#" class="offer-item-btn button" data-abonament="STERYL 20">ZAMAWIAM</a>
+        <a href="#" class="offer-item-btn button" data-abonament="STERYL 20"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 30</h3>
         <p class="offer-item-price">140,00 zł/mies</p>
         <p class="offer-item-text">
-          do 30 pakietów na miesiąc </br> koszt 1 pakietu 4,67 zł
+          do 30 pakietów na miesiąc <br />
+          koszt 1 pakietu 4,67 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 30" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 30"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 50</h3>
         <p class="offer-item-price">210,00 zł/mies</p>
         <p class="offer-item-text">
-          do 50 pakietów na miesiąc </br> koszt 1 pakietu 4,20 zł
+          do 50 pakietów na miesiąc <br />
+          koszt 1 pakietu 4,20 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 50" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 50"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 100</h3>
         <p class="offer-item-price">300,00 zł/mies</p>
         <p class="offer-item-text">
-          do 100 pakietów na miesiąc </br> koszt 1 pakietu 3,00 zł
+          do 100 pakietów na miesiąc <br />
+          koszt 1 pakietu 3,00 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 100" >ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 100"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 150</h3>
         <p class="offer-item-price">360,00 zł/mies</p>
         <p class="offer-item-text">
-          do 150 pakietów na miesiąc </br> koszt 1 pakietu 2,40 zł
+          do 150 pakietów na miesiąc <br />
+          koszt 1 pakietu 2,40 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 150">ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 150"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 200</h3>
         <p class="offer-item-price">430,00 zł/mies</p>
         <p class="offer-item-text">
-          do 200 pakietów na miesiąc </br> koszt 1 pakietu 2,15 zł
+          do 200 pakietów na miesiąc <br />
+          koszt 1 pakietu 2,15 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 200">ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 200"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 300</h3>
         <p class="offer-item-price">550,00 zł/mies</p>
         <p class="offer-item-text">
-          do 30 pakietów na miesiąc </br> koszt 1 pakietu 1,83 zł
+          do 30 pakietów na miesiąc <br />
+          koszt 1 pakietu 1,83 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 300">ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 300"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 500</h3>
         <p class="offer-item-price">780,00 zł/mies</p>
         <p class="offer-item-text">
-          do 500 pakietów na miesiąc </br> koszt 1 pakietu 1,56 zł
+          do 500 pakietów na miesiąc <br />
+          koszt 1 pakietu 1,56 zł
         </p>
-        <a href="" class="offer-item-btn button" data-abonament="STERYL 500">ZAMAWIAM</a>
+        <a href="" class="offer-item-btn button" data-abonament="STERYL 500"
+          >ZAMAWIAM</a
+        >
       </li>
       <li class="offer-list-item na-sztuki-item">
         <h3 class="offer-item-title">NA SZTUKI</h3>
@@ -1388,13 +1442,17 @@
         </div>
         <div class="contact-form-wrap">
           <p class="contact-text-pytanie">Masz pytanie? Napisz do nas!</p>
-          <form
-            action="mailto:sterylserwis@gmail.com"
-            method="post"
-            enctype="text/plain"
-            onsubmit="return validateForm()"
-            class="contact-form"
-          >
+          <form method="POST" id="contact-form" class="contact-form">
+            <input
+              type="hidden"
+              name="access_key"
+              value="674a91e4-cb0e-4621-a6fe-33522af79ee4"
+            />
+            <input
+              type="hidden"
+              name="form_name"
+              value="Formularz kontaktowy"
+            />
             <div class="contact-form-group">
               <label for="name" class="form-label">Imię</label>
               <input
@@ -1440,16 +1498,44 @@
                 ></label
               >
             </div>
-            <div
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <!-- Спінер -->
+            <div id="spinner" class="sending-text" style="display: none">
+              Wysyłanie<span class="dot-1">.</span><span class="dot-2">.</span
+              ><span class="dot-3">.</span>
+            </div>
+
+            <!-- <div id="form-status-modal" class="modal-window hidden">
+					<div class="modal-content">
+						<p id="form-status-message"></p>
+						<button id="close-modal" class="close-modal-btn">OK</button>
+					</div>
+            </div> -->
+
+            <!-- <div
               class="g-recaptcha"
               aria-colcount="form-recaptcha"
-              data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
-              data-action="LOGIN"
-            ></div>
+              data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
+            ></div> -->
             <div class="form-group">
               <button type="submit" class="form-btn button">Wyślij</button>
+              <p id="form-status" class="form-status" style="display: none"></p>
             </div>
           </form>
+
+          <script
+            src="https://www.google.com/recaptcha/api.js"
+            async
+            defer
+          ></script>
+          <!-- <script src="../js/contact.js"></script> -->
         </div>
       </div>
       <div
