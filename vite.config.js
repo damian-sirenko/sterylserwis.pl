@@ -5,7 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => ({
-  base: '/sterylserwis.pl/', // ВАЖЛИВО! Використовуємо відносні шляхи, щоб уникнути проблем
+//   base: './', // ВАЖЛИВО! Використовуємо відносні шляхи, щоб уникнути проблем
   root: 'src',
   build: {
     sourcemap: true,
@@ -28,6 +28,7 @@ export default defineConfig(({ command }) => ({
     host: '127.0.0.1',
     port: 5173,
   },
+
   plugins: [
     injectHTML(),
     FullReload(['./src/**/*.html']),

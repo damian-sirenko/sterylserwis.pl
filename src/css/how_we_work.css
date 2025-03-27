@@ -166,6 +166,7 @@
     flex-direction: column;
     max-width: 100%;
     margin: 0 auto;
+	 z-index: 20;
   }
 
   .how-list-item {

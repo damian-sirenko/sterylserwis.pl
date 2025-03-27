@@ -7,14 +7,24 @@
     </button>
     <!-- <button class="close-modal-btn" id="close-modal">&times;</button> -->
     <h2 class="modal-title">Formularz zamówienia</h2>
-    <form id="order-form" class="modal-form">
-      <!-- Вибір типу особи -->
+
+    <form id="modal-form" class="modal-form" method="POST">
+      <input
+        type="hidden"
+        name="access_key"
+        value="674a91e4-cb0e-4621-a6fe-33522af79ee4"
+      />
+      <input
+        type="hidden"
+        name="Nazwa_formularzu"
+        value="Formularz zamówienia abonamentu"
+      />
       <div class="modal-radio-group">
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="contractType"
-            value="firma"
+            name="Typ_klienta"
+            value="Firma"
             class="modal-radio"
             checked
           />
@@ -23,8 +33,8 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="contractType"
-            value="osoba"
+            name="Typ_klienta"
+            value="Osoba prywatna"
             class="modal-radio"
           />
           Osoba prywatna
@@ -37,8 +47,7 @@
         <input
           type="text"
           id="company-name"
-          name="companyName"
-          placeholder="Wprowadź nazwę firmy"
+          name="Nazwa_firmy"
           class="modal-input"
           required
           disabled
@@ -49,8 +58,7 @@
         <input
           type="text"
           id="full-name"
-          name="fullName"
-          placeholder="Wprowadź imię i nazwisko"
+          name="Imie_i_nazwisko"
           class="modal-input"
           required
           disabled
@@ -61,8 +69,7 @@
         <input
           type="number"
           id="nip"
-          name="nip"
-          placeholder="Wprowadź NIP"
+          name="Nip"
           class="modal-input"
           required
           disabled
@@ -73,8 +80,7 @@
         <input
           type="number"
           id="pesel"
-          name="pesel"
-          placeholder="Wprowadź PESEL"
+          name="Pesel"
           class="modal-input"
           required
           disabled
@@ -85,8 +91,7 @@
         <input
           type="text"
           id="address"
-          name="address"
-          placeholder="Wprowadź adres"
+          name="Adres"
           class="modal-input"
           required
         />
@@ -96,8 +101,7 @@
         <input
           type="tel"
           id="phone"
-          name="phone"
-          placeholder="Wprowadź numer telefonu"
+          name="Telefon"
           class="modal-input"
           required
         />
@@ -107,8 +111,7 @@
         <input
           type="email"
           id="email"
-          name="email"
-          placeholder="Wprowadź adres email"
+          name="Email"
           class="modal-input"
           required
         />
@@ -120,7 +123,7 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="toolsType"
+            name="Rodzaj_narzędzi"
             value="kosmetyczne"
             class="modal-radio"
             checked
@@ -130,7 +133,7 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="toolsType"
+            name="Rodzaj_narzędzi"
             value="medyczne"
             class="modal-radio"
           />
@@ -139,12 +142,12 @@
       </div>
 
       <!-- Радіокнопки для доставки -->
-      <p class="modal-radio-title">Narzędzia będą dostarczane:</p>
+      <p class="modal-radio-title">Sposób dostawy narzedzi:</p>
       <div class="modal-radio-group">
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="deliveryType"
+            name="Dostarczenie"
             value="osobiscie"
             class="modal-radio"
             checked
@@ -154,12 +157,34 @@
         <label class="modal-radio-lable">
           <input
             type="radio"
-            name="deliveryType"
+            name="Dostarczenie"
             value="kurier"
             class="modal-radio"
           />
-          Przez firmę kurierską
+          Nasz kurier w Krakowie
         </label>
+        <label class="modal-radio-lable">
+          <input
+            type="radio"
+            name="Dostarczenie"
+            value="paczkomat"
+            class="modal-radio"
+          />
+          Paczkomat InPost
+        </label>
+      </div>
+
+      <div class="modal-form-group">
+        <label for="start-date" class="modal-input-lable"
+          >Data rozpoczęcia współpracy</label
+        >
+        <input
+          type="date"
+          id="start-date"
+          name="Data_rozpoczecia"
+          class="modal-input"
+          required
+        />
       </div>
 
       <!-- Повідомлення -->
@@ -167,8 +192,7 @@
         <label for="message" class="modal-input-lable">Wiadomość</label>
         <textarea
           id="message"
-          name="message"
-          placeholder="Twoja wiadomość"
+          name="Wiadomosc"
           class="modal-textarea"
         ></textarea>
       </div>
@@ -176,7 +200,7 @@
         <input
           type="checkbox"
           id="accept"
-          name="accept"
+          name="Private-policy"
           class="form-policy-checkbox"
           required
         />
@@ -187,12 +211,17 @@
           >
         </label>
       </div>
-      <div
+
+      <!-- <div
         class="g-recaptcha"
         aria-colcount="form-recaptcha"
         data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
         data-action="LOGIN"
-      ></div>
+      ></div> -->
+
+      <div id="modal-status" class="modal-status hidden">
+        <p id="modal-status-message"></p>
+      </div>
 
       <!-- Кнопка відправлення -->
       <button type="submit" class="form-btn button">Wyślij</button>

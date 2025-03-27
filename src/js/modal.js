@@ -1,87 +1,116 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('modal');
-  const modalContent = document.querySelector('.modal-content');
-  const modalTitle = document.querySelector('.modal-title');
-  const openModalButtons = document.querySelectorAll('.offer-item-btn');
-  const closeModalButton = document.getElementById('close-modal');
+  const closeModalBtn = document.getElementById('close-modal');
+  const modalForm = document.getElementById('modal-form');
+  const modalStatus = document.getElementById('modal-status');
+  const modalStatusMessage = document.getElementById('modal-status-message');
 
-  // Відкриття модального вікна
-  openModalButtons.forEach(button => {
-    button.addEventListener('click', event => {
-      event.preventDefault();
-      const abonament = button.dataset.abonament; // Отримуємо абонемент
-      if (modal && modalTitle) {
-			modalTitle.textContent = `Formularz zamówienia abonamentu ${abonament}`;
-        modalTitle.style.FontFamily = 'Montserrat, sans-serif';
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Забороняємо прокручування сторінки
-        modalContent.style.overflow = 'auto';
-      }
-    });
-  });
-
-  // Закриття модального вікна
-  closeModalButton.addEventListener('click', closeModal);
-
-  // Закриття модального вікна при кліку поза вмістом
-  modal.addEventListener('click', event => {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Функція закриття модального вікна
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Відновлюємо прокручування сторінки
-  }
-
-  // Додавання обробника події Escape для закриття модального вікна
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
-  // Фокус на перший елемент форми при відкритті модального вікна
-  if (modal) {
-    modal.querySelector('input, select, textarea').focus();
-  }
-
-  // Отримуємо елементи полів та радіокнопок
-  const contractTypeRadios = document.querySelectorAll(
-    'input[name="contractType"]'
-  );
   const companyNameField = document.getElementById('company-name');
   const nipField = document.getElementById('nip');
   const fullNameField = document.getElementById('full-name');
   const peselField = document.getElementById('pesel');
+  const formNameField = modalForm.querySelector(
+    'input[name="Nazwa_formularzu"]'
+  );
 
-  // Функція для оновлення стану полів форми
-  function updateFormFields() {
-    if (
-      document.querySelector('input[name="contractType"]:checked').value ===
-      'firma'
-    ) {
-      // Якщо вибрано "Firma", активуємо поля для фірми
-      companyNameField.disabled = false;
-      nipField.disabled = false;
-      fullNameField.disabled = true;
-      peselField.disabled = true;
-    } else {
-      // Якщо вибрано "Osoba", активуємо поля для особи
-      companyNameField.disabled = true;
-      nipField.disabled = true;
-      fullNameField.disabled = false;
-      peselField.disabled = false;
-    }
+  const contractTypeRadios = document.querySelectorAll(
+    'input[name="Typ_klienta"]'
+  );
+
+  function updateFieldStates() {
+    const selected = document.querySelector(
+      'input[name="Typ_klienta"]:checked'
+    ).value;
+    const isCompany = selected === 'Firma';
+
+    companyNameField.disabled = !isCompany;
+    nipField.disabled = !isCompany;
+    fullNameField.disabled = isCompany;
+    peselField.disabled = isCompany;
   }
 
-  // Викликаємо функцію при завантаженні сторінки
-  updateFormFields();
+  updateFieldStates();
 
-  // Додаємо обробник події для зміни вибору радіокнопок
   contractTypeRadios.forEach(radio => {
-    radio.addEventListener('change', updateFormFields);
+    radio.addEventListener('change', updateFieldStates);
+  });
+
+  closeModalBtn.addEventListener('click', function () {
+    modal.classList.remove('active');
+    modalStatus.classList.add('hidden');
+  });
+
+  document.querySelectorAll('.offer-item-btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const abonament = this.getAttribute('data-abonament');
+      modal.classList.add('active');
+
+      // const messageField = document.getElementById('message');
+      // if (abonament && messageField) {
+      //   messageField.value = `Zamówienie abonamentu: ${abonament}`;
+      // }
+
+      if (formNameField && abonament) {
+        formNameField.value = `Formularz zamówienia abonamentu: ${abonament}`;
+      }
+
+      modalStatus.classList.add('hidden');
+      modalStatusMessage.textContent = '';
+      updateFieldStates();
+    });
+  });
+
+  modalForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    modalStatus.classList.remove('hidden');
+    modalStatusMessage.style.color = '#333';
+    modalStatusMessage.innerHTML = '📨 Wysyłanie wiadomości...';
+
+    const formData = new FormData(modalForm);
+
+    formData.append('subject', 'Zamówienie z formularza STERYL SERWIS');
+    formData.append('from_name', 'STERYL SERWIS – formularz zamówienia');
+
+    const object = Object.fromEntries(formData.entries());
+    const json = JSON.stringify(object);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    })
+      .then(async response => {
+        const json = await response.json();
+        modalStatus.classList.remove('hidden');
+        if (response.status === 200) {
+          modalStatusMessage.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 10px; color: #333;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#4CAF50">
+                <path d="M20.285 6.709a1 1 0 0 0-1.41-1.418l-9.192 9.191-4.242-4.242a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l10-10z"/>
+              </svg>
+              <span style="font-weight: 500;">Wiadomość została wysłana!</span>
+            </div>
+          `;
+          modalForm.reset();
+          setTimeout(() => {
+            modal.classList.remove('active');
+            modalStatus.classList.add('hidden');
+          }, 3000);
+        } else {
+          modalStatusMessage.textContent = '❌ ' + json.message;
+          modalStatusMessage.style.color = 'red';
+        }
+      })
+      .catch(error => {
+        modalStatus.classList.remove('hidden');
+        modalStatusMessage.textContent =
+          '❌ Coś poszło nie tak. Spróbuj ponownie.';
+        modalStatusMessage.style.color = 'red';
+      });
   });
 });

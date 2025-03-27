@@ -24,13 +24,17 @@
         </div>
         <div class="contact-form-wrap">
           <p class="contact-text-pytanie">Masz pytanie? Napisz do nas!</p>
-          <form
-            action="mailto:sterylserwis@gmail.com"
-            method="post"
-            enctype="text/plain"
-            onsubmit="return validateForm()"
-            class="contact-form"
-          >
+          <form method="POST" id="contact-form" class="contact-form">
+            <input
+              type="hidden"
+              name="access_key"
+              value="674a91e4-cb0e-4621-a6fe-33522af79ee4"
+            />
+            <input
+              type="hidden"
+              name="form_name"
+              value="Formularz kontaktowy"
+            />
             <div class="contact-form-group">
               <label for="name" class="form-label">Imię</label>
               <input
@@ -76,16 +80,44 @@
                 ></label
               >
             </div>
-            <div
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <!-- Спінер -->
+            <div id="spinner" class="sending-text" style="display: none">
+              Wysyłanie<span class="dot-1">.</span><span class="dot-2">.</span
+              ><span class="dot-3">.</span>
+            </div>
+
+            <!-- <div id="form-status-modal" class="modal-window hidden">
+					<div class="modal-content">
+						<p id="form-status-message"></p>
+						<button id="close-modal" class="close-modal-btn">OK</button>
+					</div>
+            </div> -->
+
+            <!-- <div
               class="g-recaptcha"
               aria-colcount="form-recaptcha"
-              data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
-              data-action="LOGIN"
-            ></div>
+              data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
+            ></div> -->
             <div class="form-group">
               <button type="submit" class="form-btn button">Wyślij</button>
+              <p id="form-status" class="form-status" style="display: none"></p>
             </div>
           </form>
+
+          <script
+            src="https://www.google.com/recaptcha/api.js"
+            async
+            defer
+          ></script>
+          <!-- <script src="../js/contact.js"></script> -->
         </div>
       </div>
       <div

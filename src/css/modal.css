@@ -83,6 +83,7 @@
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
   overflow-x: hidden;
+
 }
 
 .modal-title {
@@ -114,6 +115,7 @@
   margin-bottom: 16px;
     /* margin: 0 auto; */
 	 text-align: center;
+	 flex-wrap: wrap;
 }
 .modal-radio-lable {
   align-self: center;
@@ -129,6 +131,7 @@
   flex-direction: column;
 }
 .modal-input-lable {
+	text-align-last: left;
 }
 .modal-input {
   width: 100%;
@@ -158,6 +161,7 @@
 }
 .checkbox-modal {
   margin: 0 8px;
+  text-align: left;
 }
 
 .modal-policy-text {
