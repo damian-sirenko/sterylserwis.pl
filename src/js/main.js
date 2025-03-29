@@ -1,1 +1,12 @@
 import '../css/styles.css';
+import './hero.js';
+import './mob_menu.js';
+import './tools.js';
+import './modal.js';
+import './how_we_work.js';
+import './calculator.js';
+import './faq.js';
+import './contact.js';
+import './go_to_top.js';
+import './cookies.js';
+import './google_maps.js';

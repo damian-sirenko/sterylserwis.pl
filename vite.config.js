@@ -5,7 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => ({
-//   base: './', // ВАЖЛИВО! Використовуємо відносні шляхи, щоб уникнути проблем
+  base: './', 
   root: 'src',
   build: {
     sourcemap: true,
@@ -35,3 +35,5 @@ export default defineConfig(({ command }) => ({
     SortCss({ sort: 'mobile-first' }),
   ],
 }));
+
+console.log('VITE CONFIG LOADED ✅');

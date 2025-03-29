@@ -40,7 +40,7 @@
 
 @media only screen and (min-width: 1200px) {
   .shipping-section {
-    padding-top: 180px;
+    padding-top: 160px;
     margin-top: 0;
   }
   .shipping-content-wrapper {
@@ -64,6 +64,9 @@
 	  flex: 1 1;
 
   }
+  .shipping-text-two-dt{
+	display: block;
+}
   .shipping-text-two-mob {
 	display: none;
   }
