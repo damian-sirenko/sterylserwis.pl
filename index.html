@@ -26,9 +26,8 @@
     />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="module" crossorigin src="/sterylserwis.pl/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/sterylserwis.pl/assets/go_to_top-Cq5DELgf.js">
-    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/styles-CF7vp0hZ.css">
+    <script type="module" crossorigin src="/sterylserwis.pl/assets/main-RuBWVGr7.js"></script>
+    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/styles-CrqrnFdP.css">
   </head>
   <body>
     <div class="modal" id="modal">
@@ -310,14 +309,27 @@
         </a>
         <nav class="menu">
           <ul class="header-menu">
-            <li class="header-menu-item"><a href="#about">O nas</a></li>
-            <li class="header-menu-item co-item">
-              <a href="#what">Co sterylizujemy</a>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#about">O nas</a>
             </li>
-            <li class="header-menu-item"><a href="#offer">Oferta</a></li>
-            <li class="header-menu-item"><a href="#shipping">Wysyłka</a></li>
-            <li class="header-menu-item"><a href="#faq">FAQ</a></li>
-            <li class="header-menu-item"><a href="#contact">Kontakt</a></li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#offer">Oferta</a>
+            </li>
+            <li class="header-menu-item co-item">
+              <a class="header-menu-link" href="#what">Co sterylizujemy</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#delivery">Dostawa</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#shipping">Wysyłka</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#faq">FAQ</a>
+            </li>
+            <li class="header-menu-item">
+              <a class="header-menu-link" href="#contact">Kontakt</a>
+            </li>
           </ul>
         </nav>
         <div class="header-contact">
@@ -361,6 +373,7 @@
         <li class="mob-menu-item"><a href="#about">O nas</a></li>
         <li class="mob-menu-item"><a href="#what">Co sterylizujemy</a></li>
         <li class="mob-menu-item"><a href="#offer">Oferta</a></li>
+		  <li class="mob-menu-item"><a href="#delivery">Dostawa</a></li>
         <li class="mob-menu-item"><a href="#shipping">Wysyłka</a></li>
         <li class="mob-menu-item"><a href="#faq">FAQ</a></li>
         <li class="mob-menu-item"><a href="#contact">Kontakt</a></li>
@@ -1067,6 +1080,57 @@
   </div>
 </section>
 
+		<section class="delivery-section" id="delivery">
+  <div class="container deliver-container">
+    <h2 class="title delivery-title">ODBIÓR I DOSTAWA NARZĘDZI</h2>
+    <div class="delivery-content-wrapper">
+      <div class="delivery-text-wrapper">
+      	<p class="delivery-text">
+	        Na terenie całego Krakowa oferujemy usługę odbioru i dowozu narzędzi pod
+	        wskazany przez Klienta adres. Jesteś osobą zapracowaną i nie masz czasu,
+	        aby osobiście dostarczyć narzędzia do naszego punktu? Zrobimy to za
+	        Ciebie! Zamów naszego kuriera - odbierzemy Twoje narzędzia w możliwie
+	        najbliższym terminie, a już następnego dnia roboczego wrócą do Ciebie
+	        wysterylizowane i gotowe do pracy z klientami. <br />
+	      </p>
+	      <p class="delivery-text">
+	        Przed przekazaniem narzędzi kurierowi należy je odpowiednio przygotować:
+	        umieścić w plastikowym, zamykanym pojemniku, oznaczonym danymi firmy lub
+	        osoby prywatnej. Zalecamy również odpowiednie zabezpieczenie ostrzy i
+	        delikatnych elementów, aby uniknąć ich uszkodzenia w trakcie transportu.
+	        Zgłoszenia dotyczące odbioru narzędzi przyjmujemy najpóźniej na dzień
+	        przed planowaną datą przyjazdu kuriera. Usługa jest dodatkowo płatna.
+	      </p>
+      </div>
+      <div class="delivery-img">
+      	<picture>
+	        <source
+	          srcset="./img/delivery/delivery.jpg 1x, ./img/delivery/delivery.jpg 2x"
+	          media="(min-width: 1440px)"
+	        />
+	        <source
+	          srcset="./img/delivery/delivery.jpg 1x, ./img/delivery/delivery.jpg 2x"
+	          media="(min-width: 1200px)"
+	        />
+	        <source
+	          srcset="./img/delivery/delivery.jpg 1x, ./img/delivery/delivery.jpg 2x"
+	          media="(min-width: 768px)"
+	        />
+	        <source
+	          srcset="./img/delivery/delivery.jpg 1x, ./img/delivery/delivery.jpg 2x"
+	          media="(min-width: 360px)"
+	        />
+	        <img
+	          src="./img/delivery/delivery.jpg"
+	          alt="Przekazanie narzędzi do sterylizacji"
+	          class="delivery-img"
+	        />
+	      </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section class="shipping-section" id="shipping">
   <div class="container">
     <h2 class="title shipping-title">WYSYŁKA NARZĘDZI NA CAŁĄ POLSKĘ</h2>
@@ -1210,6 +1274,74 @@
         <li class="faq-item">
           <div class="faq-item-wrap">
             <div class="faq-item-icon"></div>
+            <p class="faq-item-text">
+              W jaki sposób mogę zamówić odbiór narzędzi przez Waszego kuriera?
+            </p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Aby zlecić odbiór narzędzi przez naszego kuriera, prosimy o kontakt
+            co najmniej dzień wcześniej — SMS-em lub telefonicznie. W przypadku
+            zgłoszenia w tym samym dniu nie możemy zagwarantować realizacji
+            usługi.
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
+            <p class="faq-item-text">
+              W jakich godzinach możliwy jest odbiór lub dostawa narzędzi przez
+              kuriera?
+            </p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Kurier odbiera i dostarcza narzędzia wyłącznie w godzinach od 9:00
+            do 14:00.
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
+            <p class="faq-item-text">
+              Nasz zakład działa od godziny 11:00. Czy można umówić się na
+              odbiór po tej godzinie?
+            </p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Niestety nie ma możliwości ustalenia konkretnej godziny odbioru lub
+            dostawy narzędzi. W zależności od liczby Klientów kurier
+            samodzielnie ustala kolejność wizyt. Oznacza to, że w przypadku
+            współpracy z nami, która obejmuje odbiór lub dostawę przez naszego
+            kuriera, Klient powinien być dostępny w godzinach od 9:00 do 14:00
+            lub posiadać miejsce, w którym może zostawić narzędzia do odbioru
+            przez kuriera.
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
+            <p class="faq-item-text">
+              Ile kosztuje odbiór i dostawa narzędzi na terenie Krakowa?
+            </p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Koszt odbioru lub dostawy narzędzi na terenie Krakowa wynosi 12 zł
+            brutto za jeden przyjazd kuriera – dotyczy to większości obszaru
+            miasta. W najbardziej oddalonych rejonach Krakowa cena może wynosić
+            do 15 zł. Nie dojeżdżamy do Klientów znajdujących się w obrębie
+            Starego Miasta (wewnątrz Plantów).
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
             <p class="faq-item-text">Na jak długo podpisywana jest umowa?</p>
           </div>
           <div class="faq-item-answer">
@@ -1288,13 +1420,15 @@
           <div class="faq-item-wrap">
             <div class="faq-item-icon"></div>
             <p class="faq-item-text">
-              Ile kosztuje zwrotna przesyłka sterylnych narzędzi?
+              Ile kosztuje wysyłka narzędzi do Was i z powrotem? Kto za to
+              płaci?
             </p>
           </div>
           <div class="faq-item-answer">
             <div class="line-decorator"></div>
-            Koszt przesyłki zwrotnej do Paczkomatu Inpost wynosi 20,00 zł
-            brutto.
+            Koszty wysyłki w obie strony ponosi Klient. Do nas wysyłasz paczkę
+            do Paczkomatu zgodnie z cennikiem InPost. Przesyłka zwrotna jest w
+            cenie 20 zł brutto.
           </div>
         </li>
 
@@ -1654,10 +1788,6 @@
 </footer>
 
 
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <!-- <script async defer 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj1Qy-fnSDz-mJjTbTTYesRz-gyKtpOPg&callback=initMap">
-  </script> -->
 
     <div id="goToTop" class="go-to-top" title="Wróć do góry">
       <svg width="20" height="20" class="go-to-top-icon">
