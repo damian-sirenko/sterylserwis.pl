@@ -10,10 +10,14 @@
 }
 .delivery-content-wrapper {
 }
+.delivery-text-wrapper{
+margin-bottom: 40px;
+}
 .delivery-text {
   text-indent: 30px;
   text-align: justify;
   display: block;
+
 }
 .delivery-img-wrap {
   max-width: 600px;

@@ -5,8 +5,8 @@ import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => ({
-  base: './', 
-  root: 'src',
+  //   base: './',
+  root: './src',
   build: {
     sourcemap: true,
     rollupOptions: {
@@ -18,7 +18,7 @@ export default defineConfig(({ command }) => ({
           }
         },
         entryFileNames: '[name].js',
-        assetFileNames: 'assets/[name]-[hash][extname]', // Виправляємо шлях до ресурсів
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
     outDir: '../dist',
