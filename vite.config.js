@@ -34,6 +34,8 @@ export default defineConfig(({ command }) => ({
     FullReload(['./src/**/*.html']),
     SortCss({ sort: 'mobile-first' }),
   ],
+  
 }));
 
 console.log('VITE CONFIG LOADED ✅');
+

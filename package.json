@@ -22,5 +22,12 @@
   "dependencies": {
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  }
+  },
+  "lint-staged": {
+  "**/*.{js,jsx,ts,tsx,vue,css,scss,html}": [
+    "prettier --write"
+  ]
 }
+  
+}
+
