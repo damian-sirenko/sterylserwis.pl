@@ -83,7 +83,6 @@
   animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
   overflow-x: hidden;
-
 }
 
 .modal-title {
@@ -93,11 +92,10 @@
   color: #4d8680;
   text-align: center;
   margin: 0 auto;
-
 }
 
 .modal-form {
-	margin-top: 24px;
+  margin-top: 24px;
 }
 .modal-radio-title {
   margin: 0 auto;
@@ -113,9 +111,9 @@
   gap: 16px;
   flex-direction: row;
   margin-bottom: 16px;
-    /* margin: 0 auto; */
-	 text-align: center;
-	 flex-wrap: wrap;
+  /* margin: 0 auto; */
+  text-align: center;
+  flex-wrap: wrap;
 }
 .modal-radio-lable {
   align-self: center;
@@ -126,14 +124,26 @@
 .modal-radio {
   align-self: center;
 }
-.modal-form-group {
-  display: flex;
-  flex-direction: column;
+.modal-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
+
+@media (min-width: 520px) {
+  .modal-form-row--zip-city {
+    grid-template-columns: 1fr 2fr;
+    align-items: end;
+  }
+}
+
 .modal-input-lable {
-	text-align-last: left;
-	margin-top: 8px;
+  display: block;
+  text-align: left;
+  margin-top: 8px;
 }
+
+
 .modal-input {
   width: 100%;
   padding: 8px;
@@ -220,3 +230,5 @@
     transform: translateY(0);
   }
 }
+
+

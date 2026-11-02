@@ -67,35 +67,77 @@
       <div class="modal-form-group">
         <label for="nip" class="modal-input-lable">NIP</label>
         <input
-          type="number"
+          type="text"
           id="nip"
           name="Nip"
           class="modal-input"
           required
           disabled
+          inputmode="numeric"
+          pattern="\d{10}"
+          maxlength="10"
+          data-only-digits
         />
       </div>
       <div class="modal-form-group">
         <label for="pesel" class="modal-input-lable">PESEL</label>
         <input
-          type="number"
+          type="text"
           id="pesel"
           name="Pesel"
           class="modal-input"
           required
           disabled
+          inputmode="numeric"
+          pattern="\d{11}"
+          maxlength="11"
+          data-only-digits
         />
       </div>
       <div class="modal-form-group">
-        <label for="address" class="modal-input-lable">Adres</label>
+        <label for="street-house" class="modal-input-lable">Adres</label>
         <input
           type="text"
-          id="address"
-          name="Adres"
+          id="street-house"
+          name="Ulica_i_nr_domu"
           class="modal-input"
           required
+          autocomplete="street-address"
         />
       </div>
+
+      <div class="modal-form-row modal-form-row--zip-city">
+        <div class="modal-form-group">
+          <label for="postal-code" class="modal-input-lable"
+            >Kod pocztowy</label
+          >
+          <input
+            type="text"
+            id="postal-code"
+            name="Kod_pocztowy"
+            class="modal-input"
+            required
+            inputmode="numeric"
+            placeholder="00-000"
+            autocomplete="postal-code"
+          />
+        </div>
+
+        <div class="modal-form-group">
+          <label for="city" class="modal-input-lable">Miejscowość</label>
+          <input
+            type="text"
+            id="city"
+            name="Miejscowość"
+            class="modal-input"
+            required
+            autocomplete="address-level2"
+          />
+        </div>
+      </div>
+
+      <input type="hidden" id="address" name="Adres" />
+
       <div class="modal-form-group">
         <label for="phone" class="modal-input-lable">Telefon</label>
         <input
@@ -173,18 +215,36 @@
           Paczkomat InPost
         </label>
       </div>
-
-      <div class="modal-form-group">
-        <label for="start-date" class="modal-input-lable"
-          >Data rozpoczęcia współpracy</label
+      <div
+        class="modal-form-group paczkomat-nr"
+        id="paczkomat-field"
+        style="display: none"
+      >
+        <label for="paczkomat" class="modal-input-lable"
+          >Paczkomat odbiorczy nr:</label
         >
         <input
-          type="date"
-          id="start-date"
-          name="Data_rozpoczecia"
+          type="text"
+          id="paczkomat"
+          name="Numer_paczkomatu"
           class="modal-input"
           required
         />
+      </div>
+
+      <div class="modal-form-group">
+        <label for="start-date" class="modal-input-lable">
+          Preferowana data rozpoczęcia współpracy
+        </label>
+        <input
+          type="date"
+          id="start-date"
+          name="Preferowana_data_rozpoczecia"
+          class="modal-input"
+          required
+          min=""
+        />
+        
       </div>
 
       <!-- Повідомлення -->

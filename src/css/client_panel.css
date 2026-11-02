@@ -1,0 +1,214 @@
+.panel-section {
+  padding-top: 100px;
+  padding-bottom: 140px;
+}
+
+.panel-content-wrapper {
+}
+
+.panel-title {
+  color: #333;
+  margin-bottom: 16px;
+}
+.panel-lead {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.panel-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.panel-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.panel-feature-badge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #4d8680;
+  color: #fff;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.panel-feature-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.panel-phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.panel-text-wrapper {
+  margin-top: 32px;
+}
+.panel-phone {
+  width: 180px;
+  aspect-ratio: 9 / 16;
+  background-color: #1b2e2c;
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+.panel-phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f8f7;
+  border-radius: 22px;
+  overflow: hidden;
+}
+.panel-screen {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 300ms cubic-bezier(0.4, 0, 0.2, 1), visibility 300ms;
+}
+.panel-screen.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.panel-screen-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.panel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 5;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+}
+.panel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #b9c4c2;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.panel-dot.active {
+  background-color: #4d8680;
+  transform: scale(1.3);
+}
+
+@media only screen and (min-width: 768px) {
+  .panel-section {
+    padding-top: 120px;
+    padding-bottom: 170px;
+  }
+  .panel-phone {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .panel-section {
+    padding-bottom: 200px;
+  }
+  .panel-content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .panel-phone-wrap {
+    order: 1;
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+  .panel-text-wrapper {
+    order: 2;
+    flex: 1 1;
+    margin-left: 90px;
+    margin-top: 0;
+  }
+  .panel-phone {
+    width: 220px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .panel-phone {
+    width: 240px;
+  }
+}
+.panel-screen-img {
+  cursor: zoom-in;
+}
+
+.panel-lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 20, 18, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms ease, visibility 250ms;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+.panel-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+.panel-lightbox-img {
+  max-width: min(480px, 100%);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.panel-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}

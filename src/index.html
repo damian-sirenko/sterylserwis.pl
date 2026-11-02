@@ -26,8 +26,48 @@
     />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2CCLQNTX34"
+    ></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PNRJD4GN');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-2CCLQNTX34');
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PNRJD4GN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <load src="./partials/modal.html" />
     <div class="container-header-hero">
       <load src="./partials/header.html" />
@@ -40,9 +80,10 @@
       <load src="./partials/advantages.html" />
       <load src="./partials/tools_to_steryl.html" />
       <load src="./partials/how_we_work.html" />
+      <load src="./partials/client_panel.html" />
       <load src="./partials/offer.html" />
       <load src="./partials/calculator.html" />
-		<load src="./partials/delivery.html" />
+      <load src="./partials/delivery.html" />
       <load src="./partials/shipping.html" />
       <load src="./partials/faq.html" />
       <load src="./partials/contact.html" />

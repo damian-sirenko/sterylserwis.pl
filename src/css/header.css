@@ -4,6 +4,7 @@
   justify-content: flex-start;
   min-height: auto;
 }
+
 .header {
   flex-shrink: 0;
 }
@@ -27,9 +28,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.header-logo {
-  max-width: 200px;
-}
+
 .header-contact {
   display: none;
 }
@@ -75,7 +74,7 @@
 }
 .header-bottom {
   padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-bottom: 24px; */
   padding-top: 100px;
 }
 .title-main {
@@ -99,6 +98,71 @@
 }
 .green-text {
   color: #4d8680;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .header-logo {
+    max-width: 200px;
+    height: auto;
+  }
+
+  /* .header-subtitle {
+    display: none;
+  } */
+
+  .header-top-content {
+    gap: 8px;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header-logo {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .header-subtitle {
+    display: none;
+  }
+
+  .header-top-content {
+    gap: 8px;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: inline;
+  }
+
+  .header-contact {
+    display: none;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+
+  .header-tel {
+    font-size: 13px;
+  }
+
+  .header-tel-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -169,12 +233,12 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-	 transition: border-bottom 100ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-bottom 100ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-menu-item:hover,
   .header-menu-item:focus {
-   border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #fff;
   }
   .co-item {
     display: none;
@@ -185,7 +249,11 @@
   }
   .title-wrap {
     position: absolute;
-    top: 35%;
+    top: 40%;
+
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 500px;
   }
   .title-main {
     display: block;
@@ -203,17 +271,23 @@
     max-width: 250px;
     margin: 0;
   }
+  .hero-btn-desktop {
+    display: inline-block;
+  }
 }
-
 
 @media only screen and (min-width: 1200px) {
   .container-header-hero {
     justify-content: flex-start;
     height: 105vh;
   }
+  .hero-btn-desktop {
+    display: none;
+  }
   .header-container {
     margin: 0 auto;
   }
+
   .address-line-content {
     font-size: 16px;
     padding: 0 32px 0 32px;
@@ -243,20 +317,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex: 0 0 auto;
-    width: 200px;
     border: 2px solid #fff;
     border-radius: 10px;
-    padding: 10px;
-    margin: 0 auto;
+    padding: 10px 16px;
+    margin-left: 20px;
+    white-space: nowrap;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header-tel {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 0.03em;
+    line-height: 1;
+    text-decoration: none;
+    color: #fff;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header-tel-icon {
@@ -287,6 +368,7 @@
     max-width: 600px;
     font-size: 42px;
     line-height: 54px;
+    margin-top: 100px;
   }
   .header-subtitle {
     max-width: 400px;
@@ -301,7 +383,59 @@
   .address-line-content {
     max-width: 1440px;
   }
-    .co-item {
+  .co-item {
     display: block;
+  }
 }
+.desktop-text {
+  display: inline;
+}
+
+.mobile-text {
+  display: none;
+}
+
+/* ===== HEADER CTA NOTE ===== */
+
+.hero-btn-desktop {
+  display: none;
+  margin-top: 20px;
+  background-color: #4d8680;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero-btn-desktop {
+    display: inline-block;
+  }
+}
+
+.hero-btn-desktop:hover {
+  background-color: #3b6f69;
+}
+
+.header-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* основний текст */
+.header-main-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1; /* 🔥 */
+}
+
+/* маленький підпис */
+.header-sub-text {
+  font-size: 10px;
+  line-height: 1; /* 🔥 */
+  margin-top: 2px; /* мінімальний відступ */
+  opacity: 0.85;
 }

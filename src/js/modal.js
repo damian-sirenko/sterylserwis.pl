@@ -5,10 +5,38 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalStatus = document.getElementById('modal-status');
   const modalStatusMessage = document.getElementById('modal-status-message');
 
+  const streetHouseField = document.getElementById('street-house');
+  const postalCodeField = document.getElementById('postal-code');
+  const cityField = document.getElementById('city');
+  const addressHiddenField = document.getElementById('address');
+
+  const startDateField = document.getElementById('start-date');
+
+  if (startDateField) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    startDateField.min = `${yyyy}-${mm}-${dd}`;
+  }
+
   const companyNameField = document.getElementById('company-name');
+
   const nipField = document.getElementById('nip');
   const fullNameField = document.getElementById('full-name');
   const peselField = document.getElementById('pesel');
+  document.querySelectorAll('input[data-only-digits]').forEach(input => {
+    input.addEventListener('input', () => {
+      input.value = input.value.replace(/\D+/g, '');
+    });
+
+    input.addEventListener('paste', e => {
+      e.preventDefault();
+      const text = (e.clipboardData || window.clipboardData).getData('text');
+      input.value = text.replace(/\D+/g, '').slice(0, input.maxLength);
+    });
+  });
+
   const formNameField = modalForm.querySelector(
     'input[name="Nazwa_formularzu"]'
   );
@@ -30,6 +58,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   updateFieldStates();
+
+  const deliveryRadios = document.querySelectorAll(
+    'input[name="Dostarczenie"]'
+  );
+  const paczkomatField = document.getElementById('paczkomat-field');
+  const paczkomatInput = document.getElementById('paczkomat');
+
+  function togglePaczkomatField() {
+    const selectedDelivery = document.querySelector(
+      'input[name="Dostarczenie"]:checked'
+    ).value;
+    const isPaczkomat = selectedDelivery === 'paczkomat';
+
+    paczkomatField.style.display = isPaczkomat ? 'block' : 'none';
+    paczkomatInput.required = isPaczkomat;
+  }
+
+  togglePaczkomatField(); // ініціалізація
+
+  deliveryRadios.forEach(radio => {
+    radio.addEventListener('change', togglePaczkomatField);
+  });
 
   contractTypeRadios.forEach(radio => {
     radio.addEventListener('change', updateFieldStates);
@@ -67,6 +117,44 @@ document.addEventListener('DOMContentLoaded', function () {
     modalStatus.classList.remove('hidden');
     modalStatusMessage.style.color = '#333';
     modalStatusMessage.innerHTML = '📨 Wysyłanie wiadomości...';
+
+    if (
+      addressHiddenField &&
+      streetHouseField &&
+      postalCodeField &&
+      cityField
+    ) {
+      const street = streetHouseField.value.trim();
+      const postal = postalCodeField.value.trim();
+      const city = cityField.value.trim();
+      addressHiddenField.value = `${street}, ${postal} ${city}`.trim();
+    }
+
+    const selectedType = document.querySelector(
+      'input[name="Typ_klienta"]:checked'
+    ).value;
+
+    if (selectedType === 'Firma') {
+      if (!/^\d{10}$/.test(nipField.value)) {
+        modalStatus.classList.remove('hidden');
+        modalStatusMessage.textContent =
+          '❌ NIP musi zawierać dokładnie 10 cyfr';
+        modalStatusMessage.style.color = 'red';
+        nipField.focus();
+        return;
+      }
+    }
+
+    if (selectedType === 'Osoba prywatna') {
+      if (!/^\d{11}$/.test(peselField.value)) {
+        modalStatus.classList.remove('hidden');
+        modalStatusMessage.textContent =
+          '❌ PESEL musi zawierać dokładnie 11 cyfr';
+        modalStatusMessage.style.color = 'red';
+        peselField.focus();
+        return;
+      }
+    }
 
     const formData = new FormData(modalForm);
 

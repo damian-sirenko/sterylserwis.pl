@@ -1,0 +1,180 @@
+<section class="panel-section" id="panel-klienta">
+    <div class="container">
+      <h2 class="title panel-title">PANEL KLIENTA ONLINE</h2>
+  
+      <div class="panel-content-wrapper">
+        <div class="panel-phone-wrap">
+          <div class="panel-phone">
+            <div class="panel-phone-screen">
+              <div class="panel-screen active" data-screen="1">
+                <img class="panel-screen-img" src="/img/client_panel/panel-dashboard.webp" alt="Pulpit klienta — status rozliczeń i limit pakietów" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="2">
+                <img class="panel-screen-img" src="/img/client_panel/panel-nowe-przekazanie.webp" alt="Nowe przekazanie narzędzi do sterylizacji" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="3">
+                <img class="panel-screen-img" src="/img/client_panel/panel-faktury.webp" alt="Lista faktur ze statusem płatności" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="4">
+                <img class="panel-screen-img" src="/img/client_panel/panel-testy.webp" alt="Historia testów biologicznych wg miesięcy" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="5">
+                <img class="panel-screen-img" src="/img/client_panel/panel-karta-sterylizacji.webp" alt="Karta sterylizacji narzędzi do pobrania" loading="lazy">
+              </div>
+  
+              <div class="panel-dots">
+                <button
+                  type="button"
+                  class="panel-dot active"
+                  data-target="1"
+                  aria-label="Ekran 1"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="2"
+                  aria-label="Ekran 2"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="3"
+                  aria-label="Ekran 3"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="4"
+                  aria-label="Ekran 4"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="5"
+                  aria-label="Ekran 5"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="panel-text-wrapper">
+            <p class="panel-lead">
+                Stworzyliśmy unikalny system, w którym od razu masz dostęp do całej
+                dokumentacji dotyczącej Twojej współpracy z nami. Dzięki niemu nasza
+                współpraca jest szybsza, bardziej produktywna i w pełni przejrzysta.
+              </p>
+      
+              <ul class="panel-features">
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Wszystkie faktury i status płatności zawsze pod ręką — bez
+                    szukania w mailach czy segregatorach</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Widzisz dokładnie, na jakim etapie są aktualnie Twoje narzędzia
+                    — od momentu przekazania aż po zwrot</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Bieżąca kontrola wykorzystanych pakietów w ramach abonamentu —
+                    zawsze wiesz, ile Ci jeszcze zostało</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Pełny wgląd w parametry dezynfekcji i sterylizacji zastosowane
+                    wobec Twoich narzędzi — masz pewność, że każdy cykl spełnia
+                    wymagane normy</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Wyniki testów biologicznych zawsze dostępne w Panelu — szybki
+                    wgląd, kiedy tylko ich potrzebujesz, np. podczas kontroli</span
+                  >
+                </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="panel-lightbox" id="panelLightbox">
+    <button type="button" class="panel-lightbox-close" aria-label="Zamknij powiększenie">&times;</button>
+    <img class="panel-lightbox-img" src="" alt="">
+  </div>
+  
+  <script>
+    const panelDots = document.querySelectorAll(".panel-dot");
+    const panelScreens = document.querySelectorAll(".panel-screen");
+    let panelAutoplayTimer = null;
+  
+    function panelGoToScreen(target) {
+      panelDots.forEach((d) =>
+        d.classList.toggle("active", d.dataset.target === target)
+      );
+      panelScreens.forEach((screen) => {
+        screen.classList.toggle("active", screen.dataset.screen === target);
+      });
+    }
+  
+    function panelStartAutoplay() {
+      clearInterval(panelAutoplayTimer);
+      panelAutoplayTimer = setInterval(() => {
+        const dotsArr = Array.from(panelDots);
+        const activeIndex = dotsArr.findIndex((d) =>
+          d.classList.contains("active")
+        );
+        const nextIndex = (activeIndex + 1) % dotsArr.length;
+        panelGoToScreen(dotsArr[nextIndex].dataset.target);
+      }, 2000);
+    }
+  
+    function panelStopAutoplay() {
+      clearInterval(panelAutoplayTimer);
+    }
+  
+    panelDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        panelGoToScreen(dot.dataset.target);
+        panelStartAutoplay();
+      });
+    });
+  
+    panelStartAutoplay();
+  
+    const panelLightbox = document.getElementById("panelLightbox");
+    const panelLightboxImg = panelLightbox.querySelector(".panel-lightbox-img");
+  
+    document.querySelectorAll(".panel-screen-img").forEach((img) => {
+      img.addEventListener("click", () => {
+        panelLightboxImg.src = img.currentSrc || img.src;
+        panelLightboxImg.alt = img.alt;
+        panelLightbox.classList.add("active");
+        panelStopAutoplay();
+      });
+    });
+  
+    panelLightbox.addEventListener("click", () => {
+      panelLightbox.classList.remove("active");
+      panelLightboxImg.src = "";
+      panelStartAutoplay();
+    });
+  
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && panelLightbox.classList.contains("active")) {
+        panelLightbox.classList.remove("active");
+        panelLightboxImg.src = "";
+        panelStartAutoplay();
+      }
+    });
+  </script>

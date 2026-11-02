@@ -1,13 +1,13 @@
 window.calculatePlan = function calculatePlan() {
   const plans = [
-    { name: 'STERYL 20', packets: 20, price: 110.0 },
-    { name: 'STERYL 30', packets: 30, price: 140.0 },
-    { name: 'STERYL 50', packets: 50, price: 210.0 },
-    { name: 'STERYL 100', packets: 100, price: 300.0 },
-    { name: 'STERYL 150', packets: 150, price: 360.0 },
-    { name: 'STERYL 200', packets: 200, price: 430.0 },
-    { name: 'STERYL 300', packets: 300, price: 550.0 },
-    { name: 'STERYL 500', packets: 500, price: 780.0 },
+    { name: 'STERYL 20', packets: 20, price: 120.0 },
+    { name: 'STERYL 30', packets: 30, price: 155.0 },
+    { name: 'STERYL 50', packets: 50, price: 230.0 },
+    { name: 'STERYL 100', packets: 100, price: 330.0 },
+    { name: 'STERYL 150', packets: 150, price: 400.0 },
+    { name: 'STERYL 200', packets: 200, price: 470.0 },
+    { name: 'STERYL 300', packets: 300, price: 600.0 },
+    { name: 'STERYL 500', packets: 500, price: 850.0 },
   ];
 
   // Отримуємо значення кількості пакетів
