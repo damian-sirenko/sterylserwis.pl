@@ -1,5 +1,7 @@
 const backdrop = document.querySelector('.backdrop');
-const openMenuBtn = document.querySelector('.burger-menu-wrap');
+const openMenuBtns = document.querySelectorAll(
+  '.burger-menu-wrap, .js-menu-open'
+);
 const closeMenuBtn = document.querySelector('.menu-close-btn');
 const overlay = document.querySelector('.backdrop-overlay');
 const menuItems = document.querySelectorAll('.mob-menu-item a');
@@ -38,5 +40,5 @@ overlay.addEventListener('click', () => {
 });
 
 // Додаємо обробники подій для кнопок відкриття та закриття
-openMenuBtn.addEventListener('click', openMenu);
+openMenuBtns.forEach(button => button.addEventListener('click', openMenu));
 closeMenuBtn.addEventListener('click', closeMenu);

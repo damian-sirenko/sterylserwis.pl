@@ -1,0 +1,23 @@
+:root {
+  --c-ink: #1c2f2c;
+  --c-dark: #26413e;
+  --c-brand: #31524e;
+  --c-teal: #4d8680;
+  --c-mint: #dff6f4;
+  --c-mint-strong: #9fded6;
+  --c-bg-soft: #f2f7f6;
+  --c-text-muted: #3b4f4c;
+  --c-on-dark-muted: #dbeeeb;
+  --c-line: #d6e6e3;
+  --font-display: 'Manrope', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius-md: 12px;
+  --container: 1200px;
+  --gutter: 16px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+  }
+}

@@ -9,4 +9,3 @@ import './faq.js';
 import './contact.js';
 import './go_to_top.js';
 import './cookies.js';
-import './google_maps.js';
