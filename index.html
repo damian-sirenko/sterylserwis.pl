@@ -26,10 +26,50 @@
     />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="module" crossorigin src="/sterylserwis.pl/assets/main-EzOm1_7-.js"></script>
-    <link rel="stylesheet" crossorigin href="/sterylserwis.pl/assets/styles-B2DilQVJ.css">
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2CCLQNTX34"
+    ></script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PNRJD4GN');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-2CCLQNTX34');
+    </script>
+    <script type="module" crossorigin src="/assets/main-De01KTpb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/styles-n5_yrCBe.css">
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PNRJD4GN"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="modal" id="modal">
   <div class="modal-content">
     <button class="modal-close-btn" type="button" id="close-modal">
@@ -99,35 +139,77 @@
       <div class="modal-form-group">
         <label for="nip" class="modal-input-lable">NIP</label>
         <input
-          type="number"
+          type="text"
           id="nip"
           name="Nip"
           class="modal-input"
           required
           disabled
+          inputmode="numeric"
+          pattern="\d{10}"
+          maxlength="10"
+          data-only-digits
         />
       </div>
       <div class="modal-form-group">
         <label for="pesel" class="modal-input-lable">PESEL</label>
         <input
-          type="number"
+          type="text"
           id="pesel"
           name="Pesel"
           class="modal-input"
           required
           disabled
+          inputmode="numeric"
+          pattern="\d{11}"
+          maxlength="11"
+          data-only-digits
         />
       </div>
       <div class="modal-form-group">
-        <label for="address" class="modal-input-lable">Adres</label>
+        <label for="street-house" class="modal-input-lable">Adres</label>
         <input
           type="text"
-          id="address"
-          name="Adres"
+          id="street-house"
+          name="Ulica_i_nr_domu"
           class="modal-input"
           required
+          autocomplete="street-address"
         />
       </div>
+
+      <div class="modal-form-row modal-form-row--zip-city">
+        <div class="modal-form-group">
+          <label for="postal-code" class="modal-input-lable"
+            >Kod pocztowy</label
+          >
+          <input
+            type="text"
+            id="postal-code"
+            name="Kod_pocztowy"
+            class="modal-input"
+            required
+            inputmode="numeric"
+            placeholder="00-000"
+            autocomplete="postal-code"
+          />
+        </div>
+
+        <div class="modal-form-group">
+          <label for="city" class="modal-input-lable">Miejscowość</label>
+          <input
+            type="text"
+            id="city"
+            name="Miejscowość"
+            class="modal-input"
+            required
+            autocomplete="address-level2"
+          />
+        </div>
+      </div>
+
+      <input type="hidden" id="address" name="Adres" />
+
       <div class="modal-form-group">
         <label for="phone" class="modal-input-lable">Telefon</label>
         <input
@@ -205,18 +287,36 @@
           Paczkomat InPost
         </label>
       </div>
-
-      <div class="modal-form-group">
-        <label for="start-date" class="modal-input-lable"
-          >Data rozpoczęcia współpracy</label
+      <div
+        class="modal-form-group paczkomat-nr"
+        id="paczkomat-field"
+        style="display: none"
+      >
+        <label for="paczkomat" class="modal-input-lable"
+          >Paczkomat odbiorczy nr:</label
         >
         <input
-          type="date"
-          id="start-date"
-          name="Data_rozpoczecia"
+          type="text"
+          id="paczkomat"
+          name="Numer_paczkomatu"
           class="modal-input"
           required
         />
+      </div>
+
+      <div class="modal-form-group">
+        <label for="start-date" class="modal-input-lable">
+          Preferowana data rozpoczęcia współpracy
+        </label>
+        <input
+          type="date"
+          id="start-date"
+          name="Preferowana_data_rozpoczecia"
+          class="modal-input"
+          required
+          min=""
+        />
+        
       </div>
 
       <!-- Повідомлення -->
@@ -272,17 +372,19 @@
           </svg>
           <p class="header-address-text">os. Dywizjonu 303 62F/LU2, Kraków</p>
         </div>
+
         <div class="header-shedule">
           <svg width="16" height="16" class="top-header-icon">
             <use href="./img/icons.svg#clock"></use>
           </svg>
           <p class="header-shedule-text">pn.-pt. 10:00 - 18:00</p>
         </div>
+        <p class="header-shedule-text">Tel.: 739 015 287</p>
       </div>
     </div>
     <div class="container header-container">
       <div class="header-top-content">
-        <a href="index.html">
+        <a href="/index.html">
           <picture>
             <source
               srcset="./img/header/Logo_1x.png 1x, ./img/header/Logo_1x.png 2x"
@@ -310,33 +412,40 @@
         <nav class="menu">
           <ul class="header-menu">
             <li class="header-menu-item">
-              <a class="header-menu-link" href="#about">O nas</a>
+              <a class="header-menu-link" href="/#about">O nas</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="#offer">Oferta</a>
+              <a class="header-menu-link" href="/#offer">Oferta</a>
             </li>
             <li class="header-menu-item co-item">
-              <a class="header-menu-link" href="#what">Co sterylizujemy</a>
+              <a class="header-menu-link" href="/#what">Co sterylizujemy</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="#delivery">Dostawa</a>
+              <a class="header-menu-link" href="/#delivery">Dostawa</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="#shipping">Wysyłka</a>
+              <a class="header-menu-link" href="/#shipping">Wysyłka</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="#faq">FAQ</a>
+              <a class="header-menu-link" href="/#faq">FAQ</a>
             </li>
             <li class="header-menu-item">
-              <a class="header-menu-link" href="#contact">Kontakt</a>
+              <a class="header-menu-link" href="/#contact">Kontakt</a>
             </li>
           </ul>
         </nav>
         <div class="header-contact">
-          <svg width="22" height="22" class="header-tel-icon">
-            <use href="./img/icons.svg#phone-call"></use>
-          </svg>
-          <a href="tel:+48739015287" class="header-tel">739 015 287</a>
+          <div class="header-cta">
+            <a
+              href="https://panel.sterylserwis.pl/public-transfer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="header-tel"
+            >
+              <span class="header-main-text">Przekaż narzędzia</span>
+              <span class="header-sub-text">tylko dla oferty „Na sztuki”</span>
+            </a>
+          </div>
         </div>
         <div class="burger-menu-wrap">
           <svg width="22" height="22" class="header-icon">
@@ -346,15 +455,26 @@
       </div>
     </div>
   </div>
-  <div class="container header-bottom">
-    <div class="title-wrap">
-      <h1 class="title-main">
-        PUNKT STERYLIZACJI NARZĘDZI <br />
-        <span class="green-text">STERYL SERWIS</span>
-      </h1>
-      <h3 class="header-subtitle">
-        Działaj bezpiecznie i skutecznie razem z nami!
-      </h3>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="title-wrap">
+        <h1 class="title-main">
+          PUNKT STERYLIZACJI NARZĘDZI <br />
+          <span class="green-text">STERYL SERWIS</span>
+        </h1>
+        <h3 class="header-subtitle">
+          Działaj bezpiecznie i skutecznie razem z nami!
+        </h3>
+        <a
+          href="https://panel.sterylserwis.pl/public-transfer"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hero-btn-desktop"
+        >
+          Przekaż narzędzia do sterylizacji
+        </a>
+        <p class="hero-notis">Dotyczy wyłącznie oferty „Na sztuki”</p>
+      </div>
     </div>
   </div>
 </header>
@@ -370,13 +490,13 @@
     </div>
     <nav class="mob-menu">
       <ul class="mob-menu-list">
-        <li class="mob-menu-item"><a href="#about">O nas</a></li>
-        <li class="mob-menu-item"><a href="#what">Co sterylizujemy</a></li>
-        <li class="mob-menu-item"><a href="#offer">Oferta</a></li>
-		  <li class="mob-menu-item"><a href="#delivery">Dostawa</a></li>
-        <li class="mob-menu-item"><a href="#shipping">Wysyłka</a></li>
-        <li class="mob-menu-item"><a href="#faq">FAQ</a></li>
-        <li class="mob-menu-item"><a href="#contact">Kontakt</a></li>
+        <li class="mob-menu-item"><a href="/#about">O nas</a></li>
+        <li class="mob-menu-item"><a href="/#what">Co sterylizujemy</a></li>
+        <li class="mob-menu-item"><a href="/#offer">Oferta</a></li>
+		  <li class="mob-menu-item"><a href="/#delivery">Dostawa</a></li>
+        <li class="mob-menu-item"><a href="/#shipping">Wysyłka</a></li>
+        <li class="mob-menu-item"><a href="/#faq">FAQ</a></li>
+        <li class="mob-menu-item"><a href="/#contact">Kontakt</a></li>
       </ul>
     </nav>
     <div class="line-decorator"></div>
@@ -412,7 +532,25 @@
 
       <section class="hero-section">
   <div class="hero-img-wrap">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Działaj bezpiecznie i skutecznie razem z nami!
+        </h1>
+
+        <a
+          href="https://panel.sterylserwis.pl/public-transfer"
+          class="hero-btn"
+        >
+          Przekaż narzędzia
+        </a>
+        <p class="hero-note">
+          Dotyczy wyłącznie oferty „Na sztuki”
+        </p>
+      </div>
+    </div>
   </div>
+
   <div class="hero-contact-wrap">
     <div class="hero-contact header-contact">
       <svg width="22" height="22" class="hero-tel-icon">
@@ -423,6 +561,7 @@
   </div>
 </section>
 
+
     </div>
 
     <main>
@@ -430,49 +569,50 @@
   <div class="container">
     <h2 class="title about-title">O NAS</h2>
     <div class="about-content">
-    	<div class="about-text-wrapper">
-    		<p class="about-text">
-		      Nasz zakład oferuje kompleksowe rozwiązania w zakresie dezynfekcji i
-		      sterylizacji narzędzi, skierowane do gabinetów kosmetycznych oraz
-		      medycznych, które pragną zapewnić bezpieczeństwo swoim Klientom oraz
-		      Pacjentom. Od 2019 roku działamy na terenie Krakowa, oferując wysyłkę
-		      narzędzi na całą Polskę. Naszym priorytetem jest zapewnienie najwyższych
-		      standardów higieny i bezpieczeństwa dla naszych klientów.
-		    </p>
-		    <p class="about-text">
-		      Nasze usługi obejmują dezynfekcję właściwą z użyciem profesjonalnych
-		      środków, konserwację antykorozyjną dla ochrony powierzchni, pakowanie w
-		      opakowania papierowo-foliowe oraz końcową sterylizację w autoklawie
-		      parowym klasy B typu LAFOMED PREMIUM LINE. Ten zaawansowany sterylizator
-		      parowy gwarantuje całkowitą jałowość narzędzi, eliminując wszystkie
-		      mikroorganizmy, w formie wegetatywnej, jak i przetrwalnikowej. Zapewnia
-		      to pełną sterylność narzędzi i zgodność z najwyższymi standardami
-		      sanitarnymi.
-		    </p>
-    	</div>
-	    <picture>
-	      <source
-	        srcset="./img/about/autoklaw_dt_1x.png 1x, ./img/about/autoklaw_dt_2x.png 2x"
-	        media="(min-width: 1440px)"
-	      />
-	      <source
-	        srcset="./img/about/autoklaw_dt_1x.png 1x, ./img/about/autoklaw_dt_2x.png 2x"
-	        media="(min-width: 1200px)"
-	      />
-			<source
-	        srcset="./img/about/autoklaw_mob_1x.png 1x, ./img/about/autoklaw_mob_2x.png 2x"
-	        media="(min-width: 768px)"
-	      />
-			<source
-	        srcset="./img/about/autoklaw_mob_1x.png 1x, ./img/about/autoklaw_mob_2x.png 2x"
-	        media="(min-width: 360px)"
-	      />
-	      <img
-	        src="./img/about/autoklaw_mob_1x.png"
-	        alt="Autoklaw"
-	        class="about-img"
-	      />
-	    </picture>
+      <div class="about-text-wrapper">
+        <p class="about-text">
+          Nasz zakład oferuje kompleksowe rozwiązania w zakresie dezynfekcji i
+          sterylizacji narzędzi, skierowane do gabinetów kosmetycznych oraz
+          medycznych, które pragną zapewnić bezpieczeństwo swoim Klientom oraz
+          Pacjentom. Działamy od 2019 roku z siedzibą w Krakowie, świadcząc
+          usługi zarówno lokalnie, jak i dla Klientów z całej Polski. Naszym
+          priorytetem jest zapewnienie najwyższych standardów higieny i
+          bezpieczeństwa dla naszych klientów.
+        </p>
+        <p class="about-text">
+          Nasze usługi obejmują dezynfekcję właściwą z użyciem profesjonalnych
+          środków, konserwację antykorozyjną dla ochrony powierzchni, pakowanie
+          w opakowania papierowo-foliowe oraz końcową sterylizację w autoklawie
+          parowym klasy B typu LAFOMED PREMIUM LINE. Ten zaawansowany
+          sterylizator parowy gwarantuje całkowitą jałowość narzędzi, eliminując
+          wszystkie mikroorganizmy, w formie wegetatywnej, jak i
+          przetrwalnikowej. Zapewnia to pełną sterylność narzędzi i zgodność z
+          najwyższymi standardami sanitarnymi.
+        </p>
+      </div>
+      <picture>
+        <source
+          srcset="./img/about/autoklaw_dt_1x.png 1x, ./img/about/autoklaw_dt_2x.png 2x"
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="./img/about/autoklaw_dt_1x.png 1x, ./img/about/autoklaw_dt_2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="./img/about/autoklaw_mob_1x.png 1x, ./img/about/autoklaw_mob_2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./img/about/autoklaw_mob_1x.png 1x, ./img/about/autoklaw_mob_2x.png 2x"
+          media="(min-width: 360px)"
+        />
+        <img
+          src="./img/about/autoklaw_mob_1x.png"
+          alt="Autoklaw"
+          class="about-img"
+        />
+      </picture>
     </div>
     <p class="about-text">
       Steryzacja narzędzi jest kluczowym elementem zapewniającym bezpieczeństwo
@@ -594,7 +734,7 @@
           />
         </picture>
         <div class="advantages-item od-100zl-item">
-          <h3 class="advantages-item-title">Abonamenty miesięczne od 100 zł</h3>
+          <h3 class="advantages-item-title">Abonamenty miesięczne od 110 zł</h3>
           <p class="advantages-item-text">
             Dla Klientów decydujących się na długoterminową współpracę oferujemy
             szeroki wybór abonamentów miesięcznych.
@@ -724,7 +864,7 @@
           </div>
           <div class="advantages-item-dt od-100zl-item-dt">
             <h3 class="advantages-item-title-dt">
-              Abonamenty miesięczne od 100 zł
+              Abonamenty miesięczne od 110 zł
             </h3>
             <p class="advantages-item-text-dt">
               Dla Klientów decydujących się na długoterminową współpracę
@@ -777,7 +917,7 @@
 	          <div class="card-back">
 	            <ul class="card-back-list">
 	              <li class="card-back-item">narzędzia chirurgiczne</li>
-	              <li class="card-back-item">końcówki stomatologiczne</li>
+	              <li class="card-back-item">narzędzia stomatologiczne</li>
 	              <li class="card-back-item">narzędzia laryngologiczne</li>
 	              <li class="card-back-item">narzędzia ginekologiczne</li>
 	            </ul>
@@ -953,6 +1093,186 @@
   </div>
 </section>
 
+      <section class="panel-section" id="panel-klienta">
+    <div class="container">
+      <h2 class="title panel-title">PANEL KLIENTA ONLINE</h2>
+  
+      <div class="panel-content-wrapper">
+        <div class="panel-phone-wrap">
+          <div class="panel-phone">
+            <div class="panel-phone-screen">
+              <div class="panel-screen active" data-screen="1">
+                <img class="panel-screen-img" src="/img/client_panel/panel-dashboard.webp" alt="Pulpit klienta — status rozliczeń i limit pakietów" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="2">
+                <img class="panel-screen-img" src="/img/client_panel/panel-nowe-przekazanie.webp" alt="Nowe przekazanie narzędzi do sterylizacji" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="3">
+                <img class="panel-screen-img" src="/img/client_panel/panel-faktury.webp" alt="Lista faktur ze statusem płatności" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="4">
+                <img class="panel-screen-img" src="/img/client_panel/panel-testy.webp" alt="Historia testów biologicznych wg miesięcy" loading="lazy">
+              </div>
+              <div class="panel-screen" data-screen="5">
+                <img class="panel-screen-img" src="/img/client_panel/panel-karta-sterylizacji.webp" alt="Karta sterylizacji narzędzi do pobrania" loading="lazy">
+              </div>
+  
+              <div class="panel-dots">
+                <button
+                  type="button"
+                  class="panel-dot active"
+                  data-target="1"
+                  aria-label="Ekran 1"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="2"
+                  aria-label="Ekran 2"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="3"
+                  aria-label="Ekran 3"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="4"
+                  aria-label="Ekran 4"
+                ></button>
+                <button
+                  type="button"
+                  class="panel-dot"
+                  data-target="5"
+                  aria-label="Ekran 5"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="panel-text-wrapper">
+            <p class="panel-lead">
+                Stworzyliśmy unikalny system, w którym od razu masz dostęp do całej
+                dokumentacji dotyczącej Twojej współpracy z nami. Dzięki niemu nasza
+                współpraca jest szybsza, bardziej produktywna i w pełni przejrzysta.
+              </p>
+      
+              <ul class="panel-features">
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Wszystkie faktury i status płatności zawsze pod ręką — bez
+                    szukania w mailach czy segregatorach</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Widzisz dokładnie, na jakim etapie są aktualnie Twoje narzędzia
+                    — od momentu przekazania aż po zwrot</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Bieżąca kontrola wykorzystanych pakietów w ramach abonamentu —
+                    zawsze wiesz, ile Ci jeszcze zostało</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Pełny wgląd w parametry dezynfekcji i sterylizacji zastosowane
+                    wobec Twoich narzędzi — masz pewność, że każdy cykl spełnia
+                    wymagane normy</span
+                  >
+                </li>
+                <li class="panel-feature-item">
+                  <span class="panel-feature-badge">✓</span>
+                  <span class="panel-feature-text"
+                    >Wyniki testów biologicznych zawsze dostępne w Panelu — szybki
+                    wgląd, kiedy tylko ich potrzebujesz, np. podczas kontroli</span
+                  >
+                </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="panel-lightbox" id="panelLightbox">
+    <button type="button" class="panel-lightbox-close" aria-label="Zamknij powiększenie">&times;</button>
+    <img class="panel-lightbox-img" src="" alt="">
+  </div>
+  
+  <script>
+    const panelDots = document.querySelectorAll(".panel-dot");
+    const panelScreens = document.querySelectorAll(".panel-screen");
+    let panelAutoplayTimer = null;
+  
+    function panelGoToScreen(target) {
+      panelDots.forEach((d) =>
+        d.classList.toggle("active", d.dataset.target === target)
+      );
+      panelScreens.forEach((screen) => {
+        screen.classList.toggle("active", screen.dataset.screen === target);
+      });
+    }
+  
+    function panelStartAutoplay() {
+      clearInterval(panelAutoplayTimer);
+      panelAutoplayTimer = setInterval(() => {
+        const dotsArr = Array.from(panelDots);
+        const activeIndex = dotsArr.findIndex((d) =>
+          d.classList.contains("active")
+        );
+        const nextIndex = (activeIndex + 1) % dotsArr.length;
+        panelGoToScreen(dotsArr[nextIndex].dataset.target);
+      }, 2000);
+    }
+  
+    function panelStopAutoplay() {
+      clearInterval(panelAutoplayTimer);
+    }
+  
+    panelDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        panelGoToScreen(dot.dataset.target);
+        panelStartAutoplay();
+      });
+    });
+  
+    panelStartAutoplay();
+  
+    const panelLightbox = document.getElementById("panelLightbox");
+    const panelLightboxImg = panelLightbox.querySelector(".panel-lightbox-img");
+  
+    document.querySelectorAll(".panel-screen-img").forEach((img) => {
+      img.addEventListener("click", () => {
+        panelLightboxImg.src = img.currentSrc || img.src;
+        panelLightboxImg.alt = img.alt;
+        panelLightbox.classList.add("active");
+        panelStopAutoplay();
+      });
+    });
+  
+    panelLightbox.addEventListener("click", () => {
+      panelLightbox.classList.remove("active");
+      panelLightboxImg.src = "";
+      panelStartAutoplay();
+    });
+  
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && panelLightbox.classList.contains("active")) {
+        panelLightbox.classList.remove("active");
+        panelLightboxImg.src = "";
+        panelStartAutoplay();
+      }
+    });
+  </script>
       <section class="section-offer" id="offer">
   <div class="container offer-container">
     <h2 class="title offer-title">OFEROWANE ABONAMENTY</h2>
@@ -960,10 +1280,10 @@
     <ul class="offer-list">
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 20</h3>
-        <p class="offer-item-price">110,00 zł/mies</p>
+        <p class="offer-item-price">120,00 zł/mies</p>
         <p class="offer-item-text">
           do 20 pakietów na miesiąc <br />
-          koszt 1 pakietu 5,50 zł
+          koszt 1 pakietu 6,00 zł
         </p>
         <a href="#" class="offer-item-btn button" data-abonament="STERYL 20"
           >ZAMAWIAM</a
@@ -971,10 +1291,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 30</h3>
-        <p class="offer-item-price">140,00 zł/mies</p>
+        <p class="offer-item-price">155,00 zł/mies</p>
         <p class="offer-item-text">
           do 30 pakietów na miesiąc <br />
-          koszt 1 pakietu 4,67 zł
+          koszt 1 pakietu 5,17 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 30"
           >ZAMAWIAM</a
@@ -982,10 +1302,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 50</h3>
-        <p class="offer-item-price">210,00 zł/mies</p>
+        <p class="offer-item-price">230,00 zł/mies</p>
         <p class="offer-item-text">
           do 50 pakietów na miesiąc <br />
-          koszt 1 pakietu 4,20 zł
+          koszt 1 pakietu 4,60 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 50"
           >ZAMAWIAM</a
@@ -993,10 +1313,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 100</h3>
-        <p class="offer-item-price">300,00 zł/mies</p>
+        <p class="offer-item-price">330,00 zł/mies</p>
         <p class="offer-item-text">
           do 100 pakietów na miesiąc <br />
-          koszt 1 pakietu 3,00 zł
+          koszt 1 pakietu 3,30 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 100"
           >ZAMAWIAM</a
@@ -1004,10 +1324,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 150</h3>
-        <p class="offer-item-price">360,00 zł/mies</p>
+        <p class="offer-item-price">400,00 zł/mies</p>
         <p class="offer-item-text">
           do 150 pakietów na miesiąc <br />
-          koszt 1 pakietu 2,40 zł
+          koszt 1 pakietu 2,67 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 150"
           >ZAMAWIAM</a
@@ -1015,10 +1335,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 200</h3>
-        <p class="offer-item-price">430,00 zł/mies</p>
+        <p class="offer-item-price">470,00 zł/mies</p>
         <p class="offer-item-text">
           do 200 pakietów na miesiąc <br />
-          koszt 1 pakietu 2,15 zł
+          koszt 1 pakietu 2,35 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 200"
           >ZAMAWIAM</a
@@ -1026,10 +1346,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 300</h3>
-        <p class="offer-item-price">550,00 zł/mies</p>
+        <p class="offer-item-price">600,00 zł/mies</p>
         <p class="offer-item-text">
-          do 30 pakietów na miesiąc <br />
-          koszt 1 pakietu 1,83 zł
+          do 300 pakietów na miesiąc <br />
+          koszt 1 pakietu 2,00 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 300"
           >ZAMAWIAM</a
@@ -1037,10 +1357,10 @@
       </li>
       <li class="offer-list-item">
         <h3 class="offer-item-title">STERYL 500</h3>
-        <p class="offer-item-price">780,00 zł/mies</p>
+        <p class="offer-item-price">850,00 zł/mies</p>
         <p class="offer-item-text">
           do 500 pakietów na miesiąc <br />
-          koszt 1 pakietu 1,56 zł
+          koszt 1 pakietu 1,70 zł
         </p>
         <a href="" class="offer-item-btn button" data-abonament="STERYL 500"
           >ZAMAWIAM</a
@@ -1048,7 +1368,7 @@
       </li>
       <li class="offer-list-item na-sztuki-item">
         <h3 class="offer-item-title">NA SZTUKI</h3>
-        <p class="offer-item-price">6,00 zł/pakiet</p>
+        <p class="offer-item-price">6,50 zł/pakiet</p>
         <p class="offer-item-text">bez podpisania umowy</p>
         <!-- <a href="" class="offer-item-btn button" data-abonament="NA SZTUKI">ZAMAWIAM</a> -->
       </li>
@@ -1080,7 +1400,7 @@
   </div>
 </section>
 
-		<section class="delivery-section" id="delivery">
+      <section class="delivery-section" id="delivery">
   <div class="container deliver-container">
     <h2 class="title delivery-title">ODBIÓR I DOSTAWA NARZĘDZI</h2>
     <div class="delivery-content-wrapper">
@@ -1230,26 +1550,30 @@
           <div class="faq-item-wrap">
             <div class="faq-item-icon"></div>
             <p class="faq-item-text">
-              Co potrzebuję, żeby wysłać do Was narzędzia do sterylizacji „na
-              sztuki”?
+              Co muszę przygotować, aby przekazać do Was narzędzia do
+              sterylizacji „na sztuki”?
             </p>
           </div>
           <div class="faq-item-answer">
             <div class="line-decorator"></div>
-            Aby wysłać narzędzia do sterylizacji „na sztuki”, należy najpierw
+            Aby przekazać narzędzia do sterylizacji „na sztuki”, należy najpierw
             zapoznać się z naszym Regulaminem oraz klauzulą informacyjną
             dotyczącą ochrony danych osobowych (RODO). <br />
-            Następnie konieczne jest wypełnienie następujących dokumentów:
-            <br />- Karta Klienta – dokument ten należy wypełnić tylko jeden
-            raz, przy pierwszej przesyłce. <br />- Karta Przekazania Narzędzi –
-            ten formularz należy wypełniać za każdym razem i dołączać do każdej
-            przesyłki. <br />
-            Wszystkie wspomniane informacje oraz formularze znajdziesz w stopce
-            (footerze) naszej strony internetowej. <br />
-            Po wypełnieniu dokumentów narzędzia należy odpowiednio przygotować
-            do wysyłki: umieścić w zamykanym plastikowym pojemniku oraz
-            zabezpieczyć przed uszkodzeniem. Do przesyłki dołącz wymagane
-            dokumenty, a następnie nadaj całość do Paczkomatu InPost.
+            Następnie należy wypełnić elektroniczny formularz dostępny na naszej
+            stronie internetowej. W tym celu należy kliknąć przycisk „Przekaż
+            narzędzia”, uzupełnić wszystkie wymagane informacje i wysłać
+            zgłoszenie. <br />
+            Po przesłaniu formularza narzędzia należy dostarczyć lub wysłać do
+            nas odpowiednio przygotowane narzędzia nie później niż w ciągu 7
+            dni.
+            <br />
+            Uwaga: dostarczone narzędzia bez uprzednio przesłanego formularza
+            elektronicznego nie będą przyjmowane do sterylizacji do momentu jego
+            przesłania.
+            <br /><br />
+            Jeśli posiadasz już podpisaną z nami umowę, nowe przekazanie
+            narzędzi zgłaszasz przez nasz Panel Klienta, a nie przez ten
+            formularz.
           </div>
         </li>
 
@@ -1271,6 +1595,42 @@
           <div class="faq-item-wrap">
             <div class="faq-item-icon"></div>
             <p class="faq-item-text">
+              Czy narzędzia mogą zostać uszkodzone w trakcie standardowej
+              dezynfekcji i sterylizacji?
+            </p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Niektóre narzędzia, w szczególności frezy kosmetyczne bez
+            odpowiedniego zabezpieczenia powierzchni (np. ze słabą powłoką
+            ochronną lub z bardzo delikatnym pokryciem), mogą ulec
+            przebarwieniom, zmatowieniom lub innym zmianom wyglądu w trakcie
+            standardowych procesów dezynfekcji i sterylizacji.<br />
+            Dezynfekujemy narzędzia w myjce ultradźwiękowej przez 15 minut w 1%
+            roztworze profesjonalnego preparatu Viruton Extra, który jest
+            zalecany m.in. do mycia i dezynfekcji narzędzi wykonanych ze stali
+            nierdzewnej, niklu, miedzi, aluminium, gumy, porcelany, szkła oraz
+            tworzyw sztucznych. Sterylizację przeprowadzamy w autoklawie klasy
+            B, w standardowym cyklu: 134°C przez 5 minut pod ciśnieniem 2 barów.
+            W przypadku dołączenia instrukcji producenta z innymi parametrami –
+            dostosowujemy odpowiedni tryb sterylizacji.<br />
+            Prosimy o wcześniejsze upewnienie się, że przesyłane narzędzia są
+            przystosowane do opisanych warunków.
+            <strong>
+              Nie ponosimy odpowiedzialności za ewentualne przebarwienie lub
+              inne zmiany powierzchni narzędzi, jeśli nie została do nich
+              dołączona instrukcja użytkowania z wyraźnie określonymi
+              zaleceniami producenta dotyczącymi dezynfekcji i sterylizacji, a
+              po naszej stronie zostały zastosowane parametry tych procesów
+              zgodne z opisem w naszym Regulaminie.
+            </strong>
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
+            <p class="faq-item-text">
               Nie mam dużo narzędzi i chcę je sterylizować raz na miesiąc. Czy
               muszę w takim razie podpisywać z Wami umowę?
             </p>
@@ -1279,7 +1639,7 @@
             <div class="line-decorator"></div>
             Nie muszą Państwo podpisywać umowy. Można sterylizować narzędzia „na
             sztuki”. Koszt sterylizacji jednego pakietu w tym przypadku wynosi
-            6,00 zł.
+            6,50 zł.
           </div>
         </li>
 
@@ -1343,7 +1703,7 @@
             dostawy narzędzi. W zależności od liczby Klientów kurier
             samodzielnie ustala kolejność wizyt. Oznacza to, że w przypadku
             współpracy z nami, która obejmuje odbiór lub dostawę przez naszego
-            kuriera, Klient powinien być dostępny w godzinach od 9:00 do 13:00
+            kuriera, Klient powinien być dostępny w godzinach od 9:00 do 14:00
             lub posiadać miejsce, w którym może zostawić narzędzia do odbioru
             przez kuriera.
           </div>
@@ -1358,10 +1718,10 @@
           </div>
           <div class="faq-item-answer">
             <div class="line-decorator"></div>
-            Koszt odbioru lub dostawy narzędzi na terenie Krakowa wynosi 12 zł
+            Koszt odbioru lub dostawy narzędzi na terenie Krakowa wynosi 14 zł
             brutto za jeden przyjazd kuriera – dotyczy to większości obszaru
             miasta. W najbardziej oddalonych rejonach Krakowa cena może wynosić
-            do 15 zł. Nie dojeżdżamy do Klientów znajdujących się w obrębie
+            do 17 zł. Nie dojeżdżamy do Klientów znajdujących się w obrębie
             Starego Miasta (wewnątrz Plantów).
           </div>
         </li>
@@ -1454,7 +1814,7 @@
             <div class="line-decorator"></div>
             Koszty wysyłki w obie strony ponosi Klient. Do nas wysyłasz paczkę
             do Paczkomatu zgodnie z cennikiem InPost. Przesyłka zwrotna jest w
-            cenie 20 zł brutto.
+            cenie 22,00 zł brutto.
           </div>
         </li>
 
@@ -1465,73 +1825,34 @@
           </div>
           <div class="faq-item-answer">
             <div class="line-decorator"></div>
-            Czyste, wstępnie zdezynfekowane narzędzia należy luźno umieścić w
-            zamykanym plastikowym pudełku, zabezpieczając je przed uszkodzeniem
-            w trakcie transportu (końcówki silikonowe, papier, folia bąbelkowa).
-            Pudełko należy podpisać danymi Klienta oraz koniecznie dołączyć
-            kartkę z wykazem wysyłanych narzędzi i instrukcją pakowania.
-            Najlepiej dodatkowo umieścić pudełko w kartonie.
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <div class="faq-item-wrap">
-            <div class="faq-item-icon"></div>
-            <p class="faq-item-text">
-              Jak powinna wyglądać instrukcja pakowania narzędzi?
-            </p>
-          </div>
-          <div class="faq-item-answer">
-            <div class="line-decorator"></div>
-            Instrukcja do pakowania narzędzi powinna być przygotowana w języku
-            polskim i napisana w sposób czytelny oraz łatwy do zrozumienia.
-            Każde narzędzie trzeba opisać według rodzaju (np. cążki, nożyczki,
-            sondy itp.), gdyż nie jesteśmy w stanie rozpoznać ich na podstawie
-            rozmiaru, nazwy producenta ani dodatkowych cech, takich jak liczba
-            kresek na frezach. Frezy jesteśmy w stanie rozrużniać jedynie według
-            ich kształtów. <br />
-            Prosimy kierować się poniższym przykładem: <br />
-            <div class="faq-insrtuction-wrapper">
-              <div class="faq-instruction">
-                <p class="faq-instruction-title">
-                  Prawidłowo <span style="color: green">&#10003;</span>
-                </p>
-
-                Studio stylizacji paznokci Anna Kowalska <br />
-                tel.: 888 777 666 <br />
-                <br />
-                Cążki - 12 <br />
-                Kopytka - 12 <br />
-                Frez do masy - 12 <br />
-                Frez łezka - 5 <br />
-                Frez ścięty stożek - 7 <br />
-                Pęsety - 5 <br />
-                <br />
-                PAKOWANIE: <br />
-                - cążki + kopytko + frez do masy + łezka x5 <br />
-                - cążki + kopytko + frez do masy + ścięty stożek x7 <br />
-                - pęseta (każda osobno) x5
-              </div>
-              <div class="faq-instruction">
-                <p class="faq-instruction-title">
-                  Nieprawidłowo <span style="color: red">&#x274C;</span>
-                </p>
-                Imię i nazwisko: - <br />
-                tel.: - <br />
-                <br />
-                Cążki - 12 <br />
-                Kopytka - 12 <br />
-                Frezy - 24 <br />
-                Pęsety - 5 <br />
-                <br />
-                PAKOWANIE: <br />
-                - cążki Staleks 50|2 + kopytko duże + frez do opiłowania + łezka
-                mała (2 czerwone kreski) x5 <br />
-                - cążki Neonail + dłutko małe + frez do opiłowania + frez do
-                podniesienia (niebieska kreska) x7 <br />
-                - pęseta (każda osobno) x5
-              </div>
-            </div>
+            Czyste, wstępnie zdezynfekowane narzędzia należy umieścić luźno w
+            zamykanym plastikowym pojemniku, zabezpieczając je przed
+            uszkodzeniem w trakcie transportu (np. przy użyciu silikonowych
+            końcówek, papieru lub folii bąbelkowej).
+            <br />
+            Pojemnik powinien mieć odpowiednie wymiary – nie może być zbyt mały
+            ani zbyt ciasny. Powinien być dostosowany do rozmiaru zapakowanych
+            pakietów w taki sposób, aby nie było konieczności ich zginania ani
+            ściskania. Ważne jest również, aby wewnątrz pojemnika pozostało
+            wystarczająco miejsca na odpowiednie zabezpieczenie
+            wysterylizowanych pakietów, na przykład przy użyciu ręczników
+            papierowych.<br />
+            Do przesyłki należy również dołączyć odpowiednie materiały
+            zabezpieczające, które zostaną wykorzystane przez nasz zespół do
+            wypełnienia wolnych przestrzeni w pojemniku oraz zabezpieczenia
+            wysterylizowanych pakietów. Dla dodatkowego bezpieczeństwa zalecamy
+            umieszczenie plastikowego pojemnika w kartonie.<br />
+            <strong
+              >W przypadku przesłania narzędzi w pojemniku, który uniemożliwia
+              bezpieczne zapakowanie i odesłanie wysterylizowanych pakietów,
+              będziemy zmuszeni wymienić go na własny. Koszt nowego pojemnika
+              zostanie doliczony do kwoty za usługę sterylizacji.<br />
+              Dodatkowa opłata może zostać również naliczona w sytuacji, gdy
+              konieczne będzie użycie dodatkowych materiałów zabezpieczających,
+              mających na celu zmniejszenie ryzyka uszkodzenia wysterylizowanych
+              pakietów podczas transportu. Wszystkie takie działania podejmujemy
+              wyłącznie po wcześniejszej konsultacji z Klientem.</strong
+            >
           </div>
         </li>
 
@@ -1557,18 +1878,51 @@
           <div class="faq-item-wrap">
             <div class="faq-item-icon"></div>
             <p class="faq-item-text">
-              Jak mogę podpisać umowę na sterylizację wysyłkową?
+              Jak mogę podpisać umowę o stałą współpracę?
             </p>
           </div>
           <div class="faq-item-answer">
             <div class="line-decorator"></div>
-            Jeśli są Państwo zdecydowani na długoterminową współpracę, prosimy o
-            przesłanie na nasz e-mail sterylserwis@gmail.com danych działalności
-            lub osobistych. Po wygenerowaniu umowy prześlemy ją na Państwa maila
-            do akceptacji. Jeśli umowa bedzie Państwu odpowiadała, wystarczy
-            dołączyć dwa podpisane egzemplarze do pierwszej wysyłki narzędzi.
-            Jeden z egzemplarzy zostanie podpisany przez nas oraz odesłany
-            Klientowi razem z wysterylizowanymi narzędziami.
+            Jeśli jesteś zdecydowany/-na na długoterminową współpracę, prosimy o
+            wybór abonamentu odpowiedniego do Twoich potrzeb w sekcji Oferowane
+            Abonamenty i kliknięcie przycisku „Zamów” znajdującego się pod
+            wybraną opcją. Następnie należy wypełnić formularz, podając dane
+            niezbędne do przygotowania umowy, i przesłać go do nas. Po
+            weryfikacji danych przygotowujemy umowę i przesyłamy ją na podany
+            adres e-mail do akceptacji. Podpisane skany umowy prosimy odesłać do
+            nas mailowo — na tej podstawie tworzymy dla Ciebie dostęp do Panelu
+            Klienta. Jeden podpisany egzemplarz papierowy należy dołączyć przy
+            pierwszym kontakcie — czy to podczas osobistego dostarczenia
+            narzędzi, odbioru przez naszego kuriera, czy pierwszej wysyłki.
+          </div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
+            <p class="faq-item-text">
+              Co to jest Panel Klienta i kto ma do niego dostęp?
+            </p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Panel Klienta to nasz autorski system online, w którym masz stały
+            wgląd w dokumentację dotyczącą współpracy z nami — faktury, status
+            przekazanych narzędzi, parametry dezynfekcji i sterylizacji oraz
+            wyniki testów biologicznych. Dostęp do Panelu mają wyłącznie
+            Klienci, którzy podpisali z nami umowę — nie obejmuje to
+            sterylizacji „na sztuki”.
+          </div>
+        </li>
+
+        <li class="faq-item">
+          <div class="faq-item-wrap">
+            <div class="faq-item-icon"></div>
+            <p class="faq-item-text">Jak otrzymam dostęp do Panelu Klienta?</p>
+          </div>
+          <div class="faq-item-answer">
+            <div class="line-decorator"></div>
+            Po otrzymaniu od Ciebie podpisanych skanów umowy tworzymy dla Ciebie
+            dostęp do Panelu Klienta i przekazujemy dane do logowania.
           </div>
         </li>
       </ul>
@@ -1695,19 +2049,23 @@
             async
             defer
           ></script>
-          <!-- <script src="../js/contact.js"></script> -->
         </div>
       </div>
-      <div
-        id="map"
-        class="contact-google-map"
-        center="40.12150192260742,-100.45039367675781"
-        zoom="4"
-      ></div>
+      <div class="contact-google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.3774693876633!2d20.01740007685621!3d50.08682921577483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b73fc3076f7%3A0x8c99b694ef5c2c37!2sOsiedle%20Dywizjonu%20303%2062F%2C%2031-875%20Krak%C3%B3w%2C%20Polska!5e0!3m2!1spl!2spl!4v1697816010447!5m2!1spl!2spl"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   </div>
 </section>
-<script>
+<!-- <script>
   (g => {
     var h,
       a,
@@ -1746,7 +2104,7 @@
     key: 'AIzaSyAj1Qy-fnSDz-mJjTbTTYesRz-gyKtpOPg',
     v: 'weekly',
   });
-</script>
+</script> -->
 
     </main>
     <div id="cookieConsent" class="cookie-consent">
@@ -1772,22 +2130,22 @@
       </a>
       <ul class="footer-menu">
         <li class="footer-list-item">
-          <a href="#about" class="footer-menu-item">O nas</a>
+          <a href="/#about" class="footer-menu-item">O nas</a>
         </li>
         <li class="footer-list-item">
-          <a href="#what" class="footer-menu-item">Co sterylizujemy</a>
+          <a href="/#what" class="footer-menu-item">Co sterylizujemy</a>
         </li>
         <li class="footer-list-item">
-          <a href="#offer" class="footer-menu-item">Oferta</a>
+          <a href="/#offer" class="footer-menu-item">Oferta</a>
         </li>
         <li class="footer-list-item">
-          <a href="#shipping" class="footer-menu-item">Wysyłka</a>
+          <a href="/#shipping" class="footer-menu-item">Wysyłka</a>
         </li>
         <li class="footer-list-item">
-          <a href="#faq" class="footer-menu-item">FAQ</a>
+          <a href="/#faq" class="footer-menu-item">FAQ</a>
         </li>
         <li class="footer-list-item">
-          <a href="#contact" class="footer-menu-item">Kontakt</a>
+          <a href="/#contact" class="footer-menu-item">Kontakt</a>
         </li>
       </ul>
       <ul class="footer-list">
