@@ -1,61 +1,50 @@
-const form = document.getElementById('contact-form');
-const result = document.getElementById('form-status');
-const spinner = document.getElementById('spinner');
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
+function setContactStatus(message, type) {
+  if (!contactStatus) return;
+  contactStatus.textContent = message;
+  contactStatus.dataset.type = type;
+}
 
-  // 🔄 WYSYŁANIE... (польською)
-  spinner.innerHTML = 'Wysyłanie wiadomości...';
-  spinner.style.display = 'block';
-  result.style.display = 'none';
+if (contactForm) {
+  const submitButton = contactForm.querySelector('.contact__submit');
 
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData.entries());
-  const json = JSON.stringify(object);
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault();
 
-  fetch('https://api.web3forms.com/submit', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: json,
-  })
-    .then(async response => {
-      spinner.style.display = 'none';
-      result.style.display = 'block';
-      result.style.marginTop = '8px'; // ✅ відступ від кнопки
-      const json = await response.json();
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
 
-      if (response.status === 200) {
-        result.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
-              <path d="M20.285 6.709a1 1 0 0 0-1.41-1.418l-9.192 9.191-4.242-4.242a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l10-10z"/>
-            </svg>
-            <span style="color: white; font-weight: 500;">Wiadomość została wysłana!</span>
-          </div>
-        `;
-        form.reset();
-      } else {
-        result.innerHTML = '❌ ' + json.message;
-        result.style.color = 'red';
-      }
+    submitButton.disabled = true;
+    setContactStatus('Wysyłanie wiadomości…', 'info');
 
-      setTimeout(() => {
-        result.style.display = 'none';
-      }, 3000);
+    const payload = JSON.stringify(Object.fromEntries(new FormData(contactForm).entries()));
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: payload,
     })
-    .catch(error => {
-      spinner.style.display = 'none';
-      result.innerHTML = '❌ Wystąpił problem z połączeniem. Spróbuj ponownie.';
-      result.style.color = 'red';
-      result.style.display = 'block';
-      result.style.marginTop = '8px';
+      .then(async response => {
+        const data = await response.json();
+        if (response.status === 200) {
+          setContactStatus('Dziękujemy! Wiadomość została wysłana — odpowiemy najszybciej, jak to możliwe.', 'success');
+          contactForm.reset();
+        } else {
+          setContactStatus(data.message || 'Nie udało się wysłać wiadomości. Spróbuj ponownie.', 'error');
+        }
+      })
+      .catch(() => {
+        setContactStatus('Wystąpił problem z połączeniem. Spróbuj ponownie lub zadzwoń: 739 015 287.', 'error');
+      })
+      .finally(() => {
+        submitButton.disabled = false;
+      });
+  });
+}
 
-      setTimeout(() => {
-        result.style.display = 'none';
-      }, 3000);
-    });
-});
+const footerYear = document.getElementById('footer-year');
+if (footerYear) footerYear.textContent = String(new Date().getFullYear());

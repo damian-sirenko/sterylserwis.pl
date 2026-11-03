@@ -1,44 +1,43 @@
-const backdrop = document.querySelector('.backdrop');
-const openMenuBtns = document.querySelectorAll(
-  '.burger-menu-wrap, .js-menu-open'
-);
-const closeMenuBtn = document.querySelector('.menu-close-btn');
-const overlay = document.querySelector('.backdrop-overlay');
-const menuItems = document.querySelectorAll('.mob-menu-item a');
+const mobileNav = document.getElementById('mobileNav');
 
-// Функція для відкриття меню
-const openMenu = () => {
-  backdrop.classList.add('is-open');
-  overlay.classList.add('is-open');
-  // Робимо елементи видимими
-  backdrop.style.visibility = 'visible';
-  overlay.style.visibility = 'visible';
-};
+if (mobileNav) {
+  const openButtons = document.querySelectorAll('.burger-menu-wrap, .js-menu-open');
+  const closeTargets = mobileNav.querySelectorAll('[data-mnav-close]');
+  const navLinks = mobileNav.querySelectorAll('a');
+  let lastFocused = null;
 
-// Функція для закриття меню
-const closeMenu = () => {
-  // Видаляємо класи для плавного закриття
-  backdrop.classList.remove('is-open');
-  overlay.classList.remove('is-open');
-  // Через 300 мс змінюємо visibility
-  setTimeout(() => {
-    backdrop.style.visibility = 'hidden';
-    overlay.style.visibility = 'hidden';
-  }, 300); // Відповідає тривалості transition
-};
+  function openMobileNav() {
+    lastFocused = document.activeElement;
+    mobileNav.classList.add('is-open');
+    mobileNav.removeAttribute('inert');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('is-mnav-open');
+    openButtons.forEach(button => button.setAttribute('aria-expanded', 'true'));
+    const closeButton = mobileNav.querySelector('.mnav__close');
+    if (closeButton) closeButton.focus();
+  }
 
-// Закриваємо меню при кліку на будь-який пункт меню
-menuItems.forEach(item => {
-  item.addEventListener('click', () => {
-    closeMenu();
+  function closeMobileNav() {
+    if (!mobileNav.classList.contains('is-open')) return;
+    mobileNav.classList.remove('is-open');
+    mobileNav.setAttribute('inert', '');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('is-mnav-open');
+    openButtons.forEach(button => button.setAttribute('aria-expanded', 'false'));
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+
+  openButtons.forEach(button => {
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', 'mobileNav');
+    button.addEventListener('click', openMobileNav);
   });
-});
-
-// Закриваємо меню при кліку на оверлей
-overlay.addEventListener('click', () => {
-  closeMenu();
-});
-
-// Додаємо обробники подій для кнопок відкриття та закриття
-openMenuBtns.forEach(button => button.addEventListener('click', openMenu));
-closeMenuBtn.addEventListener('click', closeMenu);
+  closeTargets.forEach(target => target.addEventListener('click', closeMobileNav));
+  navLinks.forEach(link => link.addEventListener('click', closeMobileNav));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMobileNav();
+  });
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', event => {
+    if (event.matches) closeMobileNav();
+  });
+}

@@ -1,290 +1,132 @@
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <button class="modal-close-btn" type="button" id="close-modal">
-      <svg width="8" height="8" class="modal-close-icon">
-        <use href="./img/icons.svg#close_icon"></use>
-      </svg>
+<dialog class="order" id="modal" aria-labelledby="order-title">
+  <div class="order__box">
+    <button class="order__close" type="button" id="close-modal" aria-label="Zamknij formularz">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <!-- <button class="close-modal-btn" id="close-modal">&times;</button> -->
-    <h2 class="modal-title">Formularz zamówienia</h2>
 
-    <form id="modal-form" class="modal-form" method="POST">
-      <input
-        type="hidden"
-        name="access_key"
-        value="674a91e4-cb0e-4621-a6fe-33522af79ee4"
-      />
-      <input
-        type="hidden"
-        name="Nazwa_formularzu"
-        value="Formularz zamówienia abonamentu"
-      />
-      <div class="modal-radio-group">
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Typ_klienta"
-            value="Firma"
-            class="modal-radio"
-            checked
-          />
-          Firma
-        </label>
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Typ_klienta"
-            value="Osoba prywatna"
-            class="modal-radio"
-          />
-          Osoba prywatna
-        </label>
+    <div class="order__head">
+      <p class="order__eyebrow">Zamówienie abonamentu</p>
+      <h2 class="order__title" id="order-title">Formularz zamówienia</h2>
+      <p class="order__intro">Na podstawie tych danych przygotujemy umowę i wyślemy ją na podany adres e&#8209;mail.</p>
+    </div>
+
+    <form class="order__form" id="modal-form" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="674a91e4-cb0e-4621-a6fe-33522af79ee4" />
+      <input type="hidden" name="Nazwa_formularzu" value="Formularz zamówienia abonamentu" />
+      <input class="order__honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="order__field">
+        <label class="order__label" for="order-plan">Abonament</label>
+        <select class="order__input" id="order-plan" name="Abonament" required>
+            <option value="STERYL 20">STERYL 20 — 120 zł / mies.</option>
+            <option value="STERYL 30">STERYL 30 — 155 zł / mies.</option>
+            <option value="STERYL 50">STERYL 50 — 230 zł / mies.</option>
+            <option value="STERYL 100">STERYL 100 — 330 zł / mies.</option>
+            <option value="STERYL 150">STERYL 150 — 400 zł / mies.</option>
+            <option value="STERYL 200">STERYL 200 — 470 zł / mies.</option>
+            <option value="STERYL 300">STERYL 300 — 600 zł / mies.</option>
+            <option value="STERYL 500">STERYL 500 — 850 zł / mies.</option>
+        </select>
       </div>
 
-      <!-- Поля форми -->
-      <div class="modal-form-group">
-        <label for="company-name" class="modal-input-lable">Nazwa firmy</label>
-        <input
-          type="text"
-          id="company-name"
-          name="Nazwa_firmy"
-          class="modal-input"
-          required
-          disabled
-        />
-      </div>
-      <div class="modal-form-group">
-        <label for="full-name" class="modal-input-lable">Imię i nazwisko</label>
-        <input
-          type="text"
-          id="full-name"
-          name="Imie_i_nazwisko"
-          class="modal-input"
-          required
-          disabled
-        />
-      </div>
-      <div class="modal-form-group">
-        <label for="nip" class="modal-input-lable">NIP</label>
-        <input
-          type="text"
-          id="nip"
-          name="Nip"
-          class="modal-input"
-          required
-          disabled
-          inputmode="numeric"
-          pattern="\d{10}"
-          maxlength="10"
-          data-only-digits
-        />
-      </div>
-      <div class="modal-form-group">
-        <label for="pesel" class="modal-input-lable">PESEL</label>
-        <input
-          type="text"
-          id="pesel"
-          name="Pesel"
-          class="modal-input"
-          required
-          disabled
-          inputmode="numeric"
-          pattern="\d{11}"
-          maxlength="11"
-          data-only-digits
-        />
-      </div>
-      <div class="modal-form-group">
-        <label for="street-house" class="modal-input-lable">Adres</label>
-        <input
-          type="text"
-          id="street-house"
-          name="Ulica_i_nr_domu"
-          class="modal-input"
-          required
-          autocomplete="street-address"
-        />
-      </div>
-
-      <div class="modal-form-row modal-form-row--zip-city">
-        <div class="modal-form-group">
-          <label for="postal-code" class="modal-input-lable"
-            >Kod pocztowy</label
-          >
-          <input
-            type="text"
-            id="postal-code"
-            name="Kod_pocztowy"
-            class="modal-input"
-            required
-            inputmode="numeric"
-            placeholder="00-000"
-            autocomplete="postal-code"
-          />
+      <fieldset class="order__group">
+        <legend class="order__legend">Dane do umowy</legend>
+        <div class="order__segmented" role="radiogroup" aria-label="Typ klienta">
+          <label class="order__seg"><input type="radio" name="Typ_klienta" value="Firma" checked /><span>Firma</span></label>
+          <label class="order__seg"><input type="radio" name="Typ_klienta" value="Osoba prywatna" /><span>Osoba prywatna</span></label>
         </div>
 
-        <div class="modal-form-group">
-          <label for="city" class="modal-input-lable">Miejscowość</label>
-          <input
-            type="text"
-            id="city"
-            name="Miejscowość"
-            class="modal-input"
-            required
-            autocomplete="address-level2"
-          />
+        <div class="order__field" data-for-type="Firma">
+          <label class="order__label" for="company-name">Nazwa firmy</label>
+          <input class="order__input" id="company-name" name="Nazwa_firmy" type="text" autocomplete="organization" required />
         </div>
-      </div>
+        <div class="order__field" data-for-type="Firma">
+          <label class="order__label" for="nip">NIP</label>
+          <input class="order__input" id="nip" name="Nip" type="text" inputmode="numeric" maxlength="10" pattern="\d{10}" data-only-digits required />
+        </div>
+        <div class="order__field" data-for-type="Osoba prywatna" hidden>
+          <label class="order__label" for="full-name">Imię i nazwisko</label>
+          <input class="order__input" id="full-name" name="Imie_i_nazwisko" type="text" autocomplete="name" required disabled />
+        </div>
+        <div class="order__field" data-for-type="Osoba prywatna" hidden>
+          <label class="order__label" for="pesel">PESEL</label>
+          <input class="order__input" id="pesel" name="Pesel" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" data-only-digits required disabled />
+        </div>
 
-      <input type="hidden" id="address" name="Adres" />
+        <div class="order__field">
+          <label class="order__label" for="street-house">Ulica i numer</label>
+          <input class="order__input" id="street-house" name="Ulica_i_nr_domu" type="text" autocomplete="street-address" required />
+        </div>
+        <div class="order__row">
+          <div class="order__field">
+            <label class="order__label" for="postal-code">Kod pocztowy</label>
+            <input class="order__input" id="postal-code" name="Kod_pocztowy" type="text" inputmode="numeric" placeholder="00-000" maxlength="6" pattern="\d{2}-\d{3}" autocomplete="postal-code" required />
+          </div>
+          <div class="order__field">
+            <label class="order__label" for="city">Miejscowość</label>
+            <input class="order__input" id="city" name="Miejscowość" type="text" autocomplete="address-level2" required />
+          </div>
+        </div>
+        <input type="hidden" id="address" name="Adres" />
+      </fieldset>
 
-      <div class="modal-form-group">
-        <label for="phone" class="modal-input-lable">Telefon</label>
-        <input
-          type="tel"
-          id="phone"
-          name="Telefon"
-          class="modal-input"
-          required
-        />
-      </div>
-      <div class="modal-form-group">
-        <label for="email" class="modal-input-lable">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="Email"
-          class="modal-input"
-          required
-        />
-      </div>
+      <fieldset class="order__group">
+        <legend class="order__legend">Kontakt</legend>
+        <div class="order__row">
+          <div class="order__field">
+            <label class="order__label" for="phone">Telefon</label>
+            <input class="order__input" id="phone" name="Telefon" type="tel" autocomplete="tel" required />
+          </div>
+          <div class="order__field">
+            <label class="order__label" for="order-email">E-mail</label>
+            <input class="order__input" id="order-email" name="Email" type="email" autocomplete="email" required />
+          </div>
+        </div>
+      </fieldset>
 
-      <!-- Радіокнопки для інструментів -->
-      <p class="modal-radio-title">Potrzebuję sterylizować narzędzia:</p>
-      <div class="modal-radio-group">
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Rodzaj_narzędzi"
-            value="kosmetyczne"
-            class="modal-radio"
-            checked
-          />
-          Kosmetyczne
-        </label>
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Rodzaj_narzędzi"
-            value="medyczne"
-            class="modal-radio"
-          />
-          Medyczne
-        </label>
-      </div>
+      <fieldset class="order__group">
+        <legend class="order__legend">Współpraca</legend>
+        <p class="order__label">Narzędzia do sterylizacji</p>
+        <div class="order__segmented" role="radiogroup" aria-label="Rodzaj narzędzi">
+          <label class="order__seg"><input type="radio" name="Rodzaj_narzędzi" value="kosmetyczne" checked /><span>Kosmetyczne</span></label>
+          <label class="order__seg"><input type="radio" name="Rodzaj_narzędzi" value="medyczne" /><span>Medyczne</span></label>
+        </div>
 
-      <!-- Радіокнопки для доставки -->
-      <p class="modal-radio-title">Sposób dostawy narzedzi:</p>
-      <div class="modal-radio-group">
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Dostarczenie"
-            value="osobiscie"
-            class="modal-radio"
-            checked
-          />
-          Osobiście
-        </label>
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Dostarczenie"
-            value="kurier"
-            class="modal-radio"
-          />
-          Nasz kurier w Krakowie
-        </label>
-        <label class="modal-radio-lable">
-          <input
-            type="radio"
-            name="Dostarczenie"
-            value="paczkomat"
-            class="modal-radio"
-          />
-          Paczkomat InPost
-        </label>
-      </div>
-      <div
-        class="modal-form-group paczkomat-nr"
-        id="paczkomat-field"
-        style="display: none"
-      >
-        <label for="paczkomat" class="modal-input-lable"
-          >Paczkomat odbiorczy nr:</label
-        >
-        <input
-          type="text"
-          id="paczkomat"
-          name="Numer_paczkomatu"
-          class="modal-input"
-          required
-        />
-      </div>
+        <p class="order__label">Sposób przekazania narzędzi</p>
+        <div class="order__segmented order__segmented--3" role="radiogroup" aria-label="Sposób przekazania narzędzi">
+          <label class="order__seg"><input type="radio" name="Dostarczenie" value="osobiscie" checked /><span>Osobiście</span></label>
+          <label class="order__seg"><input type="radio" name="Dostarczenie" value="kurier" /><span>Kurier w Krakowie</span></label>
+          <label class="order__seg"><input type="radio" name="Dostarczenie" value="paczkomat" /><span>Paczkomat InPost</span></label>
+        </div>
+        <div class="order__field" id="paczkomat-field" hidden>
+          <label class="order__label" for="paczkomat">Numer paczkomatu do odbioru narzędzi</label>
+          <input class="order__input" id="paczkomat" name="Numer_paczkomatu" type="text" placeholder="np. KRA01M" disabled />
+        </div>
 
-      <div class="modal-form-group">
-        <label for="start-date" class="modal-input-lable">
-          Preferowana data rozpoczęcia współpracy
-        </label>
-        <input
-          type="date"
-          id="start-date"
-          name="Preferowana_data_rozpoczecia"
-          class="modal-input"
-          required
-          min=""
-        />
-        
-      </div>
+        <div class="order__field">
+          <label class="order__label" for="start-date">Preferowana data rozpoczęcia współpracy</label>
+          <input class="order__input" id="start-date" name="Preferowana_data_rozpoczecia" type="date" required />
+        </div>
+        <div class="order__field">
+          <label class="order__label" for="order-message">Wiadomość <span class="order__optional">(opcjonalnie)</span></label>
+          <textarea class="order__input order__textarea" id="order-message" name="Wiadomosc" rows="3"></textarea>
+        </div>
+      </fieldset>
 
-      <!-- Повідомлення -->
-      <div class="modal-form-group">
-        <label for="message" class="modal-input-lable">Wiadomość</label>
-        <textarea
-          id="message"
-          name="Wiadomosc"
-          class="modal-textarea"
-        ></textarea>
-      </div>
-      <div class="checkbox-modal">
-        <input
-          type="checkbox"
-          id="accept"
-          name="Private-policy"
-          class="form-policy-checkbox"
-          required
-        />
-        <label for="accept" class="modal-policy-text">
-          Akceptuję
-          <a href="../private_policy.html"
-            ><span class="modal-policy-link">politykę prywatności</span></a
-          >
-        </label>
-      </div>
+      <label class="order__check" for="order-accept">
+        <input id="order-accept" name="Private-policy" type="checkbox" required />
+        <span>Akceptuję <a href="./private_policy.html" target="_blank" rel="noopener">politykę prywatności</a></span>
+      </label>
 
-      <!-- <div
-        class="g-recaptcha"
-        aria-colcount="form-recaptcha"
-        data-sitekey="6LeDwboqAAAAAHdOumqEOqO8lvrYerEjCe04hBoq"
-        data-action="LOGIN"
-      ></div> -->
-
-      <div id="modal-status" class="modal-status hidden">
-        <p id="modal-status-message"></p>
-      </div>
-
-      <!-- Кнопка відправлення -->
-      <button type="submit" class="form-btn button">Wyślij</button>
+      <p class="order__status" id="modal-status" role="status" aria-live="polite"><span id="modal-status-message"></span></p>
+      <button class="order__submit" type="submit">Wyślij zamówienie</button>
     </form>
+
+    <div class="order__success" id="order-success" hidden>
+      <span class="order__success-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      <h3 class="order__success-title">Dziękujemy za zamówienie!</h3>
+      <p class="order__success-text">Po weryfikacji danych przygotujemy umowę i wyślemy ją na podany adres e-mail do akceptacji. Podpisane skany umowy odeślij do nas mailowo — na tej podstawie utworzymy dla Ciebie dostęp do Panelu Klienta.</p>
+      <button class="order__submit" type="button" data-order-close>Zamknij</button>
+    </div>
   </div>
-</div>
+</dialog>

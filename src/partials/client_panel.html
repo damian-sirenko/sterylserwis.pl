@@ -1,180 +1,93 @@
-<section class="panel-section" id="panel-klienta">
-    <div class="container">
-      <h2 class="title panel-title">PANEL KLIENTA ONLINE</h2>
-  
-      <div class="panel-content-wrapper">
-        <div class="panel-phone-wrap">
-          <div class="panel-phone">
-            <div class="panel-phone-screen">
-              <div class="panel-screen active" data-screen="1">
-                <img class="panel-screen-img" src="/img/client_panel/panel-dashboard.webp" alt="Pulpit klienta — status rozliczeń i limit pakietów" loading="lazy">
-              </div>
-              <div class="panel-screen" data-screen="2">
-                <img class="panel-screen-img" src="/img/client_panel/panel-nowe-przekazanie.webp" alt="Nowe przekazanie narzędzi do sterylizacji" loading="lazy">
-              </div>
-              <div class="panel-screen" data-screen="3">
-                <img class="panel-screen-img" src="/img/client_panel/panel-faktury.webp" alt="Lista faktur ze statusem płatności" loading="lazy">
-              </div>
-              <div class="panel-screen" data-screen="4">
-                <img class="panel-screen-img" src="/img/client_panel/panel-testy.webp" alt="Historia testów biologicznych wg miesięcy" loading="lazy">
-              </div>
-              <div class="panel-screen" data-screen="5">
-                <img class="panel-screen-img" src="/img/client_panel/panel-karta-sterylizacji.webp" alt="Karta sterylizacji narzędzi do pobrania" loading="lazy">
-              </div>
-  
-              <div class="panel-dots">
-                <button
-                  type="button"
-                  class="panel-dot active"
-                  data-target="1"
-                  aria-label="Ekran 1"
-                ></button>
-                <button
-                  type="button"
-                  class="panel-dot"
-                  data-target="2"
-                  aria-label="Ekran 2"
-                ></button>
-                <button
-                  type="button"
-                  class="panel-dot"
-                  data-target="3"
-                  aria-label="Ekran 3"
-                ></button>
-                <button
-                  type="button"
-                  class="panel-dot"
-                  data-target="4"
-                  aria-label="Ekran 4"
-                ></button>
-                <button
-                  type="button"
-                  class="panel-dot"
-                  data-target="5"
-                  aria-label="Ekran 5"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="panel-text-wrapper">
-            <p class="panel-lead">
-                Stworzyliśmy unikalny system, w którym od razu masz dostęp do całej
-                dokumentacji dotyczącej Twojej współpracy z nami. Dzięki niemu nasza
-                współpraca jest szybsza, bardziej produktywna i w pełni przejrzysta.
-              </p>
-      
-              <ul class="panel-features">
-                <li class="panel-feature-item">
-                  <span class="panel-feature-badge">✓</span>
-                  <span class="panel-feature-text"
-                    >Wszystkie faktury i status płatności zawsze pod ręką — bez
-                    szukania w mailach czy segregatorach</span
-                  >
-                </li>
-                <li class="panel-feature-item">
-                  <span class="panel-feature-badge">✓</span>
-                  <span class="panel-feature-text"
-                    >Widzisz dokładnie, na jakim etapie są aktualnie Twoje narzędzia
-                    — od momentu przekazania aż po zwrot</span
-                  >
-                </li>
-                <li class="panel-feature-item">
-                  <span class="panel-feature-badge">✓</span>
-                  <span class="panel-feature-text"
-                    >Bieżąca kontrola wykorzystanych pakietów w ramach abonamentu —
-                    zawsze wiesz, ile Ci jeszcze zostało</span
-                  >
-                </li>
-                <li class="panel-feature-item">
-                  <span class="panel-feature-badge">✓</span>
-                  <span class="panel-feature-text"
-                    >Pełny wgląd w parametry dezynfekcji i sterylizacji zastosowane
-                    wobec Twoich narzędzi — masz pewność, że każdy cykl spełnia
-                    wymagane normy</span
-                  >
-                </li>
-                <li class="panel-feature-item">
-                  <span class="panel-feature-badge">✓</span>
-                  <span class="panel-feature-text"
-                    >Wyniki testów biologicznych zawsze dostępne w Panelu — szybki
-                    wgląd, kiedy tylko ich potrzebujesz, np. podczas kontroli</span
-                  >
-                </li>
-              </ul>
-          </div>
+<section class="cpanel" id="panel-klienta">
+  <div class="cpanel__inner">
+    <div class="cpanel__head">
+      <p class="cpanel__eyebrow">Panel Klienta <span class="cpanel__badge">dla klientów z umową</span></p>
+      <h2 class="cpanel__title">Cała dokumentacja współpracy w jednym miejscu</h2>
+      <p class="cpanel__intro">
+        W Panelu Klienta online masz dostęp do faktur, testów biologicznych i
+        kart sterylizacji Twoich narzędzi — o każdej porze.
+      </p>
+    </div>
+
+    <div class="cpanel__device">
+      <button class="cpanel__phone" type="button" aria-label="Powiększ zrzut ekranu Panelu Klienta">
+        <span class="cpanel__phone-screen">
+          <img class="cpanel__screen is-active" src="./img/client_panel/panel-dashboard.webp" alt="Pulpit klienta — status rozliczeń i limit pakietów" width="720" loading="lazy" data-screen="0" />
+          <img class="cpanel__screen" src="./img/client_panel/panel-nowe-przekazanie.webp" alt="Nowe przekazanie narzędzi do sterylizacji" width="720" loading="lazy" data-screen="1" />
+          <img class="cpanel__screen" src="./img/client_panel/panel-faktury.webp" alt="Lista faktur ze statusem płatności" width="720" loading="lazy" data-screen="2" />
+          <img class="cpanel__screen" src="./img/client_panel/panel-testy.webp" alt="Historia testów biologicznych wg miesięcy" width="720" loading="lazy" data-screen="3" />
+          <img class="cpanel__screen" src="./img/client_panel/panel-karta-sterylizacji.webp" alt="Karta sterylizacji narzędzi do pobrania" width="720" loading="lazy" data-screen="4" />
+        </span>
+        <span class="cpanel__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+      </button>
+    </div>
+
+    <div class="cpanel__side">
+      <ul class="cpanel__features" aria-label="Funkcje Panelu Klienta">
+        <li>
+          <button class="cpanel__feature is-active" type="button" data-screen="0" aria-pressed="true">
+            <span class="cpanel__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg></span>
+            <span class="cpanel__feature-body">
+              <span class="cpanel__feature-title">Limit pakietów i rozliczenia</span>
+              <span class="cpanel__feature-text">Widzisz, ile pakietów wykorzystałeś w bieżącym miesiącu i czy wszystkie faktury są opłacone.</span>
+            </span>
+            <span class="cpanel__progress" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button class="cpanel__feature" type="button" data-screen="1" aria-pressed="false">
+            <span class="cpanel__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 11v6M9 14h6"/></svg></span>
+            <span class="cpanel__feature-body">
+              <span class="cpanel__feature-title">Zgłoszenie przekazania narzędzi</span>
+              <span class="cpanel__feature-text">Zgłaszasz narzędzia online: wybierasz sposób dostarczenia i narzędzia z katalogu albo z zapisanego szablonu.</span>
+            </span>
+            <span class="cpanel__progress" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button class="cpanel__feature" type="button" data-screen="2" aria-pressed="false">
+            <span class="cpanel__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></span>
+            <span class="cpanel__feature-body">
+              <span class="cpanel__feature-title">Faktury i status płatności</span>
+              <span class="cpanel__feature-text">Wszystkie faktury i status ich płatności w jednym miejscu — bez szukania w mailach czy segregatorach.</span>
+            </span>
+            <span class="cpanel__progress" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button class="cpanel__feature" type="button" data-screen="3" aria-pressed="false">
+            <span class="cpanel__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg></span>
+            <span class="cpanel__feature-body">
+              <span class="cpanel__feature-title">Testy biologiczne</span>
+              <span class="cpanel__feature-text">Comiesięczne wyniki testów biologicznych dla każdego autoklawu — dostępne zawsze, także podczas kontroli.</span>
+            </span>
+            <span class="cpanel__progress" aria-hidden="true"></span>
+          </button>
+        </li>
+        <li>
+          <button class="cpanel__feature" type="button" data-screen="4" aria-pressed="false">
+            <span class="cpanel__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/></svg></span>
+            <span class="cpanel__feature-body">
+              <span class="cpanel__feature-title">Karta sterylizacji</span>
+              <span class="cpanel__feature-text">Data i numer cyklu, autoklaw oraz parametry procesu: temperatura, ciśnienie i czas sterylizacji.</span>
+            </span>
+            <span class="cpanel__progress" aria-hidden="true"></span>
+          </button>
+        </li>
+      </ul>
+      <p class="cpanel__caption" aria-live="polite"></p>
+
+      <div class="cpanel__actions">
+        <a class="cpanel__btn" href="https://panel.sterylserwis.pl" target="_blank" rel="noopener noreferrer">Zaloguj się do Panelu</a>
+        <a class="cpanel__btn cpanel__btn--outline" href="#offer">Wybierz abonament</a>
       </div>
     </div>
-  </section>
-  
-  <div class="panel-lightbox" id="panelLightbox">
-    <button type="button" class="panel-lightbox-close" aria-label="Zamknij powiększenie">&times;</button>
-    <img class="panel-lightbox-img" src="" alt="">
   </div>
-  
-  <script>
-    const panelDots = document.querySelectorAll(".panel-dot");
-    const panelScreens = document.querySelectorAll(".panel-screen");
-    let panelAutoplayTimer = null;
-  
-    function panelGoToScreen(target) {
-      panelDots.forEach((d) =>
-        d.classList.toggle("active", d.dataset.target === target)
-      );
-      panelScreens.forEach((screen) => {
-        screen.classList.toggle("active", screen.dataset.screen === target);
-      });
-    }
-  
-    function panelStartAutoplay() {
-      clearInterval(panelAutoplayTimer);
-      panelAutoplayTimer = setInterval(() => {
-        const dotsArr = Array.from(panelDots);
-        const activeIndex = dotsArr.findIndex((d) =>
-          d.classList.contains("active")
-        );
-        const nextIndex = (activeIndex + 1) % dotsArr.length;
-        panelGoToScreen(dotsArr[nextIndex].dataset.target);
-      }, 2000);
-    }
-  
-    function panelStopAutoplay() {
-      clearInterval(panelAutoplayTimer);
-    }
-  
-    panelDots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        panelGoToScreen(dot.dataset.target);
-        panelStartAutoplay();
-      });
-    });
-  
-    panelStartAutoplay();
-  
-    const panelLightbox = document.getElementById("panelLightbox");
-    const panelLightboxImg = panelLightbox.querySelector(".panel-lightbox-img");
-  
-    document.querySelectorAll(".panel-screen-img").forEach((img) => {
-      img.addEventListener("click", () => {
-        panelLightboxImg.src = img.currentSrc || img.src;
-        panelLightboxImg.alt = img.alt;
-        panelLightbox.classList.add("active");
-        panelStopAutoplay();
-      });
-    });
-  
-    panelLightbox.addEventListener("click", () => {
-      panelLightbox.classList.remove("active");
-      panelLightboxImg.src = "";
-      panelStartAutoplay();
-    });
-  
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && panelLightbox.classList.contains("active")) {
-        panelLightbox.classList.remove("active");
-        panelLightboxImg.src = "";
-        panelStartAutoplay();
-      }
-    });
-  </script>
+
+  <dialog class="cpanel__lightbox" id="cpanel-lightbox" aria-label="Powiększony zrzut ekranu">
+    <button class="cpanel__lightbox-close" type="button" aria-label="Zamknij powiększenie">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <img class="cpanel__lightbox-img" src="" alt="" />
+  </dialog>
+</section>

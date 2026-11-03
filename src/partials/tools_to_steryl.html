@@ -5,10 +5,26 @@
       <h2 class="tools__title">Narzędzia, które przyjmujemy do sterylizacji</h2>
       <p class="tools__intro">
         Sterylizujemy narzędzia wielokrotnego użytku z gabinetów kosmetycznych
-        i podmiotów medycznych. Przed przekazaniem narzędzi upewnij się, że
-        instrukcja producenta dopuszcza ich sterylizację parową.
+        i podmiotów medycznych.
       </p>
 
+      <ul class="tools__rules">
+        <li class="tools__rule">
+          <span class="tools__rule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          Instrukcja producenta dopuszcza sterylizację parową narzędzia
+        </li>
+        <li class="tools__rule">
+          <span class="tools__rule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          Narzędzia są umyte oraz wstępnie zdezynfekowane
+        </li>
+        <li class="tools__rule">
+          <span class="tools__rule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          Narzędzia są bez śladów korozji i sprawne technicznie
+        </li>
+      </ul>
+    </div>
+
+    <div class="tools__catalog">
       <div class="tools__tabs" role="tablist" aria-label="Rodzaj narzędzi">
         <button class="tools__tab" type="button" role="tab" id="tools-tab-cosmetic" aria-controls="tools-panel-cosmetic" aria-selected="true">
           Kosmetyczne
@@ -19,31 +35,76 @@
       </div>
 
       <div class="tools__panel" id="tools-panel-cosmetic" role="tabpanel" aria-labelledby="tools-tab-cosmetic">
-        <ul class="tools__chips">
-          <li class="tools__chip">Cążki</li>
-          <li class="tools__chip">Cęgi</li>
-          <li class="tools__chip">Nożyczki</li>
-          <li class="tools__chip">Obcinacze</li>
-          <li class="tools__chip">Omegi do pedicure</li>
-          <li class="tools__chip">Frezy</li>
-          <li class="tools__chip">Trzpienie frezarskie</li>
-          <li class="tools__chip">Radełka</li>
-          <li class="tools__chip">Kopytka</li>
-          <li class="tools__chip">Sondy podologiczne</li>
-          <li class="tools__chip">Pęsety</li>
-          <li class="tools__chip">Łyżeczki UNO</li>
-          <li class="tools__chip">Narzędzia do piercingu</li>
-          <li class="tools__chip">Końcówki do mikrodermabrazji</li>
+        <ul class="tools__tiles">
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M9 21l2.2-9"/><path d="M15 21l-2.2-9"/><path d="M11.2 12L10 5.5c-.2-1.3.8-2.5 2-2.5s2.2 1.2 2 2.5L12.8 12"/><path d="M10.4 16.5c1 .8 2.2.8 3.2 0"/></g></svg></span>
+            <span class="tools__tile-name">Cążki do skórek</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M8 21l3-8"/><path d="M16 21l-3-8"/><path d="M11 13l-2.5-7a3.6 3.6 0 0 1 7 0L13 13"/><circle cx="12" cy="13" r="1"/></g></svg></span>
+            <span class="tools__tile-name">Cęgi</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.1 15.9L19 3"/><path d="M15.9 15.9L5 3"/></svg></span>
+            <span class="tools__tile-name">Nożyczki do manicure</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h16a2 2 0 0 1 0 4H3"/><path d="M3 13l15-5"/><circle cx="17" cy="15" r=".8"/></svg></span>
+            <span class="tools__tile-name">Obcinacze do paznokci</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><rect x="9" y="3" width="6" height="9" rx="1.5"/><path d="M9 6.5h6M9 9h6"/><path d="M12 12v9"/></g></svg></span>
+            <span class="tools__tile-name">Frezy do manicure</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M12 10v11"/><path d="M8.5 3.5l7 2-1.5 4.5h-4z"/></g></svg></span>
+            <span class="tools__tile-name">Kopytka, radełka</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M12 6v15"/><circle cx="12" cy="4" r="1.6"/><path d="M10.5 14h3"/></g></svg></span>
+            <span class="tools__tile-name">Sondy podologiczne</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M10 3l1.5 18"/><path d="M14 3l-1.5 18"/><path d="M10 3h4"/></g></svg></span>
+            <span class="tools__tile-name">Pęsety kosmetyczne</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M12 9v12"/><ellipse cx="12" cy="5.5" rx="2.5" ry="3.2"/></g></svg></span>
+            <span class="tools__tile-name">Łyżeczki UNO</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="14" r="5"/><path d="M14 3l7 7"/><path d="M13 6l-2 2"/></svg></span>
+            <span class="tools__tile-name">Narzędzia do piercingu</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="rotate(40 12 12)"><path d="M9 21v-9h6v9"/><path d="M8 12h8l-1-4H9z"/><circle cx="12" cy="5" r="2"/></g></svg></span>
+            <span class="tools__tile-name">Końcówki do mikrodermabrazji</span>
+          </li>
         </ul>
       </div>
 
       <div class="tools__panel" id="tools-panel-medical" role="tabpanel" aria-labelledby="tools-tab-medical" hidden>
-        <ul class="tools__chips">
-          <li class="tools__chip">Narzędzia chirurgiczne</li>
-          <li class="tools__chip">Narzędzia stomatologiczne</li>
-          <li class="tools__chip">Narzędzia laryngologiczne</li>
-          <li class="tools__chip">Narzędzia ginekologiczne</li>
-          <li class="tools__chip">Narzędzia podologiczne</li>
+        <ul class="tools__tiles">
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l9-9"/><path d="M12 12l7.5-7.5a2.1 2.1 0 0 1 0 3L14 13"/></svg></span>
+            <span class="tools__tile-name">Narzędzia chirurgiczne</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.5 0-4 2-3.5 4.8.4 2.4 1.7 4.2 2 6.7.3 2.7.7 6.5 2.3 6.5 1.7 0 1.4-4.6 2.2-6 .4-.7 1.6-.7 2 0 .8 1.4.5 6 2.2 6 1.6 0 2-3.8 2.3-6.5.3-2.5 1.6-4.3 2-6.7C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/></svg></span>
+            <span class="tools__tile-name">Narzędzia stomatologiczne</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 1 1 12 0c0 3-2 4.5-3.5 5.5-1.3.9-1.5 2-1.5 3.5a3 3 0 0 1-6 0"/><path d="M10 9a2 2 0 1 1 4 0"/></svg></span>
+            <span class="tools__tile-name">Narzędzia laryngologiczne</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <span class="tools__tile-name">Narzędzia okulistyczne</span>
+          </li>
+          <li class="tools__tile">
+            <span class="tools__tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="18" r="2.5"/><circle cx="17" cy="18" r="2.5"/><path d="M8.5 16L12 9l3.5 7"/><path d="M12 9V3"/></svg></span>
+            <span class="tools__tile-name">Narzędzia ginekologiczne</span>
+          </li>
         </ul>
       </div>
 
@@ -51,12 +112,6 @@
         Nie ma Twojego narzędzia na liście?
         <a href="tel:+48739015287">Zadzwoń: 739 015 287</a>
       </p>
-    </div>
-
-    <div class="tools__media" aria-hidden="true">
-      <video class="tools__video" muted loop playsinline preload="none" poster="./img/tools/pakiety-poster.jpg">
-        <source src="./img/tools/pakiety.mp4" type="video/mp4" />
-      </video>
     </div>
   </div>
 </section>

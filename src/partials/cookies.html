@@ -1,11 +1,13 @@
-<div id="cookieConsent" class="cookie-consent">
-  <p>
-    Korzystanie ze strony oznacza zgodę na wykorzystywanie plików cookie,
-    niektóre mogą być już zapisane w przeglądarce. Więcej informacji można
-    znaleźć w 
-    <a href="../private_policy.html" target="_blank"
-      >polityce prywatności.</a
-    >.
+<div class="consent" id="cookieConsent" role="dialog" aria-labelledby="consent-title" aria-describedby="consent-text" hidden>
+  <p class="consent__title" id="consent-title">Pliki cookies</p>
+  <p class="consent__text" id="consent-text">
+    Używamy plików cookies niezbędnych do działania strony. Za Twoją zgodą
+    korzystamy też z cookies analitycznych (Google Analytics), które pomagają
+    nam ulepszać stronę. Więcej informacji znajdziesz w
+    <a href="./private_policy.html">polityce prywatności</a>.
   </p>
-  <button id="cookieConsentBtn" class="button">Rozumiem</button>
+  <div class="consent__actions">
+    <button class="consent__btn consent__btn--outline" type="button" data-consent="denied">Odrzucam</button>
+    <button class="consent__btn" type="button" data-consent="granted">Akceptuję</button>
+  </div>
 </div>
