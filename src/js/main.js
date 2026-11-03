@@ -9,3 +9,7 @@ import './faq.js';
 import './contact.js';
 import './go_to_top.js';
 import './cookies.js';
+import './reveal.js';
+import './handover.js';
+import './how.js';
+import './pricing.js';

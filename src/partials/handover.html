@@ -1,0 +1,200 @@
+<section class="handover" id="shipping">
+  <div class="handover__inner">
+    <div class="handover__head">
+      <p class="handover__eyebrow">Instrukcja</p>
+      <p class="handover__eyebrow">Twoja część</p>
+      <h2 class="handover__title">Jak przygotować i przekazać narzędzia</h2>
+      <p class="handover__intro">
+        Wybierz, w jaki sposób przekazujesz narzędzia, i wykonaj kolejne kroki.
+      </p>
+
+      <div
+        class="handover__tabs"
+        role="tablist"
+        aria-label="Sposób przekazania narzędzi"
+      >
+        <button
+          class="handover__tab"
+          type="button"
+          role="tab"
+          id="handover-tab-drop"
+          aria-controls="handover-steps"
+          aria-selected="true"
+          data-mode="drop"
+        >
+          Osobiście
+        </button>
+        <button
+          class="handover__tab"
+          type="button"
+          role="tab"
+          id="handover-tab-ship"
+          aria-controls="handover-steps"
+          aria-selected="false"
+          tabindex="-1"
+          data-mode="ship"
+        >
+          Paczką
+        </button>
+        <button
+          class="handover__tab"
+          type="button"
+          role="tab"
+          id="handover-tab-courier"
+          aria-controls="handover-steps"
+          aria-selected="false"
+          tabindex="-1"
+          data-mode="courier"
+        >
+          Kurier w Krakowie
+        </button>
+      </div>
+      <p class="handover__note" data-for="courier" hidden>
+        Odbiór i dostawa przez naszego kuriera są dostępne wyłącznie dla
+        klientów z podpisaną umową.
+      </p>
+    </div>
+
+    <ol
+      class="handover__steps"
+      id="handover-steps"
+      role="tabpanel"
+      aria-labelledby="handover-tab-drop"
+      data-mode="drop"
+    >
+      <li class="handover__step" data-for="drop ship">
+        <h3 class="handover__step-title">
+          Wypełnij formularz „Zgłoszenie przekazania narzędzi”
+        </h3>
+        <p class="handover__step-text">
+          Wpisz wszystkie narzędzia do sterylizacji oraz sposób ich pakowania.
+          Po wysłaniu formularza zobaczysz dane do przekazania narzędzi.
+          Narzędzia dostarcz w ciągu 7 dni od zgłoszenia.
+        </p>
+        <div class="handover__actions">
+          <a
+            class="handover__btn"
+            href="https://panel.sterylserwis.pl/public-transfer"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Przekaż narzędzia</a
+          >
+        </div>
+        <p class="handover__hint">
+          Masz podpisaną umowę? Zgłoszenie przekazania narzędzi wysyłasz w
+          <a
+            href="https://panel.sterylserwis.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Panelu Klienta</a
+          >
+          po zalogowaniu.
+        </p>
+      </li>
+
+      <li class="handover__step" data-for="courier" hidden>
+        <h3 class="handover__step-title">Wyślij zgłoszenie w Panelu Klienta</h3>
+        <p class="handover__step-text">
+          Zaloguj się do Panelu Klienta i wypełnij zgłoszenie przekazania
+          narzędzi: wpisz wszystkie narzędzia oraz sposób ich pakowania.
+        </p>
+        <div class="handover__actions">
+          <a
+            class="handover__btn"
+            href="https://panel.sterylserwis.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Panel Klienta</a
+          >
+        </div>
+      </li>
+
+      <li class="handover__step">
+        <h3 class="handover__step-title">Umyj i zdezynfekuj narzędzia</h3>
+        <p class="handover__step-text">
+          Dokładnie umyj narzędzia i zdezynfekuj je preparatem przeznaczonym do
+          dezynfekcji narzędzi.
+        </p>
+      </li>
+
+      <li class="handover__step">
+        <h3 class="handover__step-title">Osusz narzędzia</h3>
+        <p class="handover__step-text">
+          Upewnij się, że narzędzia są całkowicie suche.
+        </p>
+      </li>
+
+      <li class="handover__step">
+        <h3 class="handover__step-title">Zabezpiecz ostre końcówki</h3>
+        <p class="handover__step-text">
+          W miarę możliwości załóż silikonowe nasadki na ostre i delikatne
+          elementy narzędzi.
+        </p>
+      </li>
+
+      <li class="handover__step">
+        <h3 class="handover__step-title">Przygotuj pojemnik</h3>
+        <p class="handover__step-text">
+          Sztywny, plastikowy pojemnik z zamykaną pokrywą, która nie otworzy się
+          w transporcie. Pojemnik musi pomieścić wszystkie narzędzia już
+          zapakowane w rękawy papierowo-foliowe — bez zginania i ściskania
+          pakietów.
+        </p>
+        <p class="handover__tip">
+          <strong>Zalecamy:</strong> dwa pojemniki — osobny na narzędzia
+          niesterylne i osobny na narzędzia sterylne.
+        </p>
+      </li>
+
+      <li class="handover__step">
+        <h3 class="handover__step-title">Podpisz pojemnik</h3>
+        <p class="handover__step-text">
+          Pojemnik musi być podpisany Twoimi danymi: imieniem i nazwiskiem lub
+          nazwą firmy. Przy dwóch pojemnikach oznacz je napisami „Narzędzia
+          niesterylne” i „Narzędzia sterylne”.
+        </p>
+      </li>
+
+      <li class="handover__step" data-for="drop">
+        <h3 class="handover__step-title">Dostarcz narzędzia do punktu</h3>
+        <p class="handover__step-text">
+          os. Dywizjonu 303 62F, Kraków<br />
+          pon.–pt. 10:00–18:00
+        </p>
+      </li>
+
+      <li class="handover__step" data-for="ship" hidden>
+        <h3 class="handover__step-title">Zabezpiecz zawartość paczki</h3>
+        <p class="handover__step-text">
+          Wypełnij wolne miejsca w pojemniku materiałem ochronnym i dołącz
+          materiały, którymi zabezpieczymy pakiety sterylne w drodze powrotnej.
+        </p>
+      </li>
+
+      <li class="handover__step" data-for="ship" hidden>
+        <h3 class="handover__step-title">Włóż pojemnik do kartonu</h3>
+        <p class="handover__step-text">
+          Zalecamy dodatkowe zapakowanie pojemnika w karton transportowy.
+        </p>
+      </li>
+
+      <li class="handover__step" data-for="ship" hidden>
+        <h3 class="handover__step-title">Nadaj paczkę</h3>
+        <p class="handover__step-text">
+          Wyślij paczkę na dane, które zobaczysz po wysłaniu formularza
+          „Zgłoszenie przekazania narzędzi”.
+        </p>
+      </li>
+
+      <li class="handover__step" data-for="courier" hidden>
+        <h3 class="handover__step-title">Zamów kuriera</h3>
+        <p class="handover__step-text">
+          Zamów odbiór SMS-em lub telefonicznie (<a href="tel:+48739015287"
+            >739 015 287</a
+          >) najpóźniej dzień wcześniej. Kurier odbiera i dostarcza narzędzia w
+          godzinach 9:00–14:00.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
