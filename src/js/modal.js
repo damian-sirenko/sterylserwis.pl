@@ -12,6 +12,11 @@ if (orderModal && typeof orderModal.showModal === 'function') {
   const paczkomatInput = document.getElementById('paczkomat');
   const startDateField = document.getElementById('start-date');
   const postalCodeField = document.getElementById('postal-code');
+  const lockerButton = document.getElementById('paczkomat-verify');
+  const lockerAddress = document.getElementById('paczkomat-address');
+  const lockerStatus = document.getElementById('paczkomat-status');
+  const lockerLookupUrl = 'https://panel.sterylserwis.pl/api/public/paczkomat-lookup?code=';
+  let lockerState = 'empty';
 
   if (startDateField) {
     const today = new Date();
@@ -47,6 +52,62 @@ if (orderModal && typeof orderModal.showModal === 'function') {
     paczkomatField.hidden = !isPaczkomat;
     paczkomatInput.disabled = !isPaczkomat;
     paczkomatInput.required = isPaczkomat;
+  }
+
+  function setLockerStatus(message, type) {
+    lockerStatus.textContent = message;
+    if (type) {
+      lockerStatus.dataset.type = type;
+    } else {
+      delete lockerStatus.dataset.type;
+    }
+  }
+
+  function resetLocker() {
+    lockerState = paczkomatInput.value.trim() ? 'unchecked' : 'empty';
+    lockerAddress.value = '';
+    paczkomatInput.removeAttribute('aria-invalid');
+    setLockerStatus('', null);
+  }
+
+  async function verifyLocker() {
+    const code = paczkomatInput.value.trim().toUpperCase();
+    paczkomatInput.value = code;
+    if (!code) {
+      resetLocker();
+      return lockerState;
+    }
+    lockerButton.disabled = true;
+    setLockerStatus('Sprawdzamy paczkomat…', 'info');
+    try {
+      const response = await fetch(lockerLookupUrl + encodeURIComponent(code), {
+        headers: { Accept: 'application/json' },
+      });
+      const data = await response.json().catch(() => ({}));
+      if (response.ok && data && data.ok && data.address) {
+        lockerState = 'valid';
+        lockerAddress.value = data.address;
+        paczkomatInput.removeAttribute('aria-invalid');
+        setLockerStatus(`✓ ${code}: ${data.address}`, 'ok');
+        setOrderStatus('', null);
+      } else if (response.status >= 500) {
+        lockerState = 'unavailable';
+        lockerAddress.value = '';
+        setLockerStatus('Nie udało się teraz sprawdzić paczkomatu. Zweryfikujemy go przed wysyłką.', 'info');
+      } else {
+        lockerState = 'invalid';
+        lockerAddress.value = '';
+        paczkomatInput.setAttribute('aria-invalid', 'true');
+        setLockerStatus('Nie znaleziono paczkomatu o podanym numerze.', 'error');
+      }
+    } catch (error) {
+      lockerState = 'unavailable';
+      lockerAddress.value = '';
+      setLockerStatus('Nie udało się teraz sprawdzić paczkomatu. Zweryfikujemy go przed wysyłką.', 'info');
+    } finally {
+      lockerButton.disabled = false;
+    }
+    return lockerState;
   }
 
   function updateFormName() {
@@ -100,6 +161,21 @@ if (orderModal && typeof orderModal.showModal === 'function') {
   );
   if (orderPlan) orderPlan.addEventListener('change', updateFormName);
 
+  paczkomatInput.addEventListener('input', () => {
+    paczkomatInput.value = paczkomatInput.value.toUpperCase().replace(/\s+/g, '');
+    resetLocker();
+  });
+  paczkomatInput.addEventListener('keydown', event => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      verifyLocker();
+    }
+  });
+  paczkomatInput.addEventListener('blur', () => {
+    if (lockerState === 'unchecked') verifyLocker();
+  });
+  lockerButton.addEventListener('click', verifyLocker);
+
   orderForm.querySelectorAll('input[data-only-digits]').forEach(input => {
     input.addEventListener('input', () => {
       input.value = input.value.replace(/\D+/g, '');
@@ -135,15 +211,30 @@ if (orderModal && typeof orderModal.showModal === 'function') {
     return true;
   }
 
-  orderForm.addEventListener('submit', event => {
+  orderForm.addEventListener('submit', async event => {
     event.preventDefault();
     if (!validateOrder()) return;
+
+    if (!paczkomatInput.disabled) {
+      if (lockerState === 'unchecked') await verifyLocker();
+      if (lockerState === 'invalid') {
+        paczkomatInput.focus();
+        setOrderStatus('Podaj poprawny numer paczkomatu.', 'error');
+        return;
+      }
+    }
 
     const street = document.getElementById('street-house').value.trim();
     const city = document.getElementById('city').value.trim();
     document.getElementById('address').value = `${street}, ${postalCodeField.value.trim()} ${city}`;
 
     const formData = new FormData(orderForm);
+    formData.delete('Adres_paczkomatu');
+    if (!paczkomatInput.disabled && paczkomatInput.value.trim()) {
+      const lockerCode = paczkomatInput.value.trim();
+      const lockerInfo = lockerState === 'valid' && lockerAddress.value ? lockerAddress.value : 'niezweryfikowany';
+      formData.set('Numer_paczkomatu', `${lockerCode} (${lockerInfo})`);
+    }
     formData.append('subject', `Zamówienie abonamentu ${orderPlan ? orderPlan.value : ''} – STERYL SERWIS`);
     formData.append('from_name', 'STERYL SERWIS – formularz zamówienia');
 
@@ -159,6 +250,7 @@ if (orderModal && typeof orderModal.showModal === 'function') {
         const data = await response.json();
         if (response.status === 200) {
           orderForm.reset();
+          resetLocker();
           setOrderStatus('', null);
           orderForm.hidden = true;
           orderSuccess.hidden = false;

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon_1.png" />
+    <link rel="icon" type="image/png" href="./favicon_1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polityka Prywatności | STERYL SERWIS</title>
+    <title>Informacja RODO | STERYL SERWIS</title>
+    <meta name="description" content="Informacja o przetwarzaniu danych osobowych (RODO) — Correct Solution sp. z o.o., punkt sterylizacji narzędzi Steryl Serwis." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <!-- Google Tag Manager -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+      try {
+        if (localStorage.getItem('sterylConsent') === 'granted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+      } catch (e) {}
+    </script>
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -39,251 +40,97 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-PNRJD4GN');
     </script>
-    <!-- End Google Tag Manager -->
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PNRJD4GN"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNRJD4GN" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
 
-    <header class="header">
-      <div class="header-top">
-        <div class="header-address-line">
-          <div class="address-line-content">
-            <div class="header-adress">
-              <svg width="16" height="16" class="top-header-icon">
-                <use href="./img/icons.svg#location_contacts"></use>
-              </svg>
-              <p class="header-address-text">
-                os. Dywizjonu 303 62F/LU2, Kraków
-              </p>
-            </div>
-            <div class="header-shedule">
-              <svg width="16" height="16" class="top-header-icon">
-                <use href="./img/icons.svg#clock"></use>
-              </svg>
-              <p class="header-shedule-text">pn.-pt. 10:00 - 18:00</p>
-            </div>
-          </div>
-        </div>
-        <div class="container header-container">
-          <div class="header-top-content">
-            <a href="index.html">
-              <picture>
-                <source
-                  srcset="
-                    ./img/header/Logo_1x.png 1x,
-                    ./img/header/Logo_1x.png 2x
-                  "
-                  media="(min-width: 1440px)"
-                />
-                <source
-                  srcset="
-                    ./img/header/Logo_1x.png 1x,
-                    ./img/header/Logo_1x.png 2x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./img/header/Logo_1x.png 1x,
-                    ./img/header/Logo_1x.png 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./img/header/Logo_mob_1x.png 1x,
-                    ./img/header/Logo_mob_1x.png 2x
-                  "
-                  media="(min-width: 360px)"
-                />
-                <img
-                  class="header-logo"
-                  src="./img/header/Logo_mob_1x.png"
-                  alt="Logo"
-                />
-              </picture>
-            </a>
-            <nav class="menu">
-              <ul class="header-menu">
-                <li class="header-menu-item">
-                  <a href="./index.html#about">O nas</a>
-                </li>
-                <li class="header-menu-item co-item">
-                  <a href="./index.html#what">Co sterylizujemy</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#offer">Oferta</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#delivery">Dostawa</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#shipping">Wysyłka</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#faq">FAQ</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#contact">Kontakt</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="burger-menu-wrap">
-              <svg width="22" height="22" class="burger-menu">
-                <use href="./img/icons.svg#menu-burger"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <load src="./partials/page_header.html" />
     <load src="./partials/mob_menu.html" />
-    <section class="pravicy-section">
-      <main>
-        <div class="container policy-container">
-          <h1 class="title policy-title">
-            Punkt Sterylizacji Narzędzi STERYL SERWIS
-          </h1>
-          <h2 class="policy-subtitle">
-            INFORMACJA O PRZETWARZANIU DANYCH OSOBOWYCH (RODO)
-          </h2>
 
-          <section>
-            <p class="policy-text">
-              Zgodnie z art. 13 ust. 1 i 2 Rozporządzenia Parlamentu
-              Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r.
-              (RODO), informujemy, że:
-            </p>
-          </section>
+    <main class="doc">
+      <div class="doc__inner">
+        <a class="doc__back" href="/">← Strona główna</a>
+        <h1 class="doc__title">Informacja o przetwarzaniu danych osobowych (RODO)</h1>
+        <p class="doc__meta">Aktualna wersja obowiązuje od dnia 02.11.2026 r.</p>
 
-          <section>
-            <h2 class="policy-subtitle">
-              1. Administratorem danych osobowych
-              <span style="font-weight: normal">jest:</span> <br />
-            </h2>
-            <p class="policy-text">
-              Correct Solution Sp. z o.o. <br />
-              <span style="font-weight: normal"
-                >os. Dywizjonu 303 62F, 31-875 Kraków <br />
-                NIP: 6751516747 <br />
-                e-mail: info@correctsolution.pl
-              </span>
-            </p>
-          </section>
+        <p>Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO) informujemy, że:</p>
 
-          <section>
-            <h2 class="policy-subtitle">
-              2. Dane osobowe, które możemy przetwarzać,
-              <span style="font-weight: normal">to:</span>
-            </h2>
-            <ul class="policy-list">
-              <li>imię i nazwisko,</li>
-              <li>numer telefonu,</li>
-              <li>adres e-mail (jeśli zostanie podany),</li>
-              <li>dane firmy i NIP (jeśli potrzebna jest faktura).</li>
-            </ul>
-          </section>
+        <h2>1. Administrator danych osobowych</h2>
+        <p>Administratorem danych osobowych jest Correct Solution sp. z o.o. z siedzibą w Krakowie, os. Dywizjonu 303 62F, 31-875 Kraków, KRS 0000553415, NIP 6751516747, REGON 361278098, prowadząca Punkt Sterylizacji Narzędzi Steryl Serwis. Kontakt: e-mail <a href="mailto:sterylserwis@gmail.com">sterylserwis@gmail.com</a>, tel. +48 739 015 287. Administrator nie wyznaczył inspektora ochrony danych.</p>
 
-          <section>
-            <h2 class="policy-subtitle">3. Cele przetwarzania danych:</h2>
-            <ul class="policy-list">
-              <li>wykonanie usługi sterylizacji narzędzi,</li>
-              <li>kontakt w sprawie realizacji usługi,</li>
-              <li>wystawienie faktury,</li>
-              <li>prowadzenie dokumentacji rachunkowej.</li>
-            </ul>
-          </section>
+        <h2>2. Dane osobowe, które przetwarzamy</h2>
+        <ul>
+          <li>imię i nazwisko lub nazwa firmy,</li>
+          <li>numer PESEL – w przypadku umowy zawieranej z osobą prywatną oraz z osobą prowadzącą działalność nierejestrowaną, która nie posiada numeru NIP,</li>
+          <li>NIP – w przypadku przedsiębiorców oraz osób prowadzących działalność nierejestrowaną, które go posiadają,</li>
+          <li>adres zamieszkania lub adres siedziby albo adres do faktury,</li>
+          <li>numer telefonu i adres e-mail,</li>
+          <li>numer paczkomatu do odesłania narzędzi oraz adres dostawy w przypadku kuriera,</li>
+          <li>dane dotyczące przekazanych narzędzi, przebiegu usług, płatności i reklamacji,</li>
+          <li>wizerunek – w przypadku przebywania w punkcie sterylizacji objętym monitoringiem wizyjnym.</li>
+        </ul>
 
-          <section>
-            <h2 class="policy-subtitle">4. Podstawy prawne przetwarzania:</h2>
-            <ul class="policy-list">
-              <li>
-                art. 6 ust. 1 lit. b RODO - wykonanie umowy lub działania przed
-                jej zawarciem,
-              </li>
-              <li>
-                art. 6 ust. 1 lit. c RODO - obowiązek prawny (np. przechowywanie
-                dokumentów księgowych),
-              </li>
-              <li>
-                art. 6 ust. 1 lit. f RODO - uzasadniony interes administratora
-                (np. kontakt z klientem).
-              </li>
-            </ul>
-          </section>
+        <h2>3. Cele i podstawy prawne przetwarzania</h2>
+        <ul>
+          <li>zawarcie i wykonanie umowy o świadczenie usług oraz realizacja usług sterylizacji bez umowy, w tym identyfikacja strony umowy – art. 6 ust. 1 lit. b RODO;</li>
+          <li>kontakt w sprawie realizacji usług oraz organizacja odbioru i zwrotu narzędzi – art. 6 ust. 1 lit. b RODO;</li>
+          <li>wystawianie faktur i prowadzenie dokumentacji rachunkowej i podatkowej – art. 6 ust. 1 lit. c RODO;</li>
+          <li>prowadzenie dokumentacji procesów dezynfekcji i sterylizacji wymaganej przepisami sanitarnymi – art. 6 ust. 1 lit. c RODO;</li>
+          <li>rozpatrywanie reklamacji oraz ustalenie, dochodzenie lub obrona roszczeń – art. 6 ust. 1 lit. f RODO;</li>
+          <li>zapewnienie bezpieczeństwa osób i mienia w punkcie sterylizacji za pomocą monitoringu wizyjnego – art. 6 ust. 1 lit. f RODO.</li>
+        </ul>
 
-          <section>
-            <h2 class="policy-subtitle">5. Odbiorcy danych:</h2>
-            <ul class="policy-list">
-              <li>biuro rachunkowe,</li>
-              <li>
-                firmy współpracujące w celu realizacji usługi (np. kurierzy,
-                serwisy IT),
-              </li>
-              <li>podmioty uprawnione na podstawie przepisów prawa.</li>
-            </ul>
-          </section>
+        <h2>4. Monitoring wizyjny</h2>
+        <p>Pomieszczenia punktu sterylizacji są objęte monitoringiem wizyjnym, oznaczonym tabliczką informacyjną. Nagrania przechowujemy przez okres nie dłuższy niż 3 dni od dnia nagrania, a następnie są one nadpisywane. W przypadku, gdy nagranie stanowi dowód w postępowaniu prowadzonym na podstawie przepisów prawa lub Administrator powziął wiadomość, że może ono stanowić taki dowód, okres przechowywania ulega przedłużeniu do czasu prawomocnego zakończenia postępowania.</p>
 
-          <section>
-            <h2 class="policy-subtitle">6. Okres przechowywania danych:</h2>
-            <ul class="policy-list">
-              <li>
-                dane związane z realizacją usługi przechowujemy przez okres
-                niezbędny do jej wykonania,
-              </li>
-              <li>
-                dane do celów rachunkowych i podatkowych – przez 5 lat od końca
-                roku podatkowego.
-              </li>
-            </ul>
-          </section>
+        <h2>5. Odbiorcy danych</h2>
+        <ul>
+          <li>zewnętrzne biuro rachunkowe,</li>
+          <li>dostawca hostingu oraz systemu do obsługi Klientów i Panelu Klienta – cyber_Folks,</li>
+          <li>dostawcy usług poczty elektronicznej i wysyłki wiadomości – Google (Gmail), Resend,</li>
+          <li>dostawca systemu do fakturowania – Fakturownia.pl oraz Krajowy System e-Faktur (Ministerstwo Finansów),</li>
+          <li>operator przesyłek – InPost,</li>
+          <li>podmioty uprawnione na podstawie przepisów prawa, w szczególności organy państwowe i organy Państwowej Inspekcji Sanitarnej.</li>
+        </ul>
+        <p>Korzystanie z usług Google i Resend może wiązać się z przekazaniem danych poza Europejski Obszar Gospodarczy, w szczególności do Stanów Zjednoczonych – na podstawie decyzji Komisji Europejskiej stwierdzającej odpowiedni stopień ochrony danych (EU-US Data Privacy Framework) lub standardowych klauzul umownych.</p>
 
-          <section>
-            <h2 class="policy-subtitle">
-              7. Prawa osoby, której dane dotyczą:
-            </h2>
-            <ul class="policy-list">
-              <li>prawo dostępu do danych,</li>
-              <li>prawo ich sprostowania,</li>
-              <li>prawo do usunięcia lub ograniczenia przetwarzania,</li>
-              <li>prawo do wniesienia sprzeciwu,</li>
-              <li>prawo do przenoszenia danych,</li>
-              <li>
-                prawo wniesienia skargi do Prezesa UODO (ul. Stawki 2, 00-193
-                Warszawa).
-              </li>
-            </ul>
-          </section>
+        <h2>6. Okres przechowywania danych</h2>
+        <ul>
+          <li>dane związane z umową i realizacją usług – przez czas trwania umowy, a po jej zakończeniu do upływu okresu przedawnienia roszczeń,</li>
+          <li>dane zawarte w dokumentacji rachunkowej i podatkowej – przez okres wymagany przepisami prawa podatkowego i rachunkowego,</li>
+          <li>dane zawarte w dokumentacji procesów dezynfekcji i sterylizacji – przez okres wymagany przepisami sanitarnymi,</li>
+          <li>nagrania z monitoringu wizyjnego – na zasadach opisanych w pkt 4.</li>
+        </ul>
 
-          <section>
-            <h2 class="policy-subtitle">8. Dobrowolność podania danych:</h2>
+        <h2>7. Prawa osoby, której dane dotyczą</h2>
+        <ul>
+          <li>prawo dostępu do danych oraz otrzymania ich kopii,</li>
+          <li>prawo do sprostowania danych,</li>
+          <li>prawo do usunięcia lub ograniczenia przetwarzania danych,</li>
+          <li>prawo do przenoszenia danych,</li>
+          <li>prawo do wniesienia sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie Administratora,</li>
+          <li>prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).</li>
+        </ul>
 
-            <p class="policy-text">
-              Podanie danych jest dobrowolne, ale niezbędne do realizacji
-              usługi. Odmowa ich podania może uniemożliwić wykonanie usługi lub
-              wystawienie faktury.
-            </p>
-          </section>
-          <br />
-          <section>
-            <p class="policy-text">
-              Administrator dokłada wszelkich starań, aby dane osobowe były
-              przetwarzane zgodnie z obowiązującymi przepisami oraz
-              zabezpieczone przed nieuprawnionym dostępem.
-            </p>
-          </section>
-        </div>
-      </main>
-    </section>
+        <h2>8. Dobrowolność podania danych</h2>
+        <p>Podanie danych jest dobrowolne, ale niezbędne do zawarcia umowy i realizacji usługi. Podanie danych do faktury jest wymogiem ustawowym, jeżeli Klient żąda wystawienia faktury. Odmowa podania danych uniemożliwia zawarcie umowy, wykonanie usługi lub wystawienie faktury.</p>
+
+        <h2>9. Zautomatyzowane decyzje</h2>
+        <p>Dane nie są wykorzystywane do podejmowania decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu, w tym profilowaniu.</p>
+
+        <p>Szczegółowe informacje o przetwarzaniu danych w serwisie internetowym, w tym o plikach cookies, zawiera <a href="./private_policy.html">Polityka prywatności</a>.</p>
+      </div>
+    </main>
+
+    <load src="./partials/cookies.html" />
     <load src="./partials/footer.html" />
+
+    <button id="goToTop" class="to-top" type="button" aria-label="Wróć do góry strony">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

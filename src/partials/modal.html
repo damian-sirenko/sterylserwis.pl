@@ -1,70 +1,180 @@
 <dialog class="order" id="modal" aria-labelledby="order-title">
   <div class="order__box">
-    <button class="order__close" type="button" id="close-modal" aria-label="Zamknij formularz">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    <button
+      class="order__close"
+      type="button"
+      id="close-modal"
+      aria-label="Zamknij formularz"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
     </button>
 
     <div class="order__head">
       <p class="order__eyebrow">Zamówienie abonamentu</p>
       <h2 class="order__title" id="order-title">Formularz zamówienia</h2>
-      <p class="order__intro">Na podstawie tych danych przygotujemy umowę i wyślemy ją na podany adres e&#8209;mail.</p>
+      <p class="order__intro">
+        Na podstawie tych danych przygotujemy umowę i wyślemy ją na podany adres
+        e&#8209;mail.
+      </p>
     </div>
 
     <form class="order__form" id="modal-form" method="POST" novalidate>
-      <input type="hidden" name="access_key" value="674a91e4-cb0e-4621-a6fe-33522af79ee4" />
-      <input type="hidden" name="Nazwa_formularzu" value="Formularz zamówienia abonamentu" />
-      <input class="order__honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <input
+        type="hidden"
+        name="access_key"
+        value="674a91e4-cb0e-4621-a6fe-33522af79ee4"
+      />
+      <input
+        type="hidden"
+        name="Nazwa_formularzu"
+        value="Formularz zamówienia abonamentu"
+      />
+      <input
+        class="order__honeypot"
+        type="checkbox"
+        name="botcheck"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+      />
 
       <div class="order__field">
         <label class="order__label" for="order-plan">Abonament</label>
         <select class="order__input" id="order-plan" name="Abonament" required>
-            <option value="STERYL 20">STERYL 20 — 120 zł / mies.</option>
-            <option value="STERYL 30">STERYL 30 — 155 zł / mies.</option>
-            <option value="STERYL 50">STERYL 50 — 230 zł / mies.</option>
-            <option value="STERYL 100">STERYL 100 — 330 zł / mies.</option>
-            <option value="STERYL 150">STERYL 150 — 400 zł / mies.</option>
-            <option value="STERYL 200">STERYL 200 — 470 zł / mies.</option>
-            <option value="STERYL 300">STERYL 300 — 600 zł / mies.</option>
-            <option value="STERYL 500">STERYL 500 — 850 zł / mies.</option>
+          <option value="STERYL 20">STERYL 20 — 120 zł / mies.</option>
+          <option value="STERYL 30">STERYL 30 — 155 zł / mies.</option>
+          <option value="STERYL 50">STERYL 50 — 230 zł / mies.</option>
+          <option value="STERYL 100">STERYL 100 — 330 zł / mies.</option>
+          <option value="STERYL 150">STERYL 150 — 400 zł / mies.</option>
+          <option value="STERYL 200">STERYL 200 — 470 zł / mies.</option>
+          <option value="STERYL 300">STERYL 300 — 600 zł / mies.</option>
+          <option value="STERYL 500">STERYL 500 — 850 zł / mies.</option>
         </select>
       </div>
 
       <fieldset class="order__group">
         <legend class="order__legend">Dane do umowy</legend>
-        <div class="order__segmented" role="radiogroup" aria-label="Typ klienta">
-          <label class="order__seg"><input type="radio" name="Typ_klienta" value="Firma" checked /><span>Firma</span></label>
-          <label class="order__seg"><input type="radio" name="Typ_klienta" value="Osoba prywatna" /><span>Osoba prywatna</span></label>
+        <div
+          class="order__segmented"
+          role="radiogroup"
+          aria-label="Typ klienta"
+        >
+          <label class="order__seg"
+            ><input
+              type="radio"
+              name="Typ_klienta"
+              value="Firma"
+              checked
+            /><span>Firma</span></label
+          >
+          <label class="order__seg"
+            ><input
+              type="radio"
+              name="Typ_klienta"
+              value="Osoba prywatna"
+            /><span>Osoba prywatna</span></label
+          >
         </div>
 
         <div class="order__field" data-for-type="Firma">
           <label class="order__label" for="company-name">Nazwa firmy</label>
-          <input class="order__input" id="company-name" name="Nazwa_firmy" type="text" autocomplete="organization" required />
+          <input
+            class="order__input"
+            id="company-name"
+            name="Nazwa_firmy"
+            type="text"
+            autocomplete="organization"
+            required
+          />
         </div>
         <div class="order__field" data-for-type="Firma">
           <label class="order__label" for="nip">NIP</label>
-          <input class="order__input" id="nip" name="Nip" type="text" inputmode="numeric" maxlength="10" pattern="\d{10}" data-only-digits required />
+          <input
+            class="order__input"
+            id="nip"
+            name="Nip"
+            type="text"
+            inputmode="numeric"
+            maxlength="10"
+            pattern="\d{10}"
+            data-only-digits
+            required
+          />
         </div>
         <div class="order__field" data-for-type="Osoba prywatna" hidden>
           <label class="order__label" for="full-name">Imię i nazwisko</label>
-          <input class="order__input" id="full-name" name="Imie_i_nazwisko" type="text" autocomplete="name" required disabled />
+          <input
+            class="order__input"
+            id="full-name"
+            name="Imie_i_nazwisko"
+            type="text"
+            autocomplete="name"
+            required
+            disabled
+          />
         </div>
         <div class="order__field" data-for-type="Osoba prywatna" hidden>
           <label class="order__label" for="pesel">PESEL</label>
-          <input class="order__input" id="pesel" name="Pesel" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" data-only-digits required disabled />
+          <input
+            class="order__input"
+            id="pesel"
+            name="Pesel"
+            type="text"
+            inputmode="numeric"
+            maxlength="11"
+            pattern="\d{11}"
+            data-only-digits
+            required
+            disabled
+          />
         </div>
 
         <div class="order__field">
           <label class="order__label" for="street-house">Ulica i numer</label>
-          <input class="order__input" id="street-house" name="Ulica_i_nr_domu" type="text" autocomplete="street-address" required />
+          <input
+            class="order__input"
+            id="street-house"
+            name="Ulica_i_nr_domu"
+            type="text"
+            autocomplete="street-address"
+            required
+          />
         </div>
         <div class="order__row">
           <div class="order__field">
             <label class="order__label" for="postal-code">Kod pocztowy</label>
-            <input class="order__input" id="postal-code" name="Kod_pocztowy" type="text" inputmode="numeric" placeholder="00-000" maxlength="6" pattern="\d{2}-\d{3}" autocomplete="postal-code" required />
+            <input
+              class="order__input"
+              id="postal-code"
+              name="Kod_pocztowy"
+              type="text"
+              inputmode="numeric"
+              placeholder="00-000"
+              maxlength="6"
+              pattern="\d{2}-\d{3}"
+              autocomplete="postal-code"
+              required
+            />
           </div>
           <div class="order__field">
             <label class="order__label" for="city">Miejscowość</label>
-            <input class="order__input" id="city" name="Miejscowość" type="text" autocomplete="address-level2" required />
+            <input
+              class="order__input"
+              id="city"
+              name="Miejscowość"
+              type="text"
+              autocomplete="address-level2"
+              required
+            />
           </div>
         </div>
         <input type="hidden" id="address" name="Adres" />
@@ -75,11 +185,25 @@
         <div class="order__row">
           <div class="order__field">
             <label class="order__label" for="phone">Telefon</label>
-            <input class="order__input" id="phone" name="Telefon" type="tel" autocomplete="tel" required />
+            <input
+              class="order__input"
+              id="phone"
+              name="Telefon"
+              type="tel"
+              autocomplete="tel"
+              required
+            />
           </div>
           <div class="order__field">
             <label class="order__label" for="order-email">E-mail</label>
-            <input class="order__input" id="order-email" name="Email" type="email" autocomplete="email" required />
+            <input
+              class="order__input"
+              id="order-email"
+              name="Email"
+              type="email"
+              autocomplete="email"
+              required
+            />
           </div>
         </div>
       </fieldset>
@@ -87,46 +211,153 @@
       <fieldset class="order__group">
         <legend class="order__legend">Współpraca</legend>
         <p class="order__label">Narzędzia do sterylizacji</p>
-        <div class="order__segmented" role="radiogroup" aria-label="Rodzaj narzędzi">
-          <label class="order__seg"><input type="radio" name="Rodzaj_narzędzi" value="kosmetyczne" checked /><span>Kosmetyczne</span></label>
-          <label class="order__seg"><input type="radio" name="Rodzaj_narzędzi" value="medyczne" /><span>Medyczne</span></label>
+        <div
+          class="order__segmented"
+          role="radiogroup"
+          aria-label="Rodzaj narzędzi"
+        >
+          <label class="order__seg"
+            ><input
+              type="radio"
+              name="Rodzaj_narzędzi"
+              value="kosmetyczne"
+              checked
+            /><span>Kosmetyczne</span></label
+          >
+          <label class="order__seg"
+            ><input type="radio" name="Rodzaj_narzędzi" value="medyczne" /><span
+              >Medyczne</span
+            ></label
+          >
         </div>
 
         <p class="order__label">Sposób przekazania narzędzi</p>
-        <div class="order__segmented order__segmented--3" role="radiogroup" aria-label="Sposób przekazania narzędzi">
-          <label class="order__seg"><input type="radio" name="Dostarczenie" value="osobiscie" checked /><span>Osobiście</span></label>
-          <label class="order__seg"><input type="radio" name="Dostarczenie" value="kurier" /><span>Kurier w Krakowie</span></label>
-          <label class="order__seg"><input type="radio" name="Dostarczenie" value="paczkomat" /><span>Paczkomat InPost</span></label>
+        <div
+          class="order__segmented order__segmented--3"
+          role="radiogroup"
+          aria-label="Sposób przekazania narzędzi"
+        >
+          <label class="order__seg"
+            ><input
+              type="radio"
+              name="Dostarczenie"
+              value="osobiscie"
+              checked
+            /><span>Osobiście</span></label
+          >
+          <label class="order__seg"
+            ><input type="radio" name="Dostarczenie" value="kurier" /><span
+              >Kurier w Krakowie</span
+            ></label
+          >
+          <label class="order__seg"
+            ><input type="radio" name="Dostarczenie" value="paczkomat" /><span
+              >Paczkomat InPost</span
+            ></label
+          >
         </div>
         <div class="order__field" id="paczkomat-field" hidden>
-          <label class="order__label" for="paczkomat">Numer paczkomatu do odbioru narzędzi</label>
-          <input class="order__input" id="paczkomat" name="Numer_paczkomatu" type="text" placeholder="np. KRA01M" disabled />
+          <label class="order__label" for="paczkomat"
+            >Numer paczkomatu do odesłania narzędzi</label
+          >
+          <div class="order__locker">
+            <input
+              class="order__input order__locker-input"
+              id="paczkomat"
+              name="Numer_paczkomatu"
+              type="text"
+              placeholder="np. KRA16M"
+              maxlength="10"
+              autocomplete="off"
+              disabled
+            />
+            <button
+              class="order__locker-btn"
+              id="paczkomat-verify"
+              type="button"
+            >
+              Zweryfikuj
+            </button>
+          </div>
+          <input type="hidden" id="paczkomat-address" name="Adres_paczkomatu" />
+          <p
+            class="order__locker-status"
+            id="paczkomat-status"
+            aria-live="polite"
+          ></p>
         </div>
 
         <div class="order__field">
-          <label class="order__label" for="start-date">Preferowana data rozpoczęcia współpracy</label>
-          <input class="order__input" id="start-date" name="Preferowana_data_rozpoczecia" type="date" required />
+          <label class="order__label" for="start-date"
+            >Preferowana data rozpoczęcia współpracy</label
+          >
+          <input
+            class="order__input"
+            id="start-date"
+            name="Preferowana_data_rozpoczecia"
+            type="date"
+            required
+          />
         </div>
         <div class="order__field">
-          <label class="order__label" for="order-message">Wiadomość <span class="order__optional">(opcjonalnie)</span></label>
-          <textarea class="order__input order__textarea" id="order-message" name="Wiadomosc" rows="3"></textarea>
+          <label class="order__label" for="order-message"
+            >Wiadomość <span class="order__optional">(opcjonalnie)</span></label
+          >
+          <textarea
+            class="order__input order__textarea"
+            id="order-message"
+            name="Wiadomosc"
+            rows="3"
+          ></textarea>
         </div>
       </fieldset>
 
       <label class="order__check" for="order-accept">
-        <input id="order-accept" name="Private-policy" type="checkbox" required />
-        <span>Akceptuję <a href="./private_policy.html" target="_blank" rel="noopener">politykę prywatności</a></span>
+        <input
+          id="order-accept"
+          name="Private-policy"
+          type="checkbox"
+          required
+        />
+        <span
+          >Akceptuję
+          <a href="./private_policy.html" target="_blank" rel="noopener"
+            >politykę prywatności</a
+          ></span
+        >
       </label>
 
-      <p class="order__status" id="modal-status" role="status" aria-live="polite"><span id="modal-status-message"></span></p>
+      <p
+        class="order__status"
+        id="modal-status"
+        role="status"
+        aria-live="polite"
+      >
+        <span id="modal-status-message"></span>
+      </p>
       <button class="order__submit" type="submit">Wyślij zamówienie</button>
     </form>
 
     <div class="order__success" id="order-success" hidden>
-      <span class="order__success-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      <span class="order__success-icon" aria-hidden="true"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12.5l4.5 4.5L19 7.5" /></svg
+      ></span>
       <h3 class="order__success-title">Dziękujemy za zamówienie!</h3>
-      <p class="order__success-text">Po weryfikacji danych przygotujemy umowę i wyślemy ją na podany adres e-mail do akceptacji. Podpisane skany umowy odeślij do nas mailowo — na tej podstawie utworzymy dla Ciebie dostęp do Panelu Klienta.</p>
-      <button class="order__submit" type="button" data-order-close>Zamknij</button>
+      <p class="order__success-text">
+        Po weryfikacji danych przygotujemy umowę i wyślemy ją na podany adres
+        e-mail do akceptacji.
+      </p>
+      <button class="order__submit" type="button" data-order-close>
+        Zamknij
+      </button>
     </div>
   </div>
 </dialog>

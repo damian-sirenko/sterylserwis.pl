@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon_1.png" />
+    <link rel="icon" type="image/png" href="./favicon_1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Polityka Prywatności | STERYL SERWIS</title>
+    <title>Pliki do pobrania | STERYL SERWIS</title>
+    <meta name="description" content="Pliki do pobrania — Steryl Serwis, punkt sterylizacji narzędzi w Krakowie." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <!-- Google Tag Manager -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500,
+      });
+      try {
+        if (localStorage.getItem('sterylConsent') === 'granted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+      } catch (e) {}
+    </script>
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -39,159 +40,43 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-PNRJD4GN');
     </script>
-    <!-- End Google Tag Manager -->
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PNRJD4GN"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNRJD4GN" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
 
-    <header class="header">
-      <div class="header-top">
-        <div class="header-address-line">
-          <div class="address-line-content">
-            <div class="header-adress">
-              <svg width="16" height="16" class="top-header-icon">
-                <use href="./img/icons.svg#location_contacts"></use>
-              </svg>
-              <p class="header-address-text">
-                os. Dywizjonu 303 62F/LU2, Kraków
-              </p>
-            </div>
-            <div class="header-shedule">
-              <svg width="16" height="16" class="top-header-icon">
-                <use href="./img/icons.svg#clock"></use>
-              </svg>
-              <p class="header-shedule-text">pn.-pt. 10:00 - 18:00</p>
-            </div>
-          </div>
-        </div>
-        <div class="container header-container">
-          <div class="header-top-content">
-            <a href="index.html">
-              <picture>
-                <source
-                  srcset="
-                    ./img/header/Logo_1x.png 1x,
-                    ./img/header/Logo_1x.png 2x
-                  "
-                  media="(min-width: 1440px)"
-                />
-                <source
-                  srcset="
-                    ./img/header/Logo_1x.png 1x,
-                    ./img/header/Logo_1x.png 2x
-                  "
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="
-                    ./img/header/Logo_1x.png 1x,
-                    ./img/header/Logo_1x.png 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="
-                    ./img/header/Logo_mob_1x.png 1x,
-                    ./img/header/Logo_mob_1x.png 2x
-                  "
-                  media="(min-width: 360px)"
-                />
-                <img
-                  class="header-logo"
-                  src="./img/header/Logo_mob_1x.png"
-                  alt="Logo"
-                />
-              </picture>
-            </a>
-            <nav class="menu">
-              <ul class="header-menu">
-                <li class="header-menu-item">
-                  <a href="./index.html#about">O nas</a>
-                </li>
-                <li class="header-menu-item co-item">
-                  <a href="./index.html#what">Co sterylizujemy</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#offer">Oferta</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#delivery">Dostawa</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#shipping">Wysyłka</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#faq">FAQ</a>
-                </li>
-                <li class="header-menu-item">
-                  <a href="./index.html#contact">Kontakt</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="burger-menu-wrap">
-              <svg width="22" height="22" class="burger-menu">
-                <use href="./img/icons.svg#menu-burger"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <load src="./partials/page_header.html" />
     <load src="./partials/mob_menu.html" />
-    <section class="pravicy-section">
-      <main>
-        <div class="container policy-container">
-          <h1 class="title policy-title">
-            Punkt Sterylizacji Narzędzi STERYL SERWIS
-          </h1>
-          <h2 class="files-subtitle">PLIKI DO POBRANIA</h2>
 
-          <section>
-            <ul class="files-list">
-              <li class="files-item">
-                <a
-                  class="files-link"
-                  href="/docs/Karta_Przekazania_Narzedzi.pdf"
-                  download
-                  target="_blank"
-                >
-                  <img
-                    src="./img/files/file.png"
-                    alt="Plik PDF"
-                    class="files-img"
-                  />
-                  <p class="files-text">Karta Przekazania Narzędzi</p>
-                </a>
-              </li>
-              <li class="files-item">
-                <a
-                  class="files-link"
-                  href="/docs/Wzor_umowy_o_swiadczenie_uslug.pdf"
-                  download
-                  target="_blank"
-                >
-                  <img
-                    src="./img/files/file.png"
-                    alt="Plik PDF"
-                    class="files-img"
-                  />
-                  <p class="files-text">Wzór Umowy</p>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </main>
-    </section>
+    <main class="doc">
+      <div class="doc__inner">
+        <a class="doc__back" href="/">← Strona główna</a>
+        <h1 class="doc__title">Pliki do pobrania</h1>
+        <ul class="doc__files">
+          <li>
+            <a class="doc__file" href="/docs/Karta_Przekazania_Narzedzi.pdf" download target="_blank" rel="noopener">
+              <span class="doc__file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 12v6M9.5 15.5L12 18l2.5-2.5"/></svg></span>
+              <span class="doc__file-body"><span class="doc__file-name">Karta Przekazania Narzędzi</span><span class="doc__file-type">PDF · pobierz</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="doc__file" href="/docs/Wzor_umowy_o_swiadczenie_uslug.pdf" download target="_blank" rel="noopener">
+              <span class="doc__file-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 12v6M9.5 15.5L12 18l2.5-2.5"/></svg></span>
+              <span class="doc__file-body"><span class="doc__file-name">Wzór umowy</span><span class="doc__file-type">PDF · pobierz</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <load src="./partials/cookies.html" />
     <load src="./partials/footer.html" />
+
+    <button id="goToTop" class="to-top" type="button" aria-label="Wróć do góry strony">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
