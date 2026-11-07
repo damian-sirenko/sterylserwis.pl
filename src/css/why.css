@@ -137,18 +137,14 @@
     padding: 72px var(--gutter);
   }
   .why__head {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px 48px;
-    align-items: flex-end;
-    justify-content: space-between;
+    gap: 20px;
   }
   .why__heading {
-    flex: 1 1 420px;
     gap: 10px;
   }
   .why__intro {
-    flex: 1 1 460px;
+    column-count: 2;
+    column-gap: 48px;
     font-size: 16px;
     line-height: 1.6;
   }
@@ -214,5 +210,20 @@
   .why__card:hover .why__icon {
     background-color: var(--c-brand);
     color: #ffffff;
+  }
+}
+
+.why__intro p {
+  margin: 0 0 12px;
+}
+.why__intro p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .why__intro {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 }

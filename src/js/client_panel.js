@@ -7,12 +7,15 @@ if (cpanel) {
   const featureList = cpanel.querySelector('.cpanel__features');
   const phone = cpanel.querySelector('.cpanel__phone');
   const lightbox = document.getElementById('cpanel-lightbox');
-  const lightboxImg = lightbox ? lightbox.querySelector('.cpanel__lightbox-img') : null;
-  const lightboxClose = lightbox ? lightbox.querySelector('.cpanel__lightbox-close') : null;
+  const lightboxImg = lightbox
+    ? lightbox.querySelector('.cpanel__lightbox-img')
+    : null;
+  const lightboxClose = lightbox
+    ? lightbox.querySelector('.cpanel__lightbox-close')
+    : null;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0;
   let isVisible = false;
-  let isHovered = false;
   let isStopped = reducedMotion.matches;
 
   function showScreen(index) {
@@ -25,28 +28,34 @@ if (cpanel) {
     screens.forEach((screen, i) => {
       screen.classList.toggle('is-active', i === index);
     });
+    const bar = features[index].querySelector('.cpanel__progress');
+    bar.style.animation = 'none';
+    void bar.offsetWidth;
+    bar.style.animation = '';
     if (featureList && featureList.scrollWidth > featureList.clientWidth) {
       const item = features[index].parentElement;
-      const padding = parseFloat(getComputedStyle(featureList).paddingLeft) || 0;
+      const padding =
+        parseFloat(getComputedStyle(featureList).paddingLeft) || 0;
       featureList.scrollTo({
         left: item.offsetLeft - padding,
         behavior: reducedMotion.matches ? 'auto' : 'smooth',
       });
     }
     if (caption) {
-      caption.textContent = features[index].querySelector('.cpanel__feature-text').textContent;
+      caption.textContent = features[index].querySelector(
+        '.cpanel__feature-text'
+      ).textContent;
     }
   }
 
   function updatePlayback() {
     const lightboxOpen = lightbox ? lightbox.open : false;
     cpanel.classList.toggle('is-autoplay', !isStopped);
-    cpanel.classList.toggle('is-paused', !isVisible || isHovered || lightboxOpen);
+    cpanel.classList.toggle('is-paused', !isVisible || lightboxOpen);
   }
 
   features.forEach((feature, index) => {
     feature.addEventListener('click', () => {
-      isStopped = true;
       showScreen(index);
       updatePlayback();
     });
@@ -58,25 +67,24 @@ if (cpanel) {
       });
   });
 
-  cpanel.addEventListener('mouseenter', () => {
-    isHovered = true;
-    updatePlayback();
-  });
-  cpanel.addEventListener('mouseleave', () => {
-    isHovered = false;
-    updatePlayback();
-  });
-
   if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => {
-      isVisible = entry.isIntersecting;
-      updatePlayback();
-    }, { threshold: 0.3 }).observe(cpanel);
+    new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        updatePlayback();
+      },
+      { threshold: 0.3 }
+    ).observe(cpanel);
   } else {
     isVisible = true;
   }
 
-  if (phone && lightbox && lightboxImg && typeof lightbox.showModal === 'function') {
+  if (
+    phone &&
+    lightbox &&
+    lightboxImg &&
+    typeof lightbox.showModal === 'function'
+  ) {
     phone.addEventListener('click', () => {
       const screen = screens[current];
       lightboxImg.src = screen.currentSrc || screen.src;

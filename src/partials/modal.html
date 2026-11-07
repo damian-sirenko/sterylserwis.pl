@@ -31,8 +31,9 @@
 
       <fieldset class="order__group">
         <legend class="order__legend">Dane do umowy</legend>
-        <div class="order__segmented" role="radiogroup" aria-label="Typ klienta">
+        <div class="order__segmented order__segmented--3" role="radiogroup" aria-label="Typ klienta">
           <label class="order__seg"><input type="radio" name="Typ_klienta" value="Firma" checked /><span>Firma</span></label>
+          <label class="order__seg"><input type="radio" name="Typ_klienta" value="Działalność nierejestrowana" /><span>Działalność nierejestrowana</span></label>
           <label class="order__seg"><input type="radio" name="Typ_klienta" value="Osoba prywatna" /><span>Osoba prywatna</span></label>
         </div>
 
@@ -40,15 +41,22 @@
           <label class="order__label" for="company-name">Nazwa firmy</label>
           <input class="order__input" id="company-name" name="Nazwa_firmy" type="text" autocomplete="organization" required />
         </div>
-        <div class="order__field" data-for-type="Firma">
-          <label class="order__label" for="nip">NIP</label>
-          <input class="order__input" id="nip" name="Nip" type="text" inputmode="numeric" maxlength="10" pattern="\d{10}" data-only-digits required />
-        </div>
-        <div class="order__field" data-for-type="Osoba prywatna" hidden>
+        <div class="order__field" data-for-type="Osoba prywatna|Działalność nierejestrowana" hidden>
           <label class="order__label" for="full-name">Imię i nazwisko</label>
           <input class="order__input" id="full-name" name="Imie_i_nazwisko" type="text" autocomplete="name" required disabled />
         </div>
-        <div class="order__field" data-for-type="Osoba prywatna" hidden>
+        <div class="order__field" data-for-type="Działalność nierejestrowana" hidden>
+          <p class="order__label">Numer identyfikacyjny</p>
+          <div class="order__segmented" role="radiogroup" aria-label="Numer identyfikacyjny">
+            <label class="order__seg"><input type="radio" name="Identyfikator" value="NIP" checked disabled /><span>NIP</span></label>
+            <label class="order__seg"><input type="radio" name="Identyfikator" value="PESEL" disabled /><span>PESEL</span></label>
+          </div>
+        </div>
+        <div class="order__field" data-for-type="Firma|Działalność nierejestrowana" data-for-id="NIP">
+          <label class="order__label" for="nip">NIP</label>
+          <input class="order__input" id="nip" name="Nip" type="text" inputmode="numeric" maxlength="10" pattern="\d{10}" data-only-digits required />
+        </div>
+        <div class="order__field" data-for-type="Osoba prywatna|Działalność nierejestrowana" data-for-id="PESEL" hidden>
           <label class="order__label" for="pesel">PESEL</label>
           <input class="order__input" id="pesel" name="Pesel" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" data-only-digits required disabled />
         </div>
@@ -99,8 +107,13 @@
           <label class="order__seg"><input type="radio" name="Dostarczenie" value="paczkomat" /><span>Paczkomat InPost</span></label>
         </div>
         <div class="order__field" id="paczkomat-field" hidden>
-          <label class="order__label" for="paczkomat">Numer paczkomatu do odbioru narzędzi</label>
-          <input class="order__input" id="paczkomat" name="Numer_paczkomatu" type="text" placeholder="np. KRA01M" disabled />
+          <label class="order__label" for="paczkomat">Numer paczkomatu do odesłania narzędzi</label>
+          <div class="order__locker">
+            <input class="order__input order__locker-input" id="paczkomat" name="Numer_paczkomatu" type="text" placeholder="np. KRA16M" maxlength="10" autocomplete="off" disabled />
+            <button class="order__locker-btn" id="paczkomat-verify" type="button">Zweryfikuj</button>
+          </div>
+          <input type="hidden" id="paczkomat-address" name="Adres_paczkomatu" />
+          <p class="order__locker-status" id="paczkomat-status" aria-live="polite"></p>
         </div>
 
         <div class="order__field">
@@ -125,7 +138,7 @@
     <div class="order__success" id="order-success" hidden>
       <span class="order__success-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
       <h3 class="order__success-title">Dziękujemy za zamówienie!</h3>
-      <p class="order__success-text">Po weryfikacji danych przygotujemy umowę i wyślemy ją na podany adres e-mail do akceptacji. Podpisane skany umowy odeślij do nas mailowo — na tej podstawie utworzymy dla Ciebie dostęp do Panelu Klienta.</p>
+      <p class="order__success-text">Po weryfikacji danych przygotujemy umowę i wyślemy ją na podany adres e-mail do akceptacji.</p>
       <button class="order__submit" type="button" data-order-close>Zamknij</button>
     </div>
   </div>
