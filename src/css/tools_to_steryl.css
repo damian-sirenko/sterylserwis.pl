@@ -232,3 +232,11 @@
     transition: none;
   }
 }
+
+.tools__rules-label {
+  margin: 4px 0 -4px;
+  color: var(--c-mint-strong);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}

@@ -37,10 +37,15 @@ if (orderModal && typeof orderModal.showModal === 'function') {
 
   function updateClientType() {
     const selected = orderForm.querySelector('input[name="Typ_klienta"]:checked').value;
-    orderForm.querySelectorAll('[data-for-type]').forEach(field => {
-      const isActive = field.dataset.forType === selected;
-      field.hidden = !isActive;
-      field.querySelectorAll('input').forEach(input => {
+    const isUnregistered = selected === 'Działalność nierejestrowana';
+    const selectedId = orderForm.querySelector('input[name="Identyfikator"]:checked').value;
+    orderForm.querySelectorAll('[data-for-type]').forEach(element => {
+      let isActive = element.dataset.forType.split('|').includes(selected);
+      if (isActive && isUnregistered && element.dataset.forId) {
+        isActive = element.dataset.forId === selectedId;
+      }
+      element.hidden = !isActive;
+      element.querySelectorAll('input').forEach(input => {
         input.disabled = !isActive;
       });
     });
@@ -153,7 +158,7 @@ if (orderModal && typeof orderModal.showModal === 'function') {
     document.body.classList.remove('is-order-open');
   });
 
-  orderForm.querySelectorAll('input[name="Typ_klienta"]').forEach(radio =>
+  orderForm.querySelectorAll('input[name="Typ_klienta"], input[name="Identyfikator"]').forEach(radio =>
     radio.addEventListener('change', updateClientType)
   );
   orderForm.querySelectorAll('input[name="Dostarczenie"]').forEach(radio =>

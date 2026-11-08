@@ -310,3 +310,17 @@ body {
 .sticky-header__actions a[href^='tel:'] {
     display: none;
   }
+
+
+html {
+    scroll-padding-top: 84px;
+  }
+  .sticky-header {
+    border-bottom: 1px solid rgba(159, 222, 214, 0.35);
+  }
+  
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 100px;
+    }
+  }
