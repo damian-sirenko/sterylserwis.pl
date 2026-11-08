@@ -372,9 +372,6 @@
   .pricing__cost {
     font-size: 13px;
   }
-  .pricing__included-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
