@@ -351,3 +351,15 @@
   text-underline-offset: 3px;
   white-space: nowrap;
 }
+
+@media (max-width: 1023px) {
+  .faq__tabs {
+    scroll-padding-inline: var(--gutter);
+    scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--gutter), #000 85%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 var(--gutter), #000 85%, transparent);
+  }
+  .faq__tab {
+    scroll-snap-align: start;
+  }
+}
